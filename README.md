@@ -22,9 +22,10 @@ current end-to-end probe simulates an agent with an assumed error rate.
 ## The finding, in three layers
 
 1. **Continuous machinery transplanted onto discrete fields.** A known premise
-   in the literature (cite, do not claim). We have three method-section-verified
-   instances where `‖δ‖ ≤ Δ` is written over state tuples containing discrete
-   fields with the norm never specified.
+   in the literature (cite, do not claim). We have three *candidate* instances
+   where `‖δ‖ ≤ Δ` appears over state tuples containing discrete fields — these
+   came from a search pass and are **not yet verified against the papers
+   themselves**; see `docs/references.md` §5.
 2. **Decision geometry.** Which quantity governs a flip depends on the decision:
    order decisions (top-k, pairwise) are governed by `ρ = σ_r/σ_q`, absolute
    threshold decisions by `κ = |μ_r|/σ_q`. The continuous bound reports zero for
