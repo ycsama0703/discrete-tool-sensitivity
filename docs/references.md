@@ -124,10 +124,74 @@ not opened them myself. Verify before citing.**
 
 ---
 
-## Outstanding verification tasks
+## Verification round, 2026-09-21 — all five tasks closed
 
-1. **2604.11581 Appendix D** — decides whether §2.4b's transfer is already occupied in the LLM setting.
-2. **2510.03992 related-work quotes** — the two ℓp sentences our B5 leans on.
-3. **2609.16599 "bounded disturbances"** — abstract-level only; our best framing citation.
-4. **2507.20150** — potential collision with layer 1.
-5. **CertDR's open problem** — confirm top-K *internal ordering* is still unsolved in 2023–2026; RobustMask still does membership only.
+PDFs downloaded and read directly (`probes/fetch_papers.py`, text under
+`_papers/`, untracked). Outcomes, including the ones that went against us:
+
+**1. 2604.11581 Appendix D — OCCUPIED. Our §2.4b claim must narrow.** ⚠️
+Appendix D states the distinction explicitly, for LLM evaluation:
+> "The D-study formulas above give the **absolute** error variance, appropriate for **threshold decisions**… For **relative** decisions (comparing two models or ranking items), **shared main effects such as prompt and judge shift all items equally and cancel**… Applying the absolute formula mechanically will overstate some shared sources and understate object-specific interactions."
+
+Consequences: (a) cite it, write §2.4b as "we instantiate", never claim to bring
+the distinction to LLMs; (b) **retract** the earlier note that it analyses
+Chatbot Arena with the absolute formula as an unwitting conflation — it states
+the caveat itself. Remaining increment: they give a variance decomposition and
+SE advice for **evaluation design**; we give a per-query computable criterion ρ
+and **measure** its predictive power under **tool-call substitution**.
+
+**2. 2510.03992 — CONFIRMED verbatim.** ✅ Both sentences exist:
+> "tool metadata is discrete text and JSON schemas with **no natural perturbation radius**, ruling out standard continuous-input certification" (§1)
+> "Certified robustness is well developed for continuous classifiers under bounded perturbation sets, but **tool metadata has no ℓp analogue**: the input space is discrete and combinatorial, perturbations are semantic, and the pipeline is non-differentiable." (§5)
+
+**3. 2609.16599 — CONFIRMED verbatim, and it is a better layer-1 target than
+the three candidates.** ✅ Beyond the framing sentence ("hallucinations as
+bounded disturbances"), §2.3 models the applied tool/control parameter as
+**quantization**:
+> "The parameter actually in force represents a **delayed, quantized**, and potentially dropped version of the LLM's raw output… θ̂(t) = q(θ(tₖ)), where q(·) **decodes discrete token sequences onto the valid parameter set Θ**… correspond directly to the time delay, packet dropout, and **signal quantization**"
+
+Θ is said to encode "constraints, triggering thresholds… **mode indices**" — enum
+parameters. Quantization is a *bounded small-error* model presuming the grid
+finely approximates a continuum. A semantic enum is not such a grid. **This is
+now layer 1.**
+
+**4. 2507.20150 (The Policy Cliff) — CONFIRMED, and it kills our old layer-1
+phrasing while supplying a better one.** ⚠️✅
+> "**Any metric on a finite set induces the discrete topology**… any function from a space with the discrete topology to any other metric space is **necessarily continuous**."
+> "the source of policy instability… **does not stem from a formal 'discontinuity' of the reward function itself**"
+> "…as **a consequence of the inherent discontinuity of optimization over a discrete action set**"
+
+On a finite space continuity is vacuous, so "discreteness breaks continuity" is
+empty — and with the *discrete* metric, d(quarter,fy)=1 and L·ε = D_G, an
+informative bound. The problem is the **choice of metric**, not continuity.
+**Never write "the continuous bound fails because the input is discrete" again.**
+Its argmax conclusion is the upstream statement of our decision-flip mechanism —
+cite as foundation, not as an opponent.
+
+**5. CertDR — CONFIRMED, plus the best positioning find of the round.** ✅
+Open problem confirmed verbatim: *"In future work, it is worth to strengthen the
+notion of Certified Top-K Robustness to guarantee that the order of top-K ranking
+results remains unchanged."* And §4:
+> "Here, we **leave the query q free from attack**. In the future work, we would like to explore the defense against **query attacks** by focusing on q in this formulation."
+
+CertDR perturbs the **ranked objects** and explicitly defers **query-side**
+attacks. A query-side perturbation is the natural source of a **common mode** —
+one change moves every candidate at once. Our discrete parameter substitution
+acts on the call, i.e. the query side. So the positioning is not "we differ from
+CertDR" but "**we occupy the cell CertDR flagged as open, and show its
+perturbation geometry is common-mode — which is exactly why a union bound goes
+vacuous there**" (2/48 certified vs 14/48 genuinely stable).
+
+**Bonus: 2601.18753 upgraded ○ → ✅.** A2 assumes
+‖Φ(y)−Φ(y′)‖ ≤ L_Φ·d_Y(y,y′) over edit distance while A3 places the perturbation
+ball in ℝ^r. `L_Φ` appears only in A2 and the notation recap — never in a theorem
+or the scoring equation — and no quantitative relation between the two spaces is
+ever given. The bridge is declared, never crossed.
+
+### Still open
+
+- **2605.00741** ○ — PDF download truncated. **Verify or delete; do not cite.**
+- **2605.29816** — first pass did not surface the claimed contradiction.
+  Downgraded, not in use.
+- Whether anyone solved CertDR's top-K *internal ordering* problem in 2023–2026.
+  RobustMask still certifies membership only. Hedge as "we are not aware of".

@@ -3,9 +3,13 @@
 An LLM agent calling a financial data API can substitute one discrete parameter
 value for another — `period="quarter"` for `period="fy"` — and the call stays
 **schema-valid**, returns HTTP 200, and produces an output that differs by
-**66–72%**. Continuous sensitivity certification assigns such a substitution
-`ε = 0`, so its bound is `L·ε = 0`: it does not merely miss the error, it
-reports zero error.
+**66–72%**.
+
+Agent-reliability work models that substitution as **quantization**: a bounded,
+small error, absorbed by disturbance rejection. Quantization presumes the
+discrete grid finely approximates a continuum. A semantic enum is not such a
+grid — `quarter` and `fy` are different questions, not adjacent cells — so the
+error model that is supposed to cover this case does not.
 
 This repository holds the probes, data and paper framework for that finding.
 
@@ -21,11 +25,14 @@ current end-to-end probe simulates an agent with an assumed error rate.
 
 ## The finding, in three layers
 
-1. **Continuous machinery transplanted onto discrete fields.** A known premise
-   in the literature (cite, do not claim). We have three *candidate* instances
-   where `‖δ‖ ≤ Δ` appears over state tuples containing discrete fields — these
-   came from a search pass and are **not yet verified against the papers
-   themselves**; see `docs/references.md` §5.
+1. **The wrong error model, not broken continuity.** The field models an LLM's
+   choice of a discrete tool/control parameter as **quantization** — a bounded,
+   small error absorbed by disturbance rejection. Quantization presumes the grid
+   finely approximates a continuum; a semantic enum is not such a grid, and
+   `quarter → fy` moves the output by 66–72%, not by half a step. Note we do
+   **not** claim discreteness breaks continuity: on a finite set every function
+   is continuous, and with the discrete metric the bound is informative. The
+   problem is the choice of metric and error model.
 2. **Decision geometry.** Which quantity governs a flip depends on the decision:
    order decisions (top-k, pairwise) are governed by `ρ = σ_r/σ_q`, absolute
    threshold decisions by `κ = |μ_r|/σ_q`. The continuous bound reports zero for

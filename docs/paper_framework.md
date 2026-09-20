@@ -543,6 +543,15 @@ CertDR（2209.06691, CIKM 2022）是离我们最近的一篇：离散替换下�
 | Thm 4.1 逐文档独立应用，$o_d$ 是 per-document | 偏差界逐项算 |
 | Prop 4.2 `gap(d_K,d_{K+1}) − max_d o_d > 0` | **union bound**：每项各自按最坏方向独立移动 |
 | 威胁模型：`documents already ranked 1..K are excluded from attack` | **在位者豁免** |
+| §4 原文：`Here, we leave the query q free from attack. In the future work, we would like to explore the defense against query attacks by focusing on q` | **查询端未被扰动，且被它自己列为未来工作** |
+
+**最后一行是这次核实捡到的最大收获。** CertDR 扰动的是**被排序对象**（文档），并**明确
+把查询端攻击留作未来工作**。而**查询是共模的天然来源**——改一次查询，所有候选项的分数
+同时变。我们的离散参数替换**正是作用在调用端（≙ 查询端）**。
+
+所以我们的定位不是"我们和 CertDR 不同"，而是更强的一句：**我们做的正是 CertDR 自己
+标为开放的那一格，而且指出那一格的扰动几何是共模的——这恰好是它的 union bound 失效
+的原因。**（实验见 3.12：它只认证 2/48，而 14/48 真实稳定。）
 
 我们的扰动是**一次参数替换同时、相关地移动所有标的（含在位者）**。这不是措辞差异，
 是能跑出数字的差异（实验见 3.12）：
@@ -564,27 +573,117 @@ CertDR（2209.06691, CIKM 2022）是离我们最近的一篇：离散替换下�
 | Relative perturbation theory（Demmel & Veselić 1992；Ipsen 1998；Ren-Cang Li I–IV）○ | 乘性扰动下**相对**间隔决定稳定性 | 它是矩阵特征值的确定性界；我们是一群标的上的**速率** |
 | CertDR Prop 4.2 ✅ | 边际形式的排序证书 | 逐项独立 vs **共模相关**（见 4.2） |
 | 2506.02257 ✅（读过 §1） | 扰动**数据集**、把 margin 当**要摆脱的假设**、输出集值对冲 | 我们把 margin 当**可计算的预测量**，给闭式速率 |
+| **2604.11581 附录 D ✅（2026-09-21 自核）** | **已在 LLM 场景下明写 relative/absolute 区分**（见下） | 它讲**评测设计的标准误**；我们讲**工具调用替换下的逐查询翻转预测** |
+| 2507.20150 ✅ | 有限集上连续性平凡成立；不稳定源自**离散动作集上的 argmax** | 我们的决策翻转是其在工具参数场景的下游实例 |
 
-**2.4b 的决策几何必须写成 "we transfer / instantiate"，不能写 "we show that"**——
-relative/absolute 的区分本身是 G-theory 的，不是我们的。
+**⚠️ 2.4b 的主张必须进一步收窄（2026-09-21 自核后）。** 我原以为 relative/absolute
+只被 G-theory（1972）占住、LLM 场景还空着。**不对。** 2604.11581 附录 D 逐字写着：
 
-### 4.4 第一层的候选靶子（○ 全部未经自核，落笔前必须亲自开论文）
+> "The D-study formulas above give the **absolute** error variance, appropriate for
+> **threshold decisions** ('does this model exceed 80% safety?'). For **relative**
+> decisions (**comparing two models or ranking items**), **shared main effects such as
+> prompt and judge shift all items equally and cancel**… **Applying the absolute formula
+> mechanically will overstate some shared sources and understate object-specific
+> interactions.**"
 
-不说"现有认证是错的"，说**"连续机器被移植到含离散字段的状态上，而移植本身从未被
-定义"**。三个实例：
+"shared main effects … **shift all items equally and cancel**" 就是我们的 $\mu_r$ 在
+序关系决策中抵消，一字不差，且是 LLM 评测场景。
 
-1. **2605.00741**：威胁模型写 $\tilde S_t = S_t+\delta_t,\ \|\delta_t\|\le\Delta$，
-   而被扰动的七元组里**四个字段是离散的**（threat class、SLA 模式、evidence token 集、
-   capability 子集）。$\|\cdot\|$ **全文未指定是哪个范数**，$\Delta$ **从未赋值**，
-   加法对离散字段**没有定义**。
-2. **2601.18753（ICLR 2026）**：假设 A2 明写编辑距离 → ℓ2 的 $L_\Phi$-Lipschitz 桥，
-   而 **$L_\Phi$ 在 Prop 3.1、Thm 3.2、打分式里一次都没再出现**——桥是**预设的**，
-   不是建立的。
-3. **2605.29816**：理论要求连续密度支配条件，实证喂的全是离散文本编辑。
+**两个必须执行的后果**：
+1. **必须引用 2604.11581 附录 D**，并把 2.4b 写成 "we instantiate"。**不得**声称把这个
+   区分引入了 LLM 场景——已经有人做了。
+2. **撤回**我此前说的"它拿 absolute 公式分析 Chatbot Arena 是一个混淆实例"——**它自己
+   在附录里写明了这个警告**。拿它当"无意识混淆的例子"是不诚实的。
 
-**加一条元证据**：LLMCert-T 自己写 tool metadata `has no ℓp analogue` ○——它**同意**
-连续几何不适用，并据此走统计证书。**它是可以正面接续的对手，不是敌人**：它把话说
-一半（metadata 没有 ℓp 类比），我们接下半句（**参数取值有数值结构，但没有任何证书**）。
+**2.4b 剩下的增量**（窄但真实）：它们给的是**评测设计的方差分解与标准误建议**（定性、
+无预测量）；我们给的是**逐查询可算的无量纲判据 ρ** 并**实测其对决策翻转的预测力**
+（+0.851 vs 输出跳变 +0.110），场景是**工具调用参数替换**而非评测 facet 抽样。
+
+### 4.4 第一层（2026-09-21 全面重写，全部已自核 ✅）
+
+> **旧版本已作废。** 旧说法是"连续界对离散替换给 ε=0，所以失效"。这个说法**站不住**，
+> 理由见下面的 Policy Cliff。新说法更窄、更准、且有逐字原文支撑。
+
+#### 4.4.1 为什么旧说法站不住：The Policy Cliff ✅
+
+**2507.20150**（我已下载全文读过）§6.1 与附录明写：
+
+> "**Any metric on a finite set induces the discrete topology**… any function from a space
+> with the discrete topology to any other metric space is **necessarily continuous**."
+>
+> "the source of policy instability in the LLM setting **does not stem from a formal
+> 'discontinuity' of the reward function itself**"
+>
+> "…not as a failure of continuity on the state space, but as **a consequence of the
+> inherent discontinuity of optimization over a discrete action set**"
+
+**在有限/离散空间上，连续性是平凡满足的。** 所以"离散破坏了连续性"这句话在数学上是空的，
+而且 Lipschitz 性也同样平凡可满足——**用离散度量时** $d(\text{quarter},\text{fy})=1$，
+于是 $L\cdot\varepsilon = L\cdot 1 = $ 最大跃迁 $= D_G$，**这个界是有信息的**。
+
+所以真正的问题**不是连续性，而是度量的选择**：把离散枚举嵌进 $\mathbb{R}^d$ 去量 ε，
+替换就没有距离；用离散度量则界立刻变成 $D_G$，而**没有人去算它**。
+
+**Policy Cliff 不是我们的对手，是我们的基座**：它的结论"不稳定来自在离散动作集上做
+argmax"，正是我们决策翻转机制的上游陈述。**必须引用，且第一层不得再写"连续性失效"。**
+
+#### 4.4.2 真正的靶子：把参数选择建模成 quantization ✅
+
+**2609.16599**（综述，我已下载全文读过）§2.3 把 LLM 的参数输出写成：
+
+> "The parameter actually in force represents a **delayed, quantized**, and potentially
+> dropped version of the LLM's raw output… $\hat\theta(t) = q(\theta(t_k))$, where
+> $q(\cdot)$ **decodes discrete token sequences onto the valid parameter set $\Theta$**…
+> These phenomena correspond directly to the time delay, packet dropout, and
+> **signal quantization**"
+
+外加摘要层的领域共识句：
+
+> "inference latency acts as delay, API failures as packet dropouts, tokenization as
+> quantization, and **hallucinations as bounded disturbances**"
+
+**这是比旧那三个候选好得多的靶子**，理由有三：
+
+1. 它是**综述**，代表领域共识，不是某位作者的一次性选择；
+2. 它扰动的对象**就是我们的对象**——`θ ∈ Θ`，文中列举包括 constraints、triggering
+   thresholds、**mode indices**（正是枚举型参数）；
+3. **quantization 是一个有界小误差模型**：误差 ≤ 半个步长，且它**预设离散网格是某个
+   连续量的细分近似**。
+
+**而枚举参数不是细网格。** `quarter` 与 `fy` 不是同一个连续量上相邻的两格，是**语义上
+不同的两个选项**；把一个换成另一个，输出动 **66–72%**，不是半个步长。
+
+> **第一层的正确表述**：领域把离散工具/控制参数的选择建模为 **quantization**（有界、
+> 小、可被 disturbance rejection 吸收）。这个误差模型对**语义枚举**不成立——替换不是
+> 舍入，而是跳到另一个语义分支。
+
+这个说法**不与 Policy Cliff 冲突**（我们不再声称连续性失效），**不与 LipsLev 冲突**
+（我们不再声称 Lipschitz 预设连续），且有逐字原文支撑。
+
+#### 4.4.3 两个次级实例（一个已自核，一个仍未核）
+
+- **2601.18753（ICLR 2026）✅ 已自核**：假设 A2 写
+  $\|\Phi(y)-\Phi(y')\| \le L_\Phi d_Y(y,y')$（$d_Y$ 为编辑距离），A3 的扰动球却在
+  $B_\rho := \{\delta\in\mathbb{R}^r : \|\delta\|_2\le\rho\}$。**$L_\Phi$ 除 A2 与记号
+  回顾外全文再未出现**，两个空间之间**从未给出定量关系**。桥声明了，没走。
+- **2605.00741 ○ 仍未核**（PDF 下载中断）。**引用前必须自核，否则删掉。**
+- ~~2605.29816~~：初检未见"连续密度支配"与离散编辑的直接矛盾，**降级，暂不使用**。
+
+#### 4.4.4 可正面接续的对手：LLMCert-T ✅
+
+原文已逐字核实（§1 与 §5）：
+
+> "tool metadata is discrete text and JSON schemas with **no natural perturbation
+> radius**, ruling out standard continuous-input certification"
+>
+> "Certified robustness is well developed for continuous classifiers under bounded
+> perturbation sets, but **tool metadata has no $\ell_p$ analogue**: the input space is
+> discrete and combinatorial, perturbations are semantic, and the pipeline is
+> non-differentiable."
+
+**它把话说了一半**（*metadata* 没有 ℓp 类比，所以走统计证书），**我们接下半句**：
+参数**取值**不是 metadata，它常常有数值/序结构，**可以算**——但今天既没有连续证书
+也没有离散证书。
 
 ### 4.5 一句永久禁令
 
