@@ -604,33 +604,131 @@ ICML 2026 ○）统一离散-连续输入。
 
 ---
 
-## 5. 动机钩子：现有认证在主动误导 agent（论文的 motivation 核心）
+## 5. 叙事蓝图（从这条谱系的 intro 里逆向出来的 7 beats）
 
-这个发现最反直觉、最有戏剧性的点**不是"我们加了一个界"**，而是：
+> 本节是**写作蓝图**，不是内容。它来自逐字读 8 篇认证/agent 论文的 intro + contributions
+> 以及 5 篇金融 agent 可靠性论文。参考文献清单见 `references.md`。
 
-> 连续 Lipschitz 界在离散参数翻错时给出 **ε=0 → 界=0**。agent 看到"这个输出零误差、
-> 很稳"，于是放心拿去决策——但实际输出跳了 **66–72%**。
+### 5.1 规范弧：认证论文的 7 beats
 
-也就是说，现有工具可靠性认证不只是**漏掉**离散误差，它还给 agent 一个**虚假的安全感**：
-**比"没有认证"更糟**，因为 agent 会过度信任一个其实会跳变的输出。混合敏感度 S_mix
-修复的不是"多一个界"，而是**一个会骗人的认证**。
+| Beat | 做什么 | 该谱系的典型句型 |
+|---|---|---|
+| **B1 既成事实** | 不写"很有前景"，写"**已经是基础设施**"。给具体接口/产品/协议名 | "X **are now a primary interface** between agents and the world" |
+| **B2 命名扰动面** | 定义一个**微小、自然、合法**的扰动，并指定**现实的施动者** | "metadata can be written to optimize for retrieval **rather than for utility**" |
+| **B3 覆盖不可能** | 论证穷举/覆盖在**原理上**做不到。**整篇说服力的支点，最常被漏** | "…**whose number is exponentially large**" |
+| **B4 点估计不够** | 经验 benchmark 为何不足以支持部署 | "**They cannot distinguish a system that fails rarely from one that fails often**" |
+| **B5 继承—断裂** | 认证已存在，但只覆盖连续输入/分类输出。我的对象破坏了那个前提 | "prior certification algorithms have primarily focused on **the simpler** classification task" |
+| **B6 定义正确的量** | 造新量，用**输出的消费方式**论证，**不用数学优美论证** | "users mainly care about top ranked results → **Certified Top-K Robustness**" |
+| **B7 可计算化 + 一个数** | 给可执行过程 + 一个记得住的数，并说明**这个数在前人框架下算不出来** | "87.35% on BERT, **on which previous certified robust methods are not applicable**" |
 
-这个钩子撑起整篇论文的 motivation。围绕它，应用场景就顺了。
+两条几乎必现的规律：
+- **B4 与 B5 之间永远隔着一个"因此"**（Therefore / To escape this arms race / We therefore
+  want）。整篇的说服力全压在这个连接词上。
+- **B6 的量必须带 qualifier**（Top-K / Satisfaction / under a declared specification）。
+  没有 qualifier 的量会被当成"你只是换了个名字"。
 
-### 主推场景：决策前的"工具输出信任边界"筛查器
+### 5.2 我们的排布
 
-**主角**：一个靠工具调用拿数字去决策的 LLM agent（金融 agent 是最有说服力的演示）。
+| Beat | 我们写什么 | 素材 |
+|---|---|---|
+| B1 | 金融 agent 已在生产环境调结构化数据 API | FinMCP-Bench："production financial agents … **33 real-world scenarios**，65 financial tools via MCP" |
+| B2 | **合法用户在合法 schema 下填错一个离散枚举值**——不是攻击 | `period="quarter"→"fy"`；施动者是 agent 自己 |
+| B3 | **66–72% 跃迁、100% schema-valid、连续界报零** | **我们的 Phase-0 数据。必须搬到 intro，不能留在实验节** |
+| B4 | 现有 benchmark 给点估计，不能支持部署阈值 | 整段仿 LLMCert-T |
+| B5 | **双 gap** | 对认证谱系：**参数层没有 ℓp 类比**；对 benchmark 谱系：分工句 |
+| B6 | 定义 ρ 与 κ，**并显式解释方向** | 2.4/2.4b |
+| B7 | 报**两个量之间的 gap**：ρ **+0.851** vs jump **+0.110** | 3.10/3.11 |
 
-**故事线**：
-1. agent 查财务数据，把 `period=quarter` 翻成 `fy`，拿到一个完全不同的数。
-2. 现有连续灵敏度认证说"这个输出很稳"（界=0），agent 信了，拿去估值/筛选。
-3. 我们的 S_mix 在 agent **把输出用于下游决策之前**跑一遍：算出 D_G 很大 →
-   标记"这个查询对离散参数敏感"。
-4. agent 据此**复核参数、重新查询、或把结果降级为低置信度**。
+**B3 的位置是这次最大的修正。** 我们一直把 66–72% 当实验结果放第 3 节，但按这条弧它是
+**intro 的支点**。而且我们的 B3 比 SAFER 的更强、方向相反：SAFER 说"邻域大到 $10^{31}$
+所以穷举不可能"；**我们说邻域小到只有 3 个，但连续界对它报零——枚举在这里不是不可能，
+是没人做**。
 
-这就是一个**可落地的可靠性工具，不是抽象定理**。它回答 agent 社区的核心问题：
-**"这个工具输出，我到底能信多少？"** 而现有答案（连续界）恰好漏掉了 agent 最常见的
-失败模式。
+**B5 的缝隙比我们以为的窄，必须精确**：LLMCert-T 已在**工具层**论证了"no natural
+perturbation radius"；ToolRobustBench 已把 `argument binding` 列为独立 stage；MVTY 已
+测出参数类幻觉掉 >12%、工具选择类掉 <8%。**没人在参数层论证离散性本身造成覆盖缺口**
+——这是我们唯一干净的 B5，一个字都不能写宽。
+
+### 5.3 赌注怎么立：六条硬规则
+
+**最反直觉的发现：整条认证谱系（CertDR / SAFER / erase-and-check / RobustRAG）全文
+一次都没提过金融或医疗。** 它们用**产品名代替行业名**（"Bing Chat, Perplexity AI,
+LangChain, LlamaIndex"）、**带出处的真实事故代替假设**（"suggesting applying glue to
+pizza (BBC, 2024)"）。
+
+1. 用 `can / may / could`，**绝不用 `will`**
+2. **只举一个**后果，不排比灾难
+3. 每个赌注句**挂一个引用或一个带来源的真实事故**
+4. 加一个**收窄范围的从句**（越窄越可信，而且往往更吓人）
+5. 用**不可逆 / 无法重试**当放大器，**不用金额**
+6. 把风险绑在**测量不足**上（"we cannot currently tell whether…"），不绑在损失规模上
+
+**可直接改写的句式**（CryptoAnalystBench，三句排比、三个情态、零金额）：
+> "a hallucinated **TVL figure may** lead to misestimated protocol risk; an incorrectly
+> interpreted yield forecast **could** result in flawed investment allocation; a missed
+> protocol update **might** cause failure to anticipate additional risk."
+
+我们的版本应当是：`一个具体的离散参数错误 → 一个具体的、可命名的分析错误`，**停在
+决策，不往损益推**。
+
+### 5.4 金融的角色：仪器，不是目的
+
+金融 agent 那批论文（CAIA、CryptoAnalystBench）都花**整段**论证"为什么这个域适合测
+可靠性"——有 ground truth、不可逆、时间敏感、数据密集。这是最有效的**去交易化**手段。
+
+**三条纪律**：
+- 指标只用 accuracy / error rate。**Sharpe/ARR/MDD 一律不出现**（2502.15865 直接把它们
+  划进"不足以捕捉风险"那一栏）
+- 因果链**停在决策**（"misguided decision to invest"），不推到 P&L
+- 如果被质疑"你是不是在做 alpha"，引 Profit Mirage（2510.07920）最省力
+
+### 5.5 "我们的量才对"怎么说而不像攻击
+
+**从来没有人说前人错了。** 三种句型：
+
+**P1 — 从输出的消费者出发（最有力）**：
+> `在<领域>，公认<使用者只消费 X>。[行为证据]。[连现有指标都集中在 X]。因此 <新量>。`
+
+全程只谈使用者行为，**一个字都没评价前人的量**。我们的版本：agent 的下游是排序/选择
+决策 → 决策只消费**相对顺序** → 因此该认证的量是相对的（ρ）。
+
+**P2 — 结构不匹配，不是质量问题**：把差异写成**成对属性对照**（离散 vs 连续、排序
+vs 标签），不写好坏。`simpler` 这个词同时完成"前人是特例"和"我更难"，却像在夸对方。
+
+**P3 — 分工声明（最安全）**：
+> "These works **document specific failure modes**, **while** we **return** …"
+
+外加一招**自我降级式定位**（LLMCert-T）：主动把主张调低一档，换"你不能拿 ℓp 认证的
+标准来打我"。我们同样需要——我们给的不是 ∀-保证。
+
+### 5.6 必须控制掉的混淆（审稿人一定会打）
+
+MVTY 发现：**参数描述缺失比工具功能描述缺失伤害更大**。
+
+这既是我们的动机引用，**也是必须控制的变量**——否则审稿人会说"**你测到的是 schema
+质量，不是离散性**"。真实 agent 实验里，工具描述/参数描述的完整度必须作为控制变量
+固定或分层。
+
+### 5.7 Limitations 必须独立成节
+
+2024 年后没有独立 Limitations 节会被拒。抄 ToolRobustBench 那招——**把"测量原则可
+外推"和"绝对数值只适用于本环境"分开写**：
+
+> "**We expect the measurement principle** … to transfer broadly … **By contrast,
+> absolute success rates … are more specific to our controlled local setting.**"
+
+再抄 erase-and-check 的三步迎击法（全套材料里最值得抄的一段）：
+**承认不做 → 论证不该做 → 但仍然给经验证据。**
+
+### 5.8 两个仍然好用、但已降级的叙事资产
+
+**（a）虚假安全感。** 原来是我们的"最强钩子"，现在降级为 **B3 的修辞包装**——因为
+"连续界对离散失效"是**已知前提**（见 4.1）。可以这样写而不越界：连续界报零**不是
+疏漏而是定义使然**，其后果是 agent 拿到一个**看起来被认证过**的输出。**不得声称这是
+我们的发现。**
+
+**（b）D4 负结果。** 仍然是好资产，但**必须限定在序关系决策上**（见 3.11：输出跳变在
+阈值决策上达 +0.861）。
 
 ### 为什么"负结果"反而是最强的动机（D4 的失败）
 

@@ -52,6 +52,7 @@ current end-to-end probe simulates an agent with an assumed error rate.
 ```
 docs/
   paper_framework.md        the paper: theory, experiments, positioning, story
+  references.md             every work touched, by role, with verification marks
   probe_notes/              one note per probe — result, verdict, known limits
 probes/                     scripts and data together (imports and default
                             paths are same-directory; do not split them)
