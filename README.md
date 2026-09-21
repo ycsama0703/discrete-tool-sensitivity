@@ -25,6 +25,13 @@ current end-to-end probe simulates an agent with an assumed error rate.
 
 ## The finding, in three layers
 
+0. **The mechanism (why the model fills it wrong).** An LLM can represent the
+   task semantics yet fail to bind it to the tool parameter: a non-binding
+   output preference (symbol preference `a`) overwhelms the correct binding
+   signal (`d`). On qwen2.5:7b-instruct, binding dominates in only 10% of
+   task-units while symbol preference is strong in 92%, and "positive binding
+   interaction but still wrong" occurs in 60%. Request understanding is not
+   the failure point (native `b>0` on all tasks). See `docs/llm_semantic_binding_theory.md`.
 1. **The wrong error model, not broken continuity.** The field models an LLM's
    choice of a discrete tool/control parameter as **quantization** — a bounded,
    small error absorbed by disturbance rejection. Quantization presumes the grid
@@ -54,6 +61,7 @@ current end-to-end probe simulates an agent with an assumed error rate.
 | `κ` on threshold decisions | **+0.908** |
 | CertDR-style union bound | certifies **2/48**, while **14/48** are genuinely stable |
 | enumeration screener, end-to-end sim | 12% decision error → **0%** |
+| binding dominates (stage A, qwen2.5:7b) | **10%** of task-units; symbol pref 92%; pos-interaction-but-wrong 60% |
 
 ## Layout
 
@@ -86,6 +94,10 @@ python margin_model.py
 # the two results the paper leans on
 python decision_geometry.py      # the order/threshold crossover
 python certdr_baseline.py        # prior ranking certificate as a baseline
+
+# the mechanism layer (stage A, needs a GPU + Qwen2.5-7B-Instruct weights)
+python stageA_binding.py --out stageA_binding.jsonl
+python stageA_binding.py --analyze stageA_binding_coeffs.jsonl
 ```
 
 To re-collect from the API (a few minutes, no key):
