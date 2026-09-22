@@ -153,6 +153,26 @@ Key observations:
   (a~6-9) and binding almost never dominates; neutral tasks have weaker
   preference and occasional binding dominance (Q-A pair).
 
+## Cross-model replication (2026-09-22, llama3.1:8b, 50 task-units)
+
+| verdict | qwen2.5:7b | llama3.1:8b |
+|---|---|---|
+| V1: d > B (binding dominates) | 10% | 32% |
+| V2: d > 0 but wrong (pos-wrong) | 60% | 38% |
+| V3: symbol preference \|a\| > 0.5 | 92% | 60% |
+
+**Replication holds, with a model difference.** llama3.1 has stronger binding
+(V1 32% vs 10%) and weaker symbol preference (V3 60% vs 92%), but the core
+conclusion is consistent across both: binding does NOT always dominate (V1
+32% at most), symbol preference is still significant (V3 60%), and "positive
+interaction but still wrong" still occurs (V2 38%). Both models support the
+mechanism layer: binding is not always sufficient; a non-binding preference
+can overwhelm it.
+
+Note: llama3.1's Q-A symbol pair is almost always DOM (d>B) — a symbol-pair
+effect, not a task effect. gemma3:12b cannot run stage A (no transformers
+weights; gated repo).
+
 ## KNOWN CONFOUND (must address before this is publishable)
 
 The `a` values are suspiciously large (financial 5.5–9.9) while `d` is small

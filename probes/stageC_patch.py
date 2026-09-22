@@ -31,10 +31,10 @@ import stageA_binding as A  # reuse task/prompt construction
 
 
 class PatchModel:
-    def __init__(self):
-        self.tok = AutoTokenizer.from_pretrained(MODEL)
+    def __init__(self, model=MODEL):
+        self.tok = AutoTokenizer.from_pretrained(model)
         self.model = AutoModelForCausalLM.from_pretrained(
-            MODEL, torch_dtype=torch.bfloat16, device_map="auto")
+            model, torch_dtype=torch.bfloat16, device_map="auto")
         self.model.eval()
 
     def activations(self, prompt):
@@ -118,8 +118,8 @@ def run_task(pm, task, symbols):
 
 
 def cmd_run(a):
-    print(f"loading {MODEL} ...", flush=True)
-    pm = PatchModel()
+    print(f"loading {a.model} ...", flush=True)
+    pm = PatchModel(a.model)
     print("loaded\n", flush=True)
     rows = []
     # start with one financial task, one symbol pair
@@ -159,6 +159,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="stageC_patch.jsonl")
     ap.add_argument("--analyze", metavar="JSONL")
+    ap.add_argument("--model", default=MODEL,
+                    help="HF model id (default Qwen/Qwen2.5-7B-Instruct)")
     a = ap.parse_args()
     if a.analyze:
         a.out = a.analyze

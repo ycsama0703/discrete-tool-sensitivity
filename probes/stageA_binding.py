@@ -178,8 +178,8 @@ def recover_coeffs(ells, native):
 
 
 def cmd_run(a):
-    print(f"loading {MODEL_NAME} ...", flush=True)
-    bm = BindingModel()
+    print(f"loading {a.model} ...", flush=True)
+    bm = BindingModel(a.model)
     print("loaded\n", flush=True)
     rows, results = [], []
     for task in FINANCIAL + NEUTRAL:
@@ -251,6 +251,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="stageA_binding.jsonl")
     ap.add_argument("--analyze", metavar="COEFFS_JSONL")
+    ap.add_argument("--model", default=MODEL_NAME,
+                    help="HF model id (default Qwen/Qwen2.5-7B-Instruct)")
     a = ap.parse_args()
     if a.analyze:
         a.coeffs = a.analyze
