@@ -114,6 +114,26 @@ that actually produces decision errors, and the screener's value is visible:
 - when the agent cross-flips, the decision flips (D3 baseline 30%) -> consequence layer
 - the screener catches it (D3 screener 0%) -> screener value
 
+## Cross-model replication (2026-09-22, llama3.1:8b)
+
+| metric | qwen2.5:7b | llama3.1:8b |
+|---|---|---|
+| D1 runs with >=1 real error | 40% | 40% |
+| D1b total real errors | 40% | 24% |
+| D3 baseline decision errors | 30% | 30% |
+| D3 screener decision errors | 0% | 0% |
+
+**Replication holds.** Both models make real discrete errors on ambiguous
+questions (D1), and the screener drives decision error from 30% to 0% in both
+(D3). The models differ in error mode (qwen fills "all", llama3.1 fills
+"fy"/"all") and total error rate (llama3.1 is more reliable, 24% vs 40%), but
+the screener's interception is robust across both. This is the cross-model
+robustness the paper needs.
+
+**Technical note:** llama3.1's chat template ignores the `tools=` argument, so
+the tool schema is written into the system prompt manually (works across
+models). The model returns a JSON tool call which we parse.
+
 ## What this does NOT claim
 
 - One model (qwen2.5:7b), one decision task (top-3 by EPS), one parameter

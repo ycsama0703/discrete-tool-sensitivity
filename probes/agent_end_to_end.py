@@ -81,35 +81,56 @@ QUESTIONS = [
 
 
 class Agent:
-    def __init__(self):
-        self.tok = AutoTokenizer.from_pretrained(MODEL)
+    def __init__(self, model=MODEL):
+        self.tok = AutoTokenizer.from_pretrained(model)
         self.model = AutoModelForCausalLM.from_pretrained(
-            MODEL, torch_dtype=torch.bfloat16, device_map="auto")
+            model, torch_dtype=torch.bfloat16, device_map="auto")
         self.model.eval()
 
     def call_tool(self, question):
-        """Generate a tool call for the question. Returns (symbol, period) or None."""
+        """Generate a tool call for the question. Returns (symbol, period) or None.
+
+        The tool schema is written into the system prompt manually (works across
+        models; llama3.1's chat template ignores the tools= argument). The model
+        returns a JSON tool call, which we parse.
+        """
+        schema = json.dumps(TOOLS[0]["function"])
+        sys_prompt = (
+            f"{SYSTEM}\n\n"
+            f"You have one tool, get_fundamentals, with this schema:\n{schema}\n\n"
+            f"Given a user request, call the tool by returning a JSON object of "
+            f"the form {{\"name\": \"get_fundamentals\", \"arguments\": {{...}}}}. "
+            f"Choose 'period' carefully based on what the user asks for."
+        )
         messages = [
-            {"role": "system", "content": SYSTEM},
+            {"role": "system", "content": sys_prompt},
             {"role": "user", "content": question},
         ]
-        text = self.tok.apply_chat_template(messages, tools=TOOLS,
-                                            tokenize=False, add_generation_prompt=True)
+        text = self.tok.apply_chat_template(messages, tokenize=False,
+                                            add_generation_prompt=True)
         ids = self.tok(text, return_tensors="pt").to(self.model.device)
         with torch.no_grad():
             out = self.model.generate(**ids, max_new_tokens=200,
                                       do_sample=True, temperature=0.7, top_p=0.9)
         gen = self.tok.decode(out[0][ids["input_ids"].shape[1]:],
                               skip_special_tokens=False)
-        # parse <tool_call>...</tool_call>
+        # parse a JSON tool call, with or without <tool_call> tags
         m = re.search(r"<tool_call>\s*(\{.*?\})\s*</tool_call>", gen, re.DOTALL)
-        if not m:
+        raw = m.group(1) if m else gen
+        # find the first {...} JSON object
+        jm = re.search(r"\{.*\}", raw, re.DOTALL)
+        if not jm:
             return None, gen
         try:
-            call = json.loads(m.group(1))
+            call = json.loads(jm.group(0))
         except Exception:
             return None, gen
-        args = call.get("arguments", {})
+        args = call.get("arguments", call)  # some models put args at top level
+        if isinstance(args, str):
+            try:
+                args = json.loads(args)
+            except Exception:
+                args = {}
         return args.get("symbol"), args.get("period")
 
 
@@ -203,21 +224,11 @@ def run_agent(agent, question, correct_period, symbols):
                 base_top3=sorted(base_top3), screen_top3=sorted(screen_top3),
                 correct_top3=sorted(correct_top3),
                 base_err=base_err, screen_err=screen_err)
-    # baseline decision error: agent's top-3 (with whatever it filled) != correct
-    base_err = (base_top3 != correct_top3)
-    # screener decision error: after correction, should match correct
-    screen_err = (screen_top3 != correct_top3)
-
-    return dict(question=question, correct=correct_period,
-                n_flips=n_flips, n_symbols=len(symbols),
-                base_top3=sorted(base_top3), screen_top3=sorted(screen_top3),
-                correct_top3=sorted(correct_top3),
-                base_err=base_err, screen_err=screen_err)
 
 
 def cmd_run(a):
-    print(f"loading {MODEL} ...", flush=True)
-    agent = Agent()
+    print(f"loading {a.model} ...", flush=True)
+    agent = Agent(a.model)
     print("loaded\n", flush=True)
     rows = []
     for i, (q, cp) in enumerate(QUESTIONS):
@@ -257,6 +268,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="agent_end_to_end.jsonl")
     ap.add_argument("--analyze", metavar="JSONL")
+    ap.add_argument("--model", default=MODEL,
+                    help="HF model id (default Qwen/Qwen2.5-7B-Instruct)")
     ap.add_argument("--symbols", nargs="*", default=SYMBOLS[:5],
                     help="symbols to query (default first 5)")
     a = ap.parse_args()
