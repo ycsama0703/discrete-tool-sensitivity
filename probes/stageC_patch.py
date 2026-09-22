@@ -36,6 +36,10 @@ class PatchModel:
         self.model = AutoModelForCausalLM.from_pretrained(
             model, torch_dtype=torch.bfloat16, device_map="auto")
         self.model.eval()
+        # GPU layers only (device_map="auto" may put late layers on CPU)
+        dm = self.model.hf_device_map
+        self.gpu_layers = [i for i in range(len(self.model.model.layers))
+                           if dm.get(f"model.layers.{i}") == 0]
 
     def activations(self, prompt):
         """Return {layer: hidden_state} for all GPU layers at the final position."""
@@ -48,7 +52,7 @@ class PatchModel:
                 # output is a Tensor [batch, seq, hidden]
                 acts[layer_idx] = output[0, -1, :].detach()  # final pos, [hidden]
             return hook
-        for li in GPU_LAYERS:
+        for li in self.gpu_layers:
             handles.append(self.model.model.layers[li].register_forward_hook(
                 make_hook(li)))
         with torch.no_grad():
@@ -86,6 +90,7 @@ class PatchModel:
 def run_task(pm, task, symbols):
     """Causal tracing for one task. Returns rows."""
     sym_q, sym_a = symbols
+    gpu_layers = pm.gpu_layers
     # build the 4 (u,v) prompts and their activations
     cells = {}
     for u in (+1, -1):
@@ -106,7 +111,7 @@ def run_task(pm, task, symbols):
         for (su, sv), sc in cells.items():
             if (su, sv) == (tu, tv):
                 continue
-            for li in GPU_LAYERS:
+            for li in gpu_layers:
                 ell = pm.logprob_patched(tc["prompt"], sym_q, li,
                                          sc["acts"][li]) - \
                       pm.logprob_patched(tc["prompt"], sym_a, li,

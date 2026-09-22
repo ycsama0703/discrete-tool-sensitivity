@@ -130,6 +130,25 @@ single patch success is not full causal identification). The mechanism layer
 rests primarily on the behavioral result (Stage A); Stage C gives suggestive
 but not clean causal evidence.
 
+## Cross-model replication (2026-09-22, llama3.1:8b)
+
+**Patch effect by layer** (llama3.1, 28 GPU layers):
+- layers 0-12: mean |delta| < 0.26 (early, no signal)
+- layers 14-17: 0.92 -> 2.31 (onset at mid layers)
+- layers 18-27: 2.3-2.9 (late layers)
+
+**Random-vector control** (llama3.1): real patches do NOT clearly exceed
+equal-norm random vectors. E.g. target(+1,+1) L20: real delta -0.44 vs random
++2.22; L24: real +0.06 vs random -3.44. The real and random effects are
+comparable, so the late-layer effect is largely general disruption, not a clean
+binding signal.
+
+**Verdict: NOT replicated.** Unlike qwen2.5 (where real > random by 2-3x), on
+llama3.1 the real patch does not clearly exceed random. The "binding signal in
+late layers" claim holds on qwen2.5 but not cleanly on llama3.1. Stage C is
+suggestive evidence on qwen2.5 only; the mechanism layer rests primarily on the
+behavioral result (stage A), which IS cross-model (qwen + llama3.1).
+
 ## What this does NOT claim
 
 - Finding a layer whose patch changes ell does NOT prove a dedicated
