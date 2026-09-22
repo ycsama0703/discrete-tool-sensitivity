@@ -114,25 +114,28 @@ that actually produces decision errors, and the screener's value is visible:
 - when the agent cross-flips, the decision flips (D3 baseline 30%) -> consequence layer
 - the screener catches it (D3 screener 0%) -> screener value
 
-## Cross-model replication (2026-09-22, llama3.1:8b)
+## Cross-model replication (2026-09-22, llama3.1:8b + gemma3:12b)
 
-| metric | qwen2.5:7b | llama3.1:8b |
-|---|---|---|
-| D1 runs with >=1 real error | 40% | 40% |
-| D1b total real errors | 40% | 24% |
-| D3 baseline decision errors | 30% | 30% |
-| D3 screener decision errors | 0% | 0% |
+| metric | qwen2.5:7b | llama3.1:8b | gemma3:12b |
+|---|---|---|---|
+| D1 runs with >=1 real error | 40% | 40% | 40% |
+| D1b total real errors | 40% | 24% | 34% |
+| D3 baseline decision errors | 30% | 30% | 30% |
+| D3 screener decision errors | 0% | 0% | 0% |
 
-**Replication holds.** Both models make real discrete errors on ambiguous
-questions (D1), and the screener drives decision error from 30% to 0% in both
-(D3). The models differ in error mode (qwen fills "all", llama3.1 fills
-"fy"/"all") and total error rate (llama3.1 is more reliable, 24% vs 40%), but
-the screener's interception is robust across both. This is the cross-model
-robustness the paper needs.
+**Replication holds across all three models.** Each makes real discrete errors
+on ambiguous questions (D1), and the screener drives decision error from 30% to
+0% in every model (D3). The error modes differ (qwen fills "all", llama3.1
+fills "fy"/"all", gemma3 fills "fy"), and the total error rates differ
+(llama3.1 24%, gemma3 34%, qwen 40%), but the screener's interception is robust
+across all three. This is the strong cross-model evidence the paper needs.
 
-**Technical note:** llama3.1's chat template ignores the `tools=` argument, so
-the tool schema is written into the system prompt manually (works across
-models). The model returns a JSON tool call which we parse.
+**Technical notes:**
+- llama3.1's chat template ignores the `tools=` argument, so the tool schema is
+  written into the system prompt manually (works across models).
+- gemma3:12b has no transformers weights on the box (gated repo), so it runs via
+  ollama (`--backend ollama`). Stage C (activation intervention) needs
+  transformers and is not runnable for gemma3.
 
 ## What this does NOT claim
 

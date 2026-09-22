@@ -134,6 +134,56 @@ class Agent:
         return args.get("symbol"), args.get("period")
 
 
+class OllamaAgent:
+    """Agent backed by ollama (for models without transformers weights, e.g.
+    gemma3:12b). Uses the same manual-schema prompt and JSON parsing."""
+    def __init__(self, model="gemma3:12b", url="http://localhost:11434/api/chat"):
+        self.model = model
+        self.url = url
+
+    def call_tool(self, question):
+        schema = json.dumps(TOOLS[0]["function"])
+        sys_prompt = (
+            f"{SYSTEM}\n\n"
+            f"You have one tool, get_fundamentals, with this schema:\n{schema}\n\n"
+            f"Given a user request, call the tool by returning a JSON object of "
+            f"the form {{\"name\": \"get_fundamentals\", \"arguments\": {{...}}}}. "
+            f"Choose 'period' carefully based on what the user asks for."
+        )
+        body = json.dumps({
+            "model": self.model,
+            "messages": [
+                {"role": "system", "content": sys_prompt},
+                {"role": "user", "content": question},
+            ],
+            "stream": False,
+            "options": {"temperature": 0.7},
+        }).encode()
+        req = urllib.request.Request(self.url, data=body,
+                                     headers={"Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                d = json.loads(r.read())
+        except Exception as e:
+            return None, f"ollama error: {str(e)[:80]}"
+        gen = d.get("message", {}).get("content", "")
+        # parse a JSON tool call, with or without code fences
+        jm = re.search(r"\{.*\}", gen, re.DOTALL)
+        if not jm:
+            return None, gen
+        try:
+            call = json.loads(jm.group(0))
+        except Exception:
+            return None, gen
+        args = call.get("arguments", call)
+        if isinstance(args, str):
+            try:
+                args = json.loads(args)
+            except Exception:
+                args = {}
+        return args.get("symbol"), args.get("period")
+
+
 def findata_eps(symbol, period):
     """Call findata for the latest EPS of a symbol in a period. Returns eps or None."""
     url = f"{FIN_DATA}/fundamentals/{symbol}/history?period={period}"
@@ -227,8 +277,12 @@ def run_agent(agent, question, correct_period, symbols):
 
 
 def cmd_run(a):
-    print(f"loading {a.model} ...", flush=True)
-    agent = Agent(a.model)
+    if a.backend == "ollama":
+        print(f"using ollama model {a.model} ...", flush=True)
+        agent = OllamaAgent(a.model)
+    else:
+        print(f"loading {a.model} ...", flush=True)
+        agent = Agent(a.model)
     print("loaded\n", flush=True)
     rows = []
     for i, (q, cp) in enumerate(QUESTIONS):
@@ -270,6 +324,9 @@ def main():
     ap.add_argument("--analyze", metavar="JSONL")
     ap.add_argument("--model", default=MODEL,
                     help="HF model id (default Qwen/Qwen2.5-7B-Instruct)")
+    ap.add_argument("--backend", choices=["transformers", "ollama"],
+                    default="transformers",
+                    help="inference backend (ollama for models without HF weights)")
     ap.add_argument("--symbols", nargs="*", default=SYMBOLS[:5],
                     help="symbols to query (default first 5)")
     a = ap.parse_args()
