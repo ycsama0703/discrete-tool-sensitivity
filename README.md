@@ -62,6 +62,7 @@ current end-to-end probe simulates an agent with an assumed error rate.
 | CertDR-style union bound | certifies **2/48**, while **14/48** are genuinely stable |
 | enumeration screener, end-to-end sim | 12% decision error → **0%** |
 | binding dominates (stage A, qwen2.5:7b) | **10%** of task-units; symbol pref 92%; pos-interaction-but-wrong 60% |
+| real-agent e2e (stage D, qwen2.5:7b) | real error **40%**; screener: decision error **30% → 0%** |
 
 ## Layout
 
