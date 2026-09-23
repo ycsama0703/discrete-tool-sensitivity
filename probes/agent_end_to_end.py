@@ -64,8 +64,8 @@ TOOLS = [{
 SYSTEM = "You are a financial data assistant. Call the tool with the correct parameters."
 
 # Questions with correct period. {SYM} is replaced per symbol.
-# EXACT generator-relevance question set (run_generator_relevance.py), which
-# is known to induce discrete errors in weak models.
+# Mix of explicit and ambiguous phrasing, so the agent sometimes fills the
+# wrong period (incl. "all"). First 10 are the generator-relevance set.
 QUESTIONS = [
     ("What was {SYM}'s revenue for the most recent single quarter?", "quarter"),
     ("What was {SYM}'s total revenue for the last fiscal year?", "fy"),
@@ -77,6 +77,17 @@ QUESTIONS = [
     ("Show {SYM}'s total assets from its balance sheet.", "quarter"),
     ("What was {SYM}'s gross profit last quarter?", "quarter"),
     ("What was {SYM}'s annual operating income?", "fy"),
+    # extended set (explicit + ambiguous)
+    ("What was {SYM}'s diluted EPS for the last quarter?", "quarter"),
+    ("What was {SYM}'s annual diluted EPS for fiscal 2024?", "fy"),
+    ("What is {SYM}'s cash from investing?", "quarter"),
+    ("What was {SYM}'s annual cash flow from operations?", "fy"),
+    ("Show {SYM}'s current assets.", "quarter"),
+    ("What was {SYM}'s annual revenue for fiscal 2023?", "fy"),
+    ("What is {SYM}'s cash from financing?", "quarter"),
+    ("What was {SYM}'s annual net income for fiscal 2023?", "fy"),
+    ("Show {SYM}'s shareholders' equity.", "quarter"),
+    ("What was {SYM}'s annual operating income for fiscal 2023?", "fy"),
 ]
 
 
@@ -327,8 +338,8 @@ def main():
     ap.add_argument("--backend", choices=["transformers", "ollama"],
                     default="transformers",
                     help="inference backend (ollama for models without HF weights)")
-    ap.add_argument("--symbols", nargs="*", default=SYMBOLS[:5],
-                    help="symbols to query (default first 5)")
+    ap.add_argument("--symbols", nargs="*", default=SYMBOLS,
+                    help="symbols to query (default all 20)")
     a = ap.parse_args()
     if a.analyze:
         a.out = a.analyze

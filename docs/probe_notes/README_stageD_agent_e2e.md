@@ -114,21 +114,61 @@ that actually produces decision errors, and the screener's value is visible:
 - when the agent cross-flips, the decision flips (D3 baseline 30%) -> consequence layer
 - the screener catches it (D3 screener 0%) -> screener value
 
-## Cross-model replication (2026-09-22, llama3.1:8b + gemma3:12b)
+## Full run (2026-09-23, 20 symbols x 20 questions, all three models)
+
+The 5-symbol run above was a smoke test. The full run expands to **20 symbols x
+20 questions** (400 agent calls per model), mixing the original 10
+generator-relevance questions with 10 more (explicit + ambiguous). Data:
+`agent_end_to_end_full.jsonl`, `agent_end_to_end_llama_full.jsonl`,
+`agent_end_to_end_gemma_full.jsonl`.
 
 | metric | qwen2.5:7b | llama3.1:8b | gemma3:12b |
 |---|---|---|---|
-| D1 runs with >=1 real error | 40% | 40% | 40% |
-| D1b total real errors | 40% | 24% | 34% |
-| D3 baseline decision errors | 30% | 30% | 30% |
+| D1 runs with >=1 real error | 7/20 = 35% | 8/20 = 40% | 8/20 = 40% |
+| D1b total real errors | 110/400 = **27.5%** | 98/400 = **24.5%** | 112/400 = **28.0%** |
+| D3 simulated cross-flips | 80/400 = 20% | 80/400 = 20% | 80/400 = 20% |
+| D3 baseline decision errors | 20/20 = **100%** | 20/20 = **100%** | 20/20 = **100%** |
+| D3 screener decision errors | 0/20 = **0%** | 0/20 = **0%** | 0/20 = **0%** |
+
+**D1b real error rate (24.5–28%)** is stable across all three models. The real
+agent fills the wrong `period` on roughly a quarter of calls.
+
+**Error concentration on quarter questions.** Across all three models the real
+errors concentrate on the quarter-intent questions (idx 2, 3, 6, 7, 12, 16, 18
+in the 20-question set) and are ~0 on the fy questions. The ambiguous quarter
+phrasings ("current assets", "cash from investing", "shareholders' equity")
+are where the agent fails to bind "quarter" to the `period` value; the explicit
+fy questions ("annual ... for fiscal 2023") bind cleanly. This is the same
+mechanism-layer story as stage A: binding is insufficient on ambiguous input.
+
+**D3 baseline decision error is 100%** at 20 symbols — every one of the 20
+questions flips its top-3 ranking under the simulated cross-flip. This is
+stronger than the 30% at 5 symbols: with a larger universe the top-3 boundary
+is tighter, so the wrong-period data changes the ranking on every question.
+The screener still drives it to **0%** on all three models.
+
+**Design correction (why the earlier run showed 0/0):** the first design let
+"all" return the same (quarter) data as the correct period, so the decision was
+never wrong and the screener had nothing to catch. That was a design flaw, not
+a negative result. The corrected design simulates the cross-flip (quarter<->fy)
+that actually produces decision errors, and the screener's value is visible.
+
+## Cross-model replication (2026-09-22/23, llama3.1:8b + gemma3:12b)
+
+| metric | qwen2.5:7b | llama3.1:8b | gemma3:12b |
+|---|---|---|---|
+| D1 runs with >=1 real error | 35% | 40% | 40% |
+| D1b total real errors | 27.5% | 24.5% | 28.0% |
+| D3 baseline decision errors | 100% | 100% | 100% |
 | D3 screener decision errors | 0% | 0% | 0% |
 
 **Replication holds across all three models.** Each makes real discrete errors
-on ambiguous questions (D1), and the screener drives decision error from 30% to
+on ambiguous questions (D1), and the screener drives decision error from 100% to
 0% in every model (D3). The error modes differ (qwen fills "all", llama3.1
 fills "fy"/"all", gemma3 fills "fy"), and the total error rates differ
-(llama3.1 24%, gemma3 34%, qwen 40%), but the screener's interception is robust
-across all three. This is the strong cross-model evidence the paper needs.
+(llama3.1 24.5%, gemma3 28.0%, qwen 27.5%), but the screener's interception is
+robust across all three. This is the strong cross-model evidence the paper
+needs.
 
 **Technical notes:**
 - llama3.1's chat template ignores the `tools=` argument, so the tool schema is

@@ -62,8 +62,8 @@ current end-to-end probe simulates an agent with an assumed error rate.
 | CertDR-style union bound | certifies **2/48**, while **14/48** are genuinely stable |
 | enumeration screener, end-to-end sim | 12% decision error → **0%** |
 | binding dominates (stage A, qwen2.5:7b) | **10%** of task-units; symbol pref 92%; pos-interaction-but-wrong 60% |
-| real-agent e2e (stage D, qwen2.5:7b) | real error **40%**; screener: decision error **30% → 0%** |
-| real-agent e2e, 3 models | qwen2.5/llama3.1/gemma3 all: real error 40%, screener **30% → 0%** |
+| real-agent e2e (stage D, qwen2.5:7b) | real error **27.5%**; screener: decision error **100% → 0%** |
+| real-agent e2e, 3 models | qwen2.5/llama3.1/gemma3 all: real error 24.5–28%, screener **100% → 0%** |
 | baseline family (stage E) | enumeration screener is the only exact method: **prec/recall 100%** vs SAFER 77/62, MC 88/94, continuous/Gecko 0 |
 
 ## Layout
