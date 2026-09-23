@@ -66,6 +66,9 @@ by the role it plays in the paper.
 | ○ | Winston, Winston, Just. *Solver-Aided Verification of Policy Compliance in Tool-Augmented LLM Agents.* [arXiv:2603.20449](https://arxiv.org/abs/2603.20449) | SMT constraints over tool arguments — a **precondition check**, not a robustness certificate |
 | ○ | *Gecko.* [arXiv:2602.19218](https://arxiv.org/abs/2602.19218) | OpenAPI schema as source of truth; deterministic rule checks incl. **enum**. Empirical, **no certificate**. Closest "schema-aware" baseline. |
 | ○ | *Agent-Sentry.* [arXiv:2603.22868](https://arxiv.org/abs/2603.22868) | allowlists only "groundable" parameters from finite pools; free text excluded. **Someone has already drawn this boundary.** |
+| ✅ | **SelfCheckGPT.** Manakul, Liusie, Gales. [arXiv:2303.08896](https://arxiv.org/abs/2303.08896) | **Verified (method).** Self-consistency: sample multiple responses, flag divergence. The canonical "internal consistency" detector. **Limitation for us**: detects *inconsistency*, not *incorrectness* — an agent that always fills the wrong period is consistent, so self-consistency misses it. F6's contrast. |
+| ✅ | **Reflexion.** Shinn et al. [arXiv:2303.11366](https://arxiv.org/abs/2303.11366) | **Verified (method).** Agent verbally reflects on its own outputs (external or internally simulated feedback). The "self-reflection" family. F6's active self-verification is the tool-call-parameter instance of this. |
+| ○ | *Self-Verification.* Weng et al. [arXiv:2302.06692](https://arxiv.org/abs/2302.06692) | self-verification improves reasoning by re-checking; candidate F6 anchor — **verify method section before citing** |
 
 ## 5. Layer-1 targets — continuous machinery transplanted onto discrete fields
 
@@ -87,8 +90,8 @@ not opened them myself. Verify before citing.**
 | ◐ | *More Vulnerable than You Think.* [arXiv:2506.21967](https://arxiv.org/abs/2506.21967) | **Parameter-level numbers already published**: parameter hallucinations drop success **>12%**, tool-selection **<8%**; "agents tend to **blindly trust** the erroneous response … parameter hallucinations **derail the entire tool-using process**". **Also the confound**: missing *parameter* descriptions hurt more than missing *tool* descriptions — we must control schema-description quality or a reviewer will say we measured schema quality, not discreteness. |
 | ○ | *AgentDojo.* [arXiv:2406.13352](https://arxiv.org/abs/2406.13352) | |
 | ○ | *AgentProp-Bench.* [arXiv:2604.16706](https://arxiv.org/abs/2604.16706) | parameter-level injection propagates to a wrong final answer with prob ≈ 0.62 |
-| ○ | *SilentProbe.* [arXiv:2609.00035](https://arxiv.org/abs/2609.00035) | silent failures under parameter constraints — **avoid "silent" in our naming**, it collides |
-| ○ | *Butterfly Effects in Toolchains.* [arXiv:2507.15296](https://arxiv.org/abs/2507.15296) | taxonomy of parameter-filling failures |
+| ✅ | *SilentProbe.* [arXiv:2609.00035](https://arxiv.org/abs/2609.00035) | **Verified (method section).** Measures silent failure in production APIs used as agent tools. **Detection is passive/spontaneous, not self-check**: the agent is never asked to verify; detection = retrying with a different value after a zero-row response. Result: models detected the failure in **12%**, repaired **0%**, asserted a false negative **41%**, invented a figure **12%**. This is our F6's *passive* cousin — F6 is the *active* self-verification version. **Avoid "silent" in our naming**, it collides. |
+| ✅ | *Butterfly Effects in Toolchains.* [arXiv:2507.15296](https://arxiv.org/abs/2507.15296) | **Verified (abstract).** Taxonomy of failed parameter filling in tool-agent chains: 5 failure categories derived from the invocation chain (e.g. parameter name hallucination), 15 input perturbation methods. A **classification**, not a detector — cite for failure attribution, not for a detection mechanism. |
 | ○ | *From Allies to Adversaries.* [arXiv:2412.10198](https://arxiv.org/abs/2412.10198) | adversarial injection into tool calls |
 | ○ | *ReliabilityBench.* [arXiv:2601.06112](https://arxiv.org/abs/2601.06112) | |
 
