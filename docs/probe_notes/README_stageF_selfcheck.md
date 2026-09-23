@@ -44,39 +44,70 @@ simulate, judge by method section" rule)
 ## Design
 
 Reuse stage D's agent loop (20 symbols × 20 questions, 3 models). After the
-agent generates a tool call, add one active self-verification step:
+agent generates a tool call, run **three self-verification ladder levels** on
+the SAME call, so the three levels are compared on the same set of errors:
 
 ```
 financial question
   -> agent generates a tool call (period = quarter/fy/all)     [D1, stage D]
   -> if period != correct: a discrete error occurred
-  -> ACTIVE self-verification: ask the agent
+  -> L1 VALUE COMPARISON: tell the agent the correct period, ask "is X right?"
        "Does period=X correctly answer the request? The request asks for the
-        Y figure. Answer yes or no."
-     where X = the period the agent filled, Y = the correct period
-  -> record whether the agent says "no" (detects its own error)
-  -> compare: self-verification detection rate vs enumeration screener (100%)
+        Y figure. Answer yes or no."  (X = filled, Y = correct)
+  -> L2 SEMANTIC JUDGMENT: only replay what the agent filled, no correct answer
+       "Review your call. Is period=X the correct period for this request?
+        Answer yes or no."
+  -> L3 ERROR LOCALIZATION: an external screener flagged the call but did NOT
+       say which parameter is wrong
+       "An external screener flagged your call as possibly wrong, but it did
+        NOT tell you which parameter. Which parameter (symbol, statement,
+        period) is wrong? Answer: symbol, statement, period, or none."
+  -> record whether each level flags the error
+  -> compare each level's detection vs enumeration screener (100%)
 ```
 
-The self-verification prompt is deliberately *leading*: it tells the agent the
-correct period Y. This is the most favorable possible setup for the internal
-detector — if it still fails with the answer handed to it, the failure is
-robust. (A reviewer can't object "you didn't give the model enough info".)
+### Why a ladder (three difficulty levels)
 
-### Metrics
+Different self-verification forms are not equally hard for the model. Making
+them a ladder isolates *which* capability fails:
 
-- **Detection rate** = fraction of real-error calls where self-verification
-  says "no" (flags the error). Compare to enumeration screener = 100%.
-- **False-alarm rate** = fraction of correct calls where self-verification
-  says "no" (spurious flag). A good detector should be ~0.
+- **L1 (value comparison)** is the easiest: the correct period is handed to the
+  model, so it only compares values (`all` != `quarter`). High detection here
+  proves nothing about real self-diagnosis.
+- **L2 (semantic judgment)** is the "fair" version: no correct answer is given,
+  so the model must judge from its own understanding whether its period matches
+  the question — the same binding capability it used to fill the parameter.
+- **L3 (error localization)** is the hardest and the most deployment-realistic:
+  an external screener flags the call (as our enumeration screener would), but
+  the model must identify *which* parameter is wrong. This tests whether the
+  model can localize an error it is told exists — "even if the model knows
+  something is wrong, it may not identify what is wrong."
+
+L3 mirrors the paper's screener scenario: the screener flags, the agent
+localizes. If the model cannot localize the period error, the internal detector
+is not a substitute for external enumeration.
+
+### Metrics (recall + precision per level)
+
+For each ladder level, report both — a detector that flags everything is
+trivially high-recall but useless:
+
+- **Recall (detection rate)** = of real-error calls, how many the level flags.
+  Compare to enumeration screener = 100%.
+- **Precision** = of calls the level flags, how many are real errors (1 −
+  false-alarm rate). A good detector should be ~100% (few false alarms).
 
 ### Pre-registered verdicts
 
-- **F6 PASS (paper's claim strengthened)** if detection rate is well below
-  the screener's 100% — e.g. < 50%. The internal detector (dependent on the
-  failing binding capability) is not a reliable substitute for external
-  enumeration.
-- **F6 FAIL (paper's claim weakened)** if detection rate is high (≥ 90%):
+- **F6 PASS (paper's claim strengthened)** if the harder levels (L2, L3) have
+  recall well below the screener's 100% — e.g. < 50%. The internal detector
+  (dependent on the failing binding capability) is not a reliable substitute
+  for external enumeration.
+- **F6 FAIL (paper's claim weakened)** if L2/L3 recall is high (≥ 90%): then
+  the LLM can self-diagnose, and the screener's advantage is only convenience,
+  not necessity.
+- Report precision regardless — a detector that flags everything is trivially
+  "high recall" but useless.
   then the LLM can self-diagnose, and the screener's advantage is only
   convenience, not necessity.
 - Report false-alarm rate regardless — a detector that flags everything is

@@ -142,38 +142,99 @@ class Agent:
                 args = {}
         return args.get("symbol"), args.get("period"), gen
 
-    def self_verify(self, question, filled_period, correct_period):
-        """Active self-verification: ask the agent whether its own tool call
-        matched the question's intent. Returns (detected: bool, raw_gen).
+    def _verify_prompt(self, question, filled_period, correct_period, level):
+        """Build the self-verification prompt for a given ladder level.
 
-        detected = True if the agent says the filled period does NOT match the
-        question's intent (i.e. it flags its own error). We ask it to answer
-        with a single word (yes/no) to make scoring unambiguous.
+        L1 (value comparison): tells the agent the correct period, so it only
+            needs to compare values (all != quarter). Easiest.
+        L2 (semantic judgment): only replays what the agent filled, no correct
+            answer. The agent must judge from its own understanding whether the
+            period matches the question. This is the "fair" version.
+        L3 (error localization): an external screener flagged the call as
+            possibly wrong but did NOT say which parameter. The agent must
+            identify which parameter (symbol/statement/period) is wrong.
         """
         schema = json.dumps(TOOLS[0]["function"])
-        sys_prompt = (
-            f"{SYSTEM}\n\n"
-            f"You have one tool, get_fundamentals, with this schema:\n{schema}\n\n"
-            f"You just generated a tool call for the user's request. "
-            f"Now verify whether the 'period' you chose matches what the user "
-            f"asked for. Answer with exactly one word: yes (correct) or no "
-            f"(wrong period)."
-        )
-        messages = [
-            {"role": "system", "content": sys_prompt},
-            {"role": "user", "content": question},
-            {"role": "assistant", "content": f"I filled period={filled_period}."},
-            {"role": "user", "content":
-                f"Does period={filled_period} correctly answer the request? "
-                f"The request asks for the {correct_period} figure. "
-                f"Answer yes or no."},
-        ]
+        if level == 1:
+            sys_prompt = (
+                f"{SYSTEM}\n\n"
+                f"You have one tool, get_fundamentals, with this schema:\n{schema}\n\n"
+                f"You just generated a tool call for the user's request. "
+                f"Now verify whether the 'period' you chose matches what the user "
+                f"asked for. Answer with exactly one word: yes (correct) or no "
+                f"(wrong period)."
+            )
+            messages = [
+                {"role": "system", "content": sys_prompt},
+                {"role": "user", "content": question},
+                {"role": "assistant", "content": f"I filled period={filled_period}."},
+                {"role": "user", "content":
+                    f"Does period={filled_period} correctly answer the request? "
+                    f"The request asks for the {correct_period} figure. "
+                    f"Answer yes or no."},
+            ]
+        elif level == 2:
+            sys_prompt = (
+                f"{SYSTEM}\n\n"
+                f"You have one tool, get_fundamentals, with this schema:\n{schema}\n\n"
+                f"You just generated a tool call for the user's request. "
+                f"Review your own call. Is the 'period' you chose the right one "
+                f"for what the user asked? Answer with exactly one word: "
+                f"yes (correct) or no (wrong period)."
+            )
+            messages = [
+                {"role": "system", "content": sys_prompt},
+                {"role": "user", "content": question},
+                {"role": "assistant", "content": f"I called get_fundamentals with period={filled_period}."},
+                {"role": "user", "content":
+                    f"Review your call. Is period={filled_period} the correct "
+                    f"period for this request? Answer yes or no."},
+            ]
+        else:  # level 3
+            sys_prompt = (
+                f"{SYSTEM}\n\n"
+                f"You have one tool, get_fundamentals, with this schema:\n{schema}\n\n"
+                f"You just generated a tool call for the user's request. "
+                f"An external screener flagged your call as possibly wrong, but "
+                f"it did NOT tell you which parameter is wrong. Check your call "
+                f"and identify which parameter (symbol, statement, or period) is "
+                f"wrong. Answer with exactly one word: symbol, statement, period, "
+                f"or none."
+            )
+            messages = [
+                {"role": "system", "content": sys_prompt},
+                {"role": "user", "content": question},
+                {"role": "assistant", "content": f"I called get_fundamentals with period={filled_period}."},
+                {"role": "user", "content":
+                    f"Which parameter is wrong? Answer with one of: symbol, "
+                    f"statement, period, none."},
+            ]
+        return messages
+
+    def verify_L1(self, question, filled_period, correct_period):
+        """L1 value comparison: correct period is given. detected = says 'no'."""
+        messages = self._verify_prompt(question, filled_period, correct_period, 1)
         gen = self._generate(messages, max_new=30)
         low = gen.strip().lower()
-        # detect an explicit "no" (the agent flags its own error)
         m = re.search(r"\b(no|wrong|incorrect|not correct|mismatch)\b", low)
-        detected = m is not None
-        return detected, gen
+        return m is not None, gen
+
+    def verify_L2(self, question, filled_period, correct_period):
+        """L2 semantic judgment: no correct answer given. detected = says 'no'."""
+        messages = self._verify_prompt(question, filled_period, correct_period, 2)
+        gen = self._generate(messages, max_new=30)
+        low = gen.strip().lower()
+        m = re.search(r"\b(no|wrong|incorrect|not correct|mismatch)\b", low)
+        return m is not None, gen
+
+    def verify_L3(self, question, filled_period, correct_period):
+        """L3 error localization: screener flagged, agent must name the param.
+        detected = says 'period' (when the real error is a wrong period)."""
+        messages = self._verify_prompt(question, filled_period, correct_period, 3)
+        gen = self._generate(messages, max_new=30)
+        low = gen.strip().lower()
+        m = re.search(r"\bperiod\b", low)
+        return m is not None, gen
 
 
 class OllamaAgent:
@@ -228,51 +289,112 @@ class OllamaAgent:
                 args = {}
         return args.get("symbol"), args.get("period"), gen
 
-    def self_verify(self, question, filled_period, correct_period):
+    def _verify_prompt(self, question, filled_period, correct_period, level):
+        """Same ladder prompts as Agent (see Agent._verify_prompt)."""
         schema = json.dumps(TOOLS[0]["function"])
-        sys_prompt = (
-            f"{SYSTEM}\n\n"
-            f"You have one tool, get_fundamentals, with this schema:\n{schema}\n\n"
-            f"You just generated a tool call for the user's request. "
-            f"Now verify whether the 'period' you chose matches what the user "
-            f"asked for. Answer with exactly one word: yes (correct) or no "
-            f"(wrong period)."
-        )
-        messages = [
-            {"role": "system", "content": sys_prompt},
-            {"role": "user", "content": question},
-            {"role": "assistant", "content": f"I filled period={filled_period}."},
-            {"role": "user", "content":
-                f"Does period={filled_period} correctly answer the request? "
-                f"The request asks for the {correct_period} figure. "
-                f"Answer yes or no."},
-        ]
+        if level == 1:
+            sys_prompt = (
+                f"{SYSTEM}\n\n"
+                f"You have one tool, get_fundamentals, with this schema:\n{schema}\n\n"
+                f"You just generated a tool call for the user's request. "
+                f"Now verify whether the 'period' you chose matches what the user "
+                f"asked for. Answer with exactly one word: yes (correct) or no "
+                f"(wrong period)."
+            )
+            messages = [
+                {"role": "system", "content": sys_prompt},
+                {"role": "user", "content": question},
+                {"role": "assistant", "content": f"I filled period={filled_period}."},
+                {"role": "user", "content":
+                    f"Does period={filled_period} correctly answer the request? "
+                    f"The request asks for the {correct_period} figure. "
+                    f"Answer yes or no."},
+            ]
+        elif level == 2:
+            sys_prompt = (
+                f"{SYSTEM}\n\n"
+                f"You have one tool, get_fundamentals, with this schema:\n{schema}\n\n"
+                f"You just generated a tool call for the user's request. "
+                f"Review your own call. Is the 'period' you chose the right one "
+                f"for what the user asked? Answer with exactly one word: "
+                f"yes (correct) or no (wrong period)."
+            )
+            messages = [
+                {"role": "system", "content": sys_prompt},
+                {"role": "user", "content": question},
+                {"role": "assistant", "content": f"I called get_fundamentals with period={filled_period}."},
+                {"role": "user", "content":
+                    f"Review your call. Is period={filled_period} the correct "
+                    f"period for this request? Answer yes or no."},
+            ]
+        else:  # level 3
+            sys_prompt = (
+                f"{SYSTEM}\n\n"
+                f"You have one tool, get_fundamentals, with this schema:\n{schema}\n\n"
+                f"You just generated a tool call for the user's request. "
+                f"An external screener flagged your call as possibly wrong, but "
+                f"it did NOT tell you which parameter is wrong. Check your call "
+                f"and identify which parameter (symbol, statement, or period) is "
+                f"wrong. Answer with exactly one word: symbol, statement, period, "
+                f"or none."
+            )
+            messages = [
+                {"role": "system", "content": sys_prompt},
+                {"role": "user", "content": question},
+                {"role": "assistant", "content": f"I called get_fundamentals with period={filled_period}."},
+                {"role": "user", "content":
+                    f"Which parameter is wrong? Answer with one of: symbol, "
+                    f"statement, period, none."},
+            ]
+        return messages
+
+    def verify_L1(self, question, filled_period, correct_period):
+        messages = self._verify_prompt(question, filled_period, correct_period, 1)
         gen = self._chat(messages, max_new=30)
         low = gen.strip().lower()
         m = re.search(r"\b(no|wrong|incorrect|not correct|mismatch)\b", low)
         return m is not None, gen
 
+    def verify_L2(self, question, filled_period, correct_period):
+        messages = self._verify_prompt(question, filled_period, correct_period, 2)
+        gen = self._chat(messages, max_new=30)
+        low = gen.strip().lower()
+        m = re.search(r"\b(no|wrong|incorrect|not correct|mismatch)\b", low)
+        return m is not None, gen
+
+    def verify_L3(self, question, filled_period, correct_period):
+        messages = self._verify_prompt(question, filled_period, correct_period, 3)
+        gen = self._chat(messages, max_new=30)
+        low = gen.strip().lower()
+        m = re.search(r"\bperiod\b", low)
+        return m is not None, gen
+
 
 def run_one(agent, question, correct_period, symbol):
-    """One (symbol, question) run: generate tool call, then self-verify.
+    """One (symbol, question) run: generate tool call, then run all three
+    self-verification ladder levels (L1 value comparison, L2 semantic judgment,
+    L3 error localization) on the SAME call, so the three levels are compared
+    on the same set of errors.
 
     Returns a dict with:
       - filled_period: what the agent actually filled
       - real_error: filled_period != correct_period (the D1 error)
-      - detected: self-verification flagged the error (only meaningful when
-        real_error is True; when the call is correct, detection is a false alarm)
+      - det_L1 / det_L2 / det_L3: whether each level flagged the error
+      - parse_failed: the tool call could not be parsed
     """
     q = question.replace("{SYM}", symbol)
     sym, period, gen = agent.call_tool(q)
     if period is None:
         return dict(symbol=symbol, question=question, correct=correct_period,
-                    filled_period=None, real_error=None, detected=None,
-                    parse_failed=True)
+                    filled_period=None, real_error=None,
+                    det_L1=None, det_L2=None, det_L3=None, parse_failed=True)
     real_error = (period != correct_period)
-    detected, vgen = agent.self_verify(q, period, correct_period)
+    d1, _ = agent.verify_L1(q, period, correct_period)
+    d2, _ = agent.verify_L2(q, period, correct_period)
+    d3, _ = agent.verify_L3(q, period, correct_period)
     return dict(symbol=symbol, question=question, correct=correct_period,
                 filled_period=period, real_error=real_error,
-                detected=detected, parse_failed=False)
+                det_L1=d1, det_L2=d2, det_L3=d3, parse_failed=False)
 
 
 def cmd_run(a):
@@ -286,11 +408,13 @@ def cmd_run(a):
         for i, (q, cp) in enumerate(QUESTIONS):
             r = run_one(agent, q, cp, sym)
             rows.append(dict(idx=i, **r))
-            flag = "ERR" if r["real_error"] else "ok "
-            det = "DETECT" if (r["real_error"] and r["detected"]) else \
-                  ("MISS" if r["real_error"] else "-")
-            print(f"  {sym:6} [{i:2}] {q[:36]:38s} filled={r['filled_period']:8} "
-                  f"{flag} selfcheck={det}", flush=True)
+            fp = r["filled_period"] if r["filled_period"] is not None else "?"
+            flag = "ERR" if r["real_error"] else ("ok " if r["real_error"] is False else "PARSE")
+            l1 = "D" if (r["real_error"] and r["det_L1"]) else ("M" if r["real_error"] else "-")
+            l2 = "D" if (r["real_error"] and r["det_L2"]) else ("M" if r["real_error"] else "-")
+            l3 = "D" if (r["real_error"] and r["det_L3"]) else ("M" if r["real_error"] else "-")
+            print(f"  {sym:6} [{i:2}] {q[:30]:32s} filled={fp:8} {flag} "
+                  f"L1={l1} L2={l2} L3={l3}", flush=True)
     with open(a.out, "w", encoding="utf-8") as fh:
         for r in rows:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
@@ -302,21 +426,31 @@ def cmd_analyze(a):
     n = len(rows)
     errors = [r for r in rows if r["real_error"]]
     n_err = len(errors)
-    n_det = sum(1 for r in errors if r["detected"])
-    # false alarms: correct calls that self-verification flagged as wrong
     correct = [r for r in rows if r["real_error"] is False]
-    n_fa = sum(1 for r in correct if r["detected"])
+    n_correct = len(correct)
     print(f"runs: {n}")
     print(f"real errors (D1): {n_err}/{n} = {n_err/n:.1%}")
-    if n_err:
-        print(f"self-verification detection rate: {n_det}/{n_err} = {n_det/n_err:.1%}")
-    if correct:
-        print(f"false alarms on correct calls: {n_fa}/{len(correct)} = {n_fa/len(correct):.1%}")
+    print(f"correct calls:    {n_correct}/{n} = {n_correct/n:.1%}")
     print()
-    print("Compare: enumeration screener detection rate is 100% (stage D).")
-    print("If self-verification detection is well below 100%, the internal")
-    print("detector (which depends on the failing binding capability) is not a")
-    print("reliable substitute for external enumeration.")
+    print("ladder level    recall (detect)   precision (no false alarm)")
+    for lvl, key in [("L1 value-compare", "det_L1"),
+                     ("L2 semantic-judge", "det_L2"),
+                     ("L3 error-locate", "det_L3")]:
+        # recall: of real errors, how many flagged
+        n_det = sum(1 for r in errors if r[key])
+        recall = n_det / n_err if n_err else float("nan")
+        # precision: of calls flagged, how many were real errors
+        flagged = [r for r in rows if r[key]]
+        n_flag = len(flagged)
+        n_flag_true = sum(1 for r in flagged if r["real_error"])
+        precision = n_flag_true / n_flag if n_flag else float("nan")
+        print(f"  {lvl:18} {n_det:3}/{n_err:3} = {recall:6.1%}   "
+              f"{n_flag_true:3}/{n_flag:3} = {precision:6.1%}")
+    print()
+    print("Compare: enumeration screener detection is 100% recall AND 100%")
+    print("precision (it does not depend on the model's binding capability).")
+    print("If the ladder levels drop below that, the internal detector is not")
+    print("a reliable substitute for external enumeration.")
 
 
 def main():
