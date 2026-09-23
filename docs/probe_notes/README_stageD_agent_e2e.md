@@ -142,10 +142,36 @@ fy questions ("annual ... for fiscal 2023") bind cleanly. This is the same
 mechanism-layer story as stage A: binding is insufficient on ambiguous input.
 
 **D3 baseline decision error is 100%** at 20 symbols — every one of the 20
-questions flips its top-3 ranking under the simulated cross-flip. This is
-stronger than the 30% at 5 symbols: with a larger universe the top-3 boundary
-is tighter, so the wrong-period data changes the ranking on every question.
-The screener still drives it to **0%** on all three models.
+questions flips its top-3 ranking under the simulated cross-flip. The screener
+still drives it to **0%** on all three models.
+
+**Why 100% (mechanism, symbol-level reproducible).** The 100% is not a vague
+"more symbols -> tighter boundary" claim; it is determined by the structure of
+the D3 cross-flip set, and reproduces exactly.
+
+1. **The flip set is deterministic.** D3 draws `random.Random(0)` inside each
+   `run_agent`, so every question uses the same flip set for a given symbol
+   pool. At 20 symbols the flip set is exactly {GOOGL, CRM, ADBE, QCOM}
+   (4/20 = 20%, not 40% — `rng.random()<0.4` happens to hit 4 of 20).
+2. **The flip set hits a top-3 member of each period.** With real findata EPS:
+   - quarter top-3 = {META, MU, QCOM}, and **QCOM is flipped** (rank 2). Flipped
+     to fy data (9.09) it still ranks 4th, but it drops out of the quarter
+     top-3, which is replaced -> **top-3 changes**.
+   - fy top-3 = {ADBE, META, NFLX}, and **ADBE is flipped** (rank 2). Flipped to
+     quarter data (4.26, rank 6) it drops out of the fy top-3 -> **top-3 changes**.
+   Because the flip set hits QCOM (quarter top-3) and ADBE (fy top-3), every
+   question — quarter or fy — has its top-3 broken. 20/20 = 100%. This is a
+   deterministic consequence of this flip set, not sampling noise.
+3. **Why 5 symbols gave 30%.** The 5-symbol pool (AAPL/MSFT/NVDA/GOOGL/AMZN)
+   has flip set {GOOGL} (1 symbol), and GOOGL is not a top-3 member, so only
+   some questions flip.
+4. **Boundary tightness (expectation view).** 100% is this flip set's observed
+   value, not a universal "20 symbols always 100%". Sweeping 200 seeds, the
+   expected flip rate rises monotonically with pool size: 5 -> 57%, 10 -> 75%,
+   15 -> 87%, 20 -> 87.7%. Larger pools tighten the top-3 boundary, so a
+   cross-flip is more likely to change the ranking; seed=0's 100% is one
+   realization of that mechanism, not an upper bound. (At 20 symbols, varying
+   the seed gives 8/20 to 20/20.)
 
 **Design correction (why the earlier run showed 0/0):** the first design let
 "all" return the same (quarter) data as the correct period, so the decision was
@@ -191,6 +217,11 @@ needs.
 
 ## Files
 
-- `probes/agent_end_to_end.py` — the probe (to be written)
-- `probes/agent_end_to_end.jsonl` — results
+- `probes/agent_end_to_end.py` — the probe
+- `probes/agent_end_to_end.jsonl` — 5-symbol smoke-test results
+- `probes/agent_end_to_end_full.jsonl` — 20-symbol full run (qwen2.5:7b)
+- `probes/agent_end_to_end_llama_full.jsonl` — 20-symbol full run (llama3.1:8b)
+- `probes/agent_end_to_end_gemma_full.jsonl` — 20-symbol full run (gemma3:12b)
+- `probes/stageD_mechanism.py` — reproduces the "why 100%" mechanism argument
+  (flip-set structure + boundary-tightness expectation sweep)
 - this note
