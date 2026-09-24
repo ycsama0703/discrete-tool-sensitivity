@@ -114,7 +114,13 @@ def main():
         print(f"  {fam:5} {small:>4} -> {big:<4}   err {s['err']:6.1%} -> {b['err']:6.1%}"
               f"   |  L3 recall {s['L3_rec']:6.1%} -> {b['L3_rec']:6.1%}")
 
-    print("\n  enumeration screener, every configuration: 100.0% recall, 100.0% precision")
+    print("\n  NOTE on the screener: this table deliberately carries NO screener row.")
+    print("  Its \"100% / 100%\" elsewhere in this repo is an identity, not a")
+    print("  measurement - baseline_family.py sets `our_flags = true_flip`, and")
+    print("  agent_end_to_end.py's screener branch queries the correct period in")
+    print("  BOTH arms. For a measured number see stageI_screener_measured.py:")
+    print("  decision-error recall 100%, precision 5-20%, flag rate 50-92%")
+    print("  depending on the symbol universe.")
 
 
 if __name__ == "__main__":

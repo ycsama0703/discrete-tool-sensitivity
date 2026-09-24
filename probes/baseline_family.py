@@ -123,8 +123,19 @@ def main():
     # agent fills 'all' on ambiguous questions (stage-D real error mode)
     agent_periods = {s: "all" for s in syms}  # all legal but semantically wrong
 
-    # our enumeration screener: exact, recomputes the decision under the
-    # period neighbour (quarter<->fy), flags symbols whose rank flips
+    # our enumeration screener.
+    #
+    # WARNING - this is an IDENTITY, not a measurement. Setting our_flags to
+    # true_flip makes precision and recall 100% by definition, so the "100/100"
+    # this script prints for our method is not evidence of anything. It is a
+    # statement that enumerating every period value and recomputing the decision
+    # must, in principle, see every decision that moves with period.
+    #
+    # An implementable screener is weaker: it does NOT know which period is
+    # correct, so it can only report that a decision is period-SENSITIVE, not
+    # that the agent got it wrong. Measured in stageI_screener_measured.py:
+    # decision-error recall 100% (the identity holds), but precision 5-20% and
+    # flag rate 50-92% depending on the symbol universe - it over-warns.
     our_flags = true_flip  # by construction, exact
 
     results = [

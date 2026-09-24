@@ -1,0 +1,82 @@
+{
+ "AAPL": {
+  "quarter": 2.04,
+  "fy": 6.11
+ },
+ "MSFT": {
+  "quarter": 4.28,
+  "fy": 11.86
+ },
+ "NVDA": {
+  "quarter": 2.4,
+  "fy": 2.97
+ },
+ "GOOGL": {
+  "quarter": 5.17,
+  "fy": 8.04
+ },
+ "AMZN": {
+  "quarter": 5.82,
+  "fy": 5.66
+ },
+ "META": {
+  "quarter": 10.57,
+  "fy": 24.61
+ },
+ "ORCL": {
+  "quarter": 1.28,
+  "fy": 3.81
+ },
+ "CRM": {
+  "quarter": 2.08,
+  "fy": 6.44
+ },
+ "TSLA": {
+  "quarter": 0.15,
+  "fy": 2.23
+ },
+ "AMD": {
+  "quarter": 1.4,
+  "fy": 1.01
+ },
+ "INTC": {
+  "quarter": -0.73,
+  "fy": null
+ },
+ "NFLX": {
+  "quarter": 1.25,
+  "fy": 20.28
+ },
+ "ADBE": {
+  "quarter": 4.26,
+  "fy": 12.44
+ },
+ "AVGO": {
+  "quarter": 2.75,
+  "fy": 1.33
+ },
+ "CSCO": {
+  "quarter": 0.85,
+  "fy": 2.55
+ },
+ "QCOM": {
+  "quarter": 6.92,
+  "fy": 9.09
+ },
+ "IBM": {
+  "quarter": 1.3,
+  "fy": 6.53
+ },
+ "TXN": {
+  "quarter": 1.7,
+  "fy": 5.24
+ },
+ "AMAT": {
+  "quarter": 3.2,
+  "fy": 8.68
+ },
+ "MU": {
+  "quarter": 12.25,
+  "fy": 0.7
+ }
+}

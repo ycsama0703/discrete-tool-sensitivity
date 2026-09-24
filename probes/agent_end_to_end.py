@@ -254,7 +254,13 @@ def run_agent(agent, question, correct_period, symbols):
             base_eps[sym] = eps
     base_top3 = top3(base_eps) if base_eps else set()
 
-    # screener: detect the parameter error (period != correct) and re-query
+    # screener: detect the parameter error (period != correct) and re-query.
+    #
+    # WARNING - as written both branches below query correct_period, so this is
+    # an ORACLE ("always use the right period"), not a detector. Its 0% decision
+    # error is therefore true by construction. A deployable screener cannot do
+    # this: not knowing the correct period is the problem itself. See
+    # stageI_screener_measured.py for what an implementable version achieves.
     screen_eps = {}
     for sym in symbols:
         if cross_flip[sym]:
