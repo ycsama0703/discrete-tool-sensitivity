@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .DS_Store
 _papers/
+
+# secrets - never commit
+.env
+*.key
+openrouter_key.txt
