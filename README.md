@@ -65,7 +65,7 @@ current end-to-end probe simulates an agent with an assumed error rate.
 | real-agent e2e (stage D, qwen2.5:7b) | real error **27.5%**; screener: decision error **100% → 0%** |
 | real-agent e2e, 3 models | qwen2.5/llama3.1/gemma3 all: real error 24.5–28%, screener **100% → 0%** |
 | baseline family (stage E) | enumeration screener is the only exact method: **prec/recall 100%** vs SAFER 77/62, MC 88/94, continuous/Gecko 0 |
-| active self-check (stage F, designed) | "why not just ask the LLM to check itself?" — same agent that fills the wrong period tries to verify its own call; expected to fail because self-check depends on the same failing binding capability. Script + pre-registered verdicts in `docs/probe_notes/README_stageF_selfcheck.md` |
+| active self-check (stage F, 3 models) | "why not just ask the LLM to check itself?" — L3 error localization: qwen **4.6%**, gemma 22.7%, llama 60.6% (prec 24%), vs screener **100%**; L1/L2 recall ~100% but precision collapses (llama 30%). Internal detection unreliable, external enumeration reliable |
 
 ## Layout
 

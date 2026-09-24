@@ -108,27 +108,52 @@ trivially high-recall but useless:
   not necessity.
 - Report precision regardless — a detector that flags everything is trivially
   "high recall" but useless.
-  then the LLM can self-diagnose, and the screener's advantage is only
-  convenience, not necessity.
-- Report false-alarm rate regardless — a detector that flags everything is
-  trivially "high recall" but useless.
 
-## Expected result (to be measured)
+## Result (2026-09-24, 20 symbols x 20 questions, 3 models)
 
-Detection rate low (binding defect present at check time), enumeration
-screener 100%. A clean contrast: **internal detection (depends on the failing
-binding) vs external enumeration (does not depend on binding)**.
+| model | D1 err | L1 rec/prec | L2 rec/prec | L3 rec/prec |
+|---|---|---|---|---|
+| qwen2.5:7b | 27.3% | 100% / 99% | 100% / 65% | **4.6% / 8.9%** |
+| llama3.1:8b | 27.3% | 100% / 30% | 100% / 28% | **60.6% / 24%** |
+| gemma3:12b | 29.8% | 100% / 100% | 99% / 76% | **22.7% / 73%** |
+| **screener** | — | **100% / 100%** | **100% / 100%** | **100% / 100%** |
+
+**F6 PASS (paper's claim strengthened) across all three models.** The internal
+detector is not a reliable substitute for external enumeration:
+
+- **L1/L2 (value comparison, semantic judgment)**: recall ~100% on all models,
+  but **precision collapses** — llama's L1 precision is 30% (it flags almost
+  every call), qwen L2 65%, gemma L2 76%. The models "cry wolf".
+- **L3 (error localization)**: all three models fall far below the screener's
+  100% — qwen 4.6%, gemma 22.7%, llama 60.6% (but llama's precision is only
+  24%, i.e. heavy false alarms).
+
+**The consistent pattern**: self-verification either localizes poorly (qwen L3
+4.6%, gemma 22.7%) or cries wolf (llama precision 24-30%). The enumeration
+screener is 100% recall AND 100% precision on every level for every model,
+because it does not depend on the model's binding capability.
+
+**This is the "even if the model knows something is wrong, it may not identify
+what is wrong" result**: qwen localizes its own period error only 4.6% of the
+time even when told a screener flagged the call.
 
 ## What this does NOT claim
 
-- One decision task (top-3 by EPS), one parameter (period), 3 models. External
-  validity limited.
+- One decision task (top-3 by EPS), one parameter (period), 3 weak models.
+  External validity limited.
 - Self-verification might do better with a different prompt, a stronger model,
   or chain-of-thought. We report the leading-prompt result; the point is the
   *contrast* with the screener, not an absolute "self-check never works".
+- **Commercial API models (GPT-4o, Claude) are out of scope**: they may not
+  make these errors at all (strong models showed 0% in stage 3.2), or may
+  self-check better. The claim is scoped to weak models — which are the ones
+  real cost-sensitive deployments use, and precisely where the screener is
+  needed.
 
 ## Files
 
-- `probes/stageF_selfcheck.py` — the probe (script written, not yet run)
-- `probes/stageF_selfcheck.jsonl` — results (to be produced)
+- `probes/stageF_selfcheck.py` — the probe (three-level ladder)
+- `probes/stageF_ladder_qwen.jsonl` — qwen2.5:7b results
+- `probes/stageF_ladder_llama.jsonl` — llama3.1:8b results
+- `probes/stageF_ladder_gemma.jsonl` — gemma3:12b results
 - this note
