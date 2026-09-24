@@ -1,94 +1,162 @@
-# Stage-G probe — the stage-F ladder on commercial models via OpenRouter
+# Stage-G probe — the stage-F ladder across a capability scale
 
-**Status: IN PROGRESS (harness validated, full runs pending).**
+**Status: group 1 (same-family scale) DONE.**
 
-Stage F showed that self-verification is unreliable on three local weak models
-(qwen2.5:7b, llama3.1:8b, gemma3:12b). The obvious objection is that this is a
-weak-model artifact. Stage G answers it by running **the identical experiment**
-— same 20 symbols x 20 questions, same tool schema, same L1/L2/L3 prompts, same
-temperature 0.7 — against commercial models through OpenRouter, with only the
-inference backend swapped.
+Stage F showed self-verification is unreliable on three local weak models. The
+obvious objection: that is a weak-model artifact. Stage G answers it by running
+**the identical experiment** — same 20 symbols x 20 questions, same tool schema,
+same L1/L2/L3 prompts, same temperature 0.7 — against larger models through
+OpenRouter, with only the inference backend swapped.
 
-Script: `probes/stageG_openrouter_ladder.py`.
+Scripts: `probes/stageG_openrouter_ladder.py` (the run),
+`probes/stageG_scale_table.py` (the table, reads both local and API outputs).
 
-## Model selection: a capability ladder, not a grab-bag
+## Design: a scale ladder, not a grab-bag of strong models
 
-The point is not "test some strong models"; it is to see whether the phenomenon
-**decays with scale or persists**. So the selection is structured:
+The question is whether the phenomenon **decays with scale**, so the selection
+holds the family fixed and varies only the parameter count — and the small end
+is already measured locally:
 
-**Group 1 — same-family scale (the clean slope).** Only the parameter count
-varies, and the small end is already measured locally:
+| pair | ratio |
+|---|---|
+| qwen2.5 **7B** (local) -> qwen2.5 **72B** (API) | ~10x |
+| llama3.1 **8B** (local) -> llama3.3 **70B** (API) | ~9x |
 
-| model | ~cost / full run | role |
+Cost for all four at the full 400-case ladder: **~$0.33**.
+
+## Sanity check: same weights, local vs API
+
+`qwen-2.5-7b` and `llama-3.1-8b` are the *same weights* we run locally. If the
+API numbers diverged, the harness would not be comparable and the scale
+comparison would be void.
+
+| model | error rate (local -> API) | L3 recall (local -> API) |
 |---|---|---|
-| `qwen/qwen-2.5-7b-instruct` | $0.05 | **sanity check** vs our local qwen2.5:7b |
-| `qwen/qwen-2.5-72b-instruct` | $0.19 | qwen 7B -> 72B, 10x scale |
-| `meta-llama/llama-3.1-8b-instruct` | $0.03 | **sanity check** vs our local llama3.1:8b |
-| `meta-llama/llama-3.3-70b-instruct` | $0.06 | llama 8B -> 70B |
+| qwen2.5-7b | 27.3% -> 30.8% | 4.6% -> 0.0% |
+| llama3.1-8b | 27.5% -> 29.4% | 60.6% -> 63.8% |
 
-**Group 2 — the cheap deployment tier (closest to the paper's motivation).**
-Real cost-sensitive deployments run these, not 7B local models and not Opus:
+llama is the striking one: not just the error rate but its idiosyncratic
+*signature* reproduces — the "cry wolf" pattern of ~30% precision at every
+ladder level, and an L3 recall near 60%. That is not something that matches by
+chance. **The harness is comparable.**
 
-| model | ~cost |
+## Result
+
+| model | size | src | emit | err | L1 rec/pre | L2 rec/pre | L3 rec/pre |
+|---|---|---|---|---|---|---|---|
+| qwen2.5-7b | 7B | local | 100% | 27.3% | 100/99 | 100/65 | **4.6/8.9** |
+| qwen2.5-7b | 7B | API | 98% | 30.8% | 99/99 | 99/72 | **0.0/0.0** |
+| qwen2.5-72b | 72B | API | 100% | **38.2%** | 100/100 | 99/99 | **68.6/99.1** |
+| llama3.1-8b | 8B | local | 99% | 27.5% | 100/30 | 100/28 | **60.6/24.0** |
+| llama3.1-8b | 8B | API | 99% | 29.4% | 100/32 | 100/29 | **63.8/27.1** |
+| llama3.3-70b | 70B | API | 99% | **25.9%** | 100/100 | **8.7/17.6** | **6.8/58.3** |
+| gemma3-12b | 12B | local | 100% | 29.8% | 100/100 | 99/76 | 22.7/73.0 |
+
+(`emit` = fraction of runs producing a parseable tool call; `err` is over
+parsed calls. Enumeration screener: 100% recall AND 100% precision on every
+row, because it does not depend on the model.)
+
+### Finding 1: scale does not fix the binding defect
+
+| family | small | large |
+|---|---|---|
+| qwen | 27.3% | **38.2%** (worse) |
+| llama | 29.4% | **25.9%** (slightly better) |
+
+A ~10x increase in parameters leaves the period error rate in a 26-38% band,
+with no consistent direction and certainly no order-of-magnitude improvement.
+**Filling the wrong discrete parameter is not a small-model failing.** This is
+the load-bearing result for the paper: the error the screener exists to catch
+does not go away as models get bigger.
+
+### Finding 2: self-verification is unreliable in an *unpredictable* way
+
+This revises stage F's conclusion, and the revision makes it stronger.
+
+| family | L3 recall, small -> large |
 |---|---|
-| `openai/gpt-4o-mini` | $0.09 |
-| `google/gemini-2.5-flash` | $0.22 |
-| `deepseek/deepseek-chat` | $0.18 |
+| qwen | 4.6% -> **68.6%** (large improvement) |
+| llama | 63.8% -> **6.8%** (large degradation) |
 
-**Group 3 — frontier ceiling (two is enough; they are expensive and similar).**
+Same ~10x scale step, **opposite directions**. And within a single size class
+the spread is enormous: at 70-72B, L3 recall is 68.6% (qwen) versus 6.8%
+(llama).
 
-| model | ~cost |
-|---|---|
-| `openai/gpt-5.1` | $0.91 |
-| `anthropic/claude-sonnet-5` | $1.27 |
+llama-3.3-70b is the sharpest case: L1 is perfect (100% recall, 100%
+precision) — told the correct period, it judges flawlessly — but L2 collapses
+to 8.7%. Without being handed the answer it almost always says its own call was
+fine.
 
-Total ~$3 for all nine at the full 400-case ladder.
+**The revised claim:** stage F said self-verification localizes poorly. The
+scale data says something more useful — self-verification's reliability is
+*not predictable from scale or family*. L3 recall ranges from 6.8% to 68.6%
+across four models, and scaling a family up 10x can move it either way.
 
-## Why the two sanity-check models matter
+That is a stronger argument for the screener than "self-check is always bad":
+you cannot fix this by picking a bigger or better model, because you cannot
+know in advance which regime your model is in. The screener is 100%/100%
+everywhere precisely because it never consults the model.
 
-`qwen-2.5-7b` and `llama-3.1-8b` are the *same weights* we ran locally. If the
-API error rate diverges sharply from the local run, the harness is not
-comparable and none of the commercial numbers can be read against the local
-ones. This must pass before spending on the rest.
+## A harness lesson worth recording
 
-**Smoke test (1 symbol, 20 cases, qwen-2.5-7b):** error rate 25% vs 27.3%
-locally, and — more telling than the rate — the *same error signature*: the
-model fills `all`, the errors land on the quarter-intent questions, L1 catches
-them, L3 does not. The harness is comparable.
+The first llama-3.3-70b run reported **12.5% tool-call emission and a 2.5%
+error rate**. Read naively that says "the 70B model barely makes these
+mistakes" — a clean, plausible, and completely wrong finding.
 
-## An observation the local runs could not produce
+The cause was the parser, not the model. llama emits
 
-On OpenRouter some models **do not emit a tool call at all** — they answer in
-prose ("To provide the most accurate information on Apple's shareholders'
-equity, I would need to refer to...") and get truncated. This never happened
-locally, where a chat template with an explicit tool-call format was applied.
+```json
+{"type":"function","name":"get_fundamentals",
+ "parameters":{"symbol":{"type":"string","value":"AAPL"}, ...
+```
 
-This is real model behaviour, not a harness bug, so the script records it
-separately (`fail_reason: "no_toolcall"` vs `"api_error"`) and the analysis
-reports the tool-call emission rate alongside the period error rate. **These
-cases must not be silently counted as "no error"** — a model that declines to
-call the tool has not got the period right; it has produced nothing to check.
+— `parameters` rather than `arguments`, with each value wrapped in its schema
+type annotation. The parser accepted only the OpenAI-style `arguments` with
+bare values, so 87.5% of valid calls were discarded. The verbose format also
+overran the 400-token cap, truncating calls mid-JSON.
 
-Two harness details follow from it:
-- `max_tokens` for the tool call is 400, not 200: a tight cap truncates models
-  that write a sentence of preamble, turning real output into a fake parse
-  failure (`finish_reason: "length"`).
-- The denominator for the period error rate is *parsed calls*, with the
-  emission rate reported next to it, so the two effects stay separable.
+Two things made this catchable rather than publishable:
+
+1. **Failures were split by cause** (`no_toolcall` vs `api_error`) and the
+   emission rate was reported *beside* the error rate, instead of a single
+   `parse_failed` flag. A 12.5% emission rate is obviously wrong in a way that
+   "error rate 2.5%" is not.
+2. The error rate denominator is parsed calls, so a parsing gap shows up as a
+   collapsing denominator rather than a flattering numerator.
+
+**The general point for cross-model comparison: "the model produced nothing"
+and "I failed to parse it" must be recorded separately.** Otherwise harness
+gaps masquerade as model capability differences — and they masquerade in the
+direction of *stronger models looking better*, which is exactly the direction
+one is least likely to question.
+
+Fixes: accept `arguments` or `parameters`, unwrap `{"type":..,"value":..}`
+envelopes, raise the tool-call cap to 800 tokens. After the fix llama-3.3-70b
+emits 99.2%.
 
 ## Engineering notes
 
-- **Concurrency is required.** Serially, one case (4 dependent API calls) took
-  ~60s, i.e. ~6.7h per model. With 8-10 concurrent cases it is ~35-45 min.
-- **Resumable.** `--resume` appends and skips (symbol, idx) already in the
-  output, so a mid-run failure does not waste spend.
-- **Cost is tracked live** from OpenRouter's `usage.cost` field and printed
-  with the ETA on every line.
-- The key is read from `OPENROUTER_API_KEY` or a gitignored `.env`; it is never
-  logged.
+- **Concurrency is required.** Serially one case (4 dependent calls) took ~60s,
+  i.e. ~6.7h per model; at concurrency 12 it is 2-90 min depending on provider.
+  qwen-2.5-7b (Phala) is an order of magnitude slower than the rest.
+- **Resumable** (`--resume` skips cases already in the output), so a mid-run
+  failure does not waste spend.
+- Cost tracked live from OpenRouter's `usage.cost`. Group 1 total: ~$0.33.
+- ~100 cases already gives error rate and L3 recall within a couple of points
+  of the 400-case value, useful if a later group needs to be cheaper.
+- Key read from `OPENROUTER_API_KEY` or a gitignored `.env`; never logged.
+
+## Still open
+
+- Groups 2 and 3 (cheap deployment tier: gpt-4o-mini, gemini-2.5-flash,
+  deepseek-chat; frontier: gpt-5.1, claude-sonnet-5), ~$2.7.
+- Whether the L2/L3 spread tracks anything predictable (instruction-tuning
+  recipe? tool-call training?) or is simply idiosyncratic. Four models cannot
+  answer this.
 
 ## Files
 
-- `probes/stageG_openrouter_ladder.py` — the probe
-- `probes/stageG_*.jsonl` — per-model results (pending)
+- `probes/stageG_openrouter_ladder.py` — the run
+- `probes/stageG_scale_table.py` — the table
+- `probes/stageG_{qwen7b,qwen72b,llama8b,llama70b}.jsonl` — results
 - this note

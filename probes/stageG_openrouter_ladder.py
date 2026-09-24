@@ -162,14 +162,16 @@ class ORAgent:
             f"the form {{\"name\": \"get_fundamentals\", \"arguments\": {{...}}}}. "
             f"Choose 'period' carefully based on what the user asks for."
         )
-        # 400 rather than 200: some models write a sentence of preamble before
-        # the JSON, and a tight cap truncates the call itself (finish_reason
-        # "length"), which would look like a parse failure rather than what it
-        # is. The extra headroom costs a negligible number of output tokens.
+        # 800 rather than 200: models differ a lot in how verbosely they emit a
+        # tool call. Some write a sentence of preamble; llama-3.3-70b echoes the
+        # schema's type annotations around every value, which is long. A tight
+        # cap truncates the call itself (finish_reason "length") and that looks
+        # like a parse failure rather than what it is. Output tokens are the
+        # cheap half of the bill, so the headroom costs almost nothing.
         gen = self._chat([
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": question},
-        ], max_new=400)
+        ], max_new=800)
         if gen.startswith("__API_ERROR__"):
             return None, None, gen
         m = re.search(r"<tool_call>\s*(\{.*?\})\s*</tool_call>", gen, re.DOTALL)
@@ -181,7 +183,14 @@ class ORAgent:
             call = json.loads(jm.group(0))
         except Exception:
             return None, None, gen
-        args = call.get("arguments", call)
+        # Models disagree on the envelope key: OpenAI-style uses "arguments",
+        # some Llama variants emit "parameters". Accept either, and fall back
+        # to the object itself if it is already the argument dict.
+        args = call.get("arguments")
+        if args is None:
+            args = call.get("parameters")
+        if args is None:
+            args = call
         if isinstance(args, str):
             try:
                 args = json.loads(args)
@@ -189,7 +198,18 @@ class ORAgent:
                 args = {}
         if not isinstance(args, dict):
             return None, None, gen
-        return args.get("symbol"), args.get("period"), gen
+
+        def unwrap(v):
+            # Some models echo the schema's type annotation around the value:
+            #   {"type": "string", "value": "AAPL"}  instead of  "AAPL"
+            if isinstance(v, dict):
+                for k in ("value", "default", "const"):
+                    if k in v:
+                        return v[k]
+                return None
+            return v
+
+        return unwrap(args.get("symbol")), unwrap(args.get("period")), gen
 
     def _verify_prompt(self, question, filled_period, correct_period, level):
         """Identical wording to stageF_selfcheck.py's _verify_prompt."""
