@@ -51,6 +51,47 @@ neighborhood the enumeration screener (|S| ~ 3) covers. So the screener's
 mechanism (enumerate the period neighbors, recompute) applies to real
 commercial-model errors, not just our weak-model agent errors.
 
+### The core claim reproduces on real errors: the bound reports zero, the
+### output moves a lot
+
+This is the external-validity test of the paper's central theoretical claim.
+Script: `D:\luyao4\exp\daloopa\analyze_jump_magnitude.py`.
+
+Relative output jump = `|answer_num - gt_num| / |gt_num|` over the 170 real
+period errors:
+
+| statistic | value |
+|---|---|
+| median | **18.8%** |
+| p75 | 38.8% |
+| p90 | 99.8% |
+| **> 1%** | **170/170 = 100%** |
+| > 10% | 124/170 = 73% |
+| > 30% | 45/170 = 26% |
+
+**Not a single one of the 170 real period errors moves the output by less than
+1%**, and 73% move it by more than 10%. Meanwhile the continuous Lipschitz
+bound reports `S_cont(0) = 0` on **all** of them — a discrete substitution has
+no continuous perturbation to measure. **Certification does not miss the error
+quietly; it actively reports zero.**
+
+Side-by-side with our own probes:
+
+| | findata (our construction) | Daloopa (real commercial models) |
+|---|---|---|
+| sample | 96 discrete substitutions | 170 real period errors |
+| median jump | 47.3% | **18.8%** |
+| fraction > 10% | 62% | **73%** |
+| continuous bound | **0** | **0** |
+| schema-valid / no error raised | 100% | 100% |
+
+Daloopa's median is lower than ours, and the reason is informative: our
+substitutions are `quarter → fy` (a single quarter vs a full year, ~4x by
+construction), whereas Daloopa mixes `FY2022 → FY2023` (adjacent years, where
+YoY change is naturally only 10–20%) with quarter shifts and fiscal-vs-calendar
+confusions. **Even the mildest kind of period error — one adjacent fiscal year
+— still moves the output by ~19% at the median while the bound reports zero.**
+
 ## Task boundary (honest)
 
 Daloopa is **single-number retrieval by a chatbot with web search**, NOT a
