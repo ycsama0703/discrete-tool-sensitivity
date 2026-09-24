@@ -116,11 +116,14 @@ lab box: qwen2.5:7b, llama3.1:8b, gemma3:12b).
 
 ## Reading order
 
-1. `docs/paper_framework.md` §1–2 — the claim and the corrected theory
-2. `docs/probe_notes/README_decision_geometry.md` — the crossover
-3. `docs/probe_notes/README_certdr_baseline.md` — why prior certificates are a
+1. `docs/paper_storyline.md` — the full narrative arc (discovery → theory →
+   experiments → why enumeration is the only reliable detector), with the
+   financial framing
+2. `docs/paper_framework.md` §1–2 — the claim and the corrected theory
+3. `docs/probe_notes/README_decision_geometry.md` — the crossover
+4. `docs/probe_notes/README_certdr_baseline.md` — why prior certificates are a
    baseline here rather than a competitor
-4. `docs/paper_framework.md` §4 — what we inherit, compare against, and rebut
+5. `docs/paper_framework.md` §4 — what we inherit, compare against, and rebut
 
 ## Writing discipline carried in the docs
 
