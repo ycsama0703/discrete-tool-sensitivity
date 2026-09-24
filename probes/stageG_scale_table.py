@@ -16,6 +16,9 @@ Columns:
   emit   - fraction of runs where the model emitted a parseable tool call.
            Reported because a harness that cannot parse a model's tool-call
            dialect silently deflates its error rate (see the note).
+  omit   - well-formed tool calls that left `period` out entirely. The schema
+           does not require it, so these are schema-valid, raise no error, and
+           the API just applies a default. Counted as errors.
   err    - period error rate, over PARSED calls.
   L1/L2/L3 - ladder recall / precision.
 
@@ -29,6 +32,7 @@ import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 # (label, filename, family, size, source)
+# group 1 - same-family scale pairs, plus the local runs they are paired with
 ROWS = [
     ("qwen2.5-7b",   "stageF_ladder_qwen.jsonl",   "qwen",  "7B",  "local"),
     ("qwen2.5-7b",   "stageG_qwen7b.jsonl",        "qwen",  "7B",  "API"),
@@ -37,6 +41,12 @@ ROWS = [
     ("llama3.1-8b",  "stageG_llama8b.jsonl",       "llama", "8B",  "API"),
     ("llama3.3-70b", "stageG_llama70b.jsonl",      "llama", "70B", "API"),
     ("gemma3-12b",   "stageF_ladder_gemma.jsonl",  "gemma", "12B", "local"),
+    # group 2/3 - current-generation commercial models
+    ("gpt-6-luna",   "stageG_gpt6luna.jsonl",      "gpt",   "-",   "API"),
+    ("deepseek-v4.1-flash", "stageG_dsv41flash.jsonl", "deepseek", "-", "API"),
+    ("gemini-3.8-flash",    "stageG_gemini38.jsonl",   "gemini",   "-", "API"),
+    ("qwen3.8-flash",       "stageG_qwen38.jsonl",     "qwen3.8",  "-", "API"),
+    ("claude-sonnet-5",     "stageG_sonnet5.jsonl",    "claude",   "-", "API"),
 ]
 
 
@@ -50,9 +60,12 @@ def stats(path):
     failed = [r for r in rows if r.get("parse_failed")]
     parsed = n - len(failed)
     errs = [r for r in rows if r["real_error"]]
+    # A well-formed tool call that omits `period` entirely: schema-valid (period
+    # is not in `required`), raises no error, API silently applies a default.
+    n_omit = sum(1 for r in rows if r.get("filled_period") == "__OMITTED__")
     out = {"n": n, "emit": parsed / n if n else 0.0,
            "err": len(errs) / parsed if parsed else float("nan"),
-           "n_err": len(errs)}
+           "n_err": len(errs), "omit": n_omit}
     for key, lab in [("det_L1", "L1"), ("det_L2", "L2"), ("det_L3", "L3")]:
         n_det = sum(1 for r in errs if r.get(key))
         flagged = [r for r in rows if r.get(key)]
@@ -67,18 +80,18 @@ def pct(x):
 
 
 def main():
-    print(f"{'model':13} {'size':>4} {'src':>5} {'n':>4} {'emit':>6} {'err':>6} "
+    print(f"{'model':21} {'size':>4} {'src':>5} {'n':>4} {'emit':>6} {'omit':>5} {'err':>6} "
           f"| {'L1 rec':>6} {'L1 pre':>6} | {'L2 rec':>6} {'L2 pre':>6} "
           f"| {'L3 rec':>6} {'L3 pre':>6}")
-    print("-" * 108)
+    print("-" * 122)
     data = {}
     for label, fn, fam, size, src in ROWS:
         s = stats(os.path.join(HERE, fn))
         if s is None:
-            print(f"{label:13} {size:>4} {src:>5}  (not run yet)")
+            print(f"{label:21} {size:>4} {src:>5}  (not run yet)")
             continue
         data[(fam, size, src)] = s
-        print(f"{label:13} {size:>4} {src:>5} {s['n']:4} {pct(s['emit'])} {pct(s['err'])} "
+        print(f"{label:21} {size:>4} {src:>5} {s['n']:4} {pct(s['emit'])} {s['omit']:5} {pct(s['err'])} "
               f"| {pct(s['L1_rec'])} {pct(s['L1_pre'])} | {pct(s['L2_rec'])} {pct(s['L2_pre'])} "
               f"| {pct(s['L3_rec'])} {pct(s['L3_pre'])}")
 

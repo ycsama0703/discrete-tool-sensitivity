@@ -142,7 +142,17 @@ class ORAgent:
                     self.out_tok += u.get("completion_tokens", 0)
                     self.cost += float(u.get("cost", 0) or 0)
                     self.n_calls += 1
-                return d["choices"][0]["message"].get("content") or ""
+                msg = d["choices"][0].get("message") or {}
+                content = msg.get("content")
+                if not content:
+                    # Reasoning models put their chain of thought in `reasoning`
+                    # and may leave `content` null (especially if the budget ran
+                    # out mid-thought). Falling back to `reasoning` lets us still
+                    # recover a tool call the model did emit, instead of scoring
+                    # it as "no tool call" - which would be a harness artifact,
+                    # not model behaviour.
+                    content = msg.get("reasoning") or ""
+                return content
             except Exception as e:
                 msg = str(e)[:150]
                 if attempt == retries - 1:
@@ -162,16 +172,17 @@ class ORAgent:
             f"the form {{\"name\": \"get_fundamentals\", \"arguments\": {{...}}}}. "
             f"Choose 'period' carefully based on what the user asks for."
         )
-        # 800 rather than 200: models differ a lot in how verbosely they emit a
-        # tool call. Some write a sentence of preamble; llama-3.3-70b echoes the
-        # schema's type annotations around every value, which is long. A tight
-        # cap truncates the call itself (finish_reason "length") and that looks
-        # like a parse failure rather than what it is. Output tokens are the
-        # cheap half of the bill, so the headroom costs almost nothing.
+        # 2000 rather than 200: models differ a lot in how verbosely they emit
+        # a tool call. Some write a sentence of preamble; llama-3.3-70b echoes
+        # the schema's type annotations around every value; reasoning models
+        # spend hundreds of tokens on chain-of-thought BEFORE emitting anything.
+        # A tight cap truncates the call itself (finish_reason "length"), which
+        # looks like a parse failure rather than what it is. Output tokens are
+        # the cheap half of the bill, so the headroom costs almost nothing.
         gen = self._chat([
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": question},
-        ], max_new=800)
+        ], max_new=2000)
         if gen.startswith("__API_ERROR__"):
             return None, None, gen
         m = re.search(r"<tool_call>\s*(\{.*?\})\s*</tool_call>", gen, re.DOTALL)
@@ -209,7 +220,15 @@ class ORAgent:
                 return None
             return v
 
-        return unwrap(args.get("symbol")), unwrap(args.get("period")), gen
+        period = unwrap(args.get("period"))
+        if period is None and "get_fundamentals" in gen:
+            # A well-formed tool call that simply OMITS `period`. The schema does
+            # not require it, so this is schema-valid and raises no error - the
+            # API just applies its default. That makes it a third failure mode,
+            # more silent than filling the wrong value, and it must be scored as
+            # an error rather than as "no tool call".
+            period = "__OMITTED__"
+        return unwrap(args.get("symbol")), period, gen
 
     def _verify_prompt(self, question, filled_period, correct_period, level):
         """Identical wording to stageF_selfcheck.py's _verify_prompt."""
@@ -271,8 +290,10 @@ class ORAgent:
         return msgs
 
     def verify(self, question, filled_period, correct_period, level):
+        # 600, not 30: the answer is one word, but a reasoning model burns its
+        # budget on chain-of-thought first and would be cut off before saying it.
         gen = self._chat(self._verify_prompt(question, filled_period,
-                                             correct_period, level), max_new=30)
+                                             correct_period, level), max_new=600)
         low = gen.strip().lower()
         if level == 3:
             return bool(re.search(r"\bperiod\b", low)), gen
@@ -375,11 +396,15 @@ def cmd_analyze(a):
     n_api = sum(1 for r in failed if r.get("fail_reason") == "api_error")
     n_noc = sum(1 for r in failed if r.get("fail_reason") == "no_toolcall")
     n_unk = len(failed) - n_api - n_noc
+    n_omit = sum(1 for r in rows if r.get("filled_period") == "__OMITTED__")
     print(f"runs: {n}")
     print(f"  emitted a tool call : {n - len(failed)}/{n} = {(n-len(failed))/n:.1%}")
     print(f"  no tool call (prose): {n_noc}"
           + (f"  [+{n_unk} unclassified]" if n_unk else ""))
     print(f"  API failures        : {n_api}")
+    if n_omit:
+        print(f"  omitted `period`    : {n_omit}  (schema-valid, no error raised,"
+              f" counted as an error)")
     if not n_err:
         print("\nno real errors - nothing to detect")
         return

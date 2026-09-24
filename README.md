@@ -55,7 +55,7 @@ current end-to-end probe simulates an agent with an assumed error rate.
 | | |
 |---|---|
 | output jump, `period=quarter→fy` | 66–72%, 100% schema-valid |
-| weak models making the substitution | llama3.1:8b 12%, qwen2.5:7b 18.75% (strong models 0%) |
+| models making the substitution | llama3.1:8b 12%, qwen2.5:7b 18.75% on the early probe. **The "strong models 0%" reading from that probe did not survive stage G**: on the full 20x20 tool-call task every model tested, up to claude-sonnet-5, errs at 25.9-38.2% |
 | `corr(ρ, flip)` vs `corr(jump, flip)`, 48 cells | **+0.851** vs **+0.110** |
 | `κ` on order decisions (must be ~0) | **−0.028** |
 | `κ` on threshold decisions | **+0.908** |
@@ -66,6 +66,8 @@ current end-to-end probe simulates an agent with an assumed error rate.
 | real-agent e2e, 3 models | qwen2.5/llama3.1/gemma3 all: real error 24.5–28%, screener **100% → 0%** |
 | baseline family (stage E) | enumeration screener is the only exact method: **prec/recall 100%** vs SAFER 77/62, MC 88/94, continuous/Gecko 0 |
 | active self-check (stage F, 3 models) | "why not just ask the LLM to check itself?" — L3 error localization: qwen **4.6%**, gemma 22.7%, llama 60.6% (prec 24%), vs screener **100%**; L1/L2 recall ~100% but precision collapses (llama 30%). Internal detection unreliable, external enumeration reliable |
+| scale & vendor sweep (stage G) | **12 configurations, 7B to frontier, 5 vendors: period error rate never leaves 25.9-38.2%.** claude-sonnet-5 errs at 36.5%, *higher* than a local 7B. Self-check L3 recall spans 0.0-89.8% with no predictable direction; screener is 100/100 on every row |
+| a third, silent failure mode | gemini-3.8-flash omitted `period` entirely on **100/400** calls - schema-valid, no error raised, API applies a default. The screener catches these unchanged |
 | external validity (Daloopa) | real commercial models make discrete period errors: 5 non-grounded models **5–9%**, grounded **1.0%**; **99.4%** of errors are enumerable neighbors the screener covers |
 | the bound reports zero on *real* errors | across 170 real commercial-model period errors, the output moves **>1% in 100%** of cases (median **18.8%**, >10% in 73%) — while the continuous bound reports **0** on every one |
 
