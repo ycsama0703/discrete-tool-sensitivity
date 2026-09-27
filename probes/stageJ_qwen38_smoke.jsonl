@@ -1,0 +1,20 @@
+{"idx": 0, "symbol": "AAPL", "question": "What was {SYM}'s revenue for the most recent single quarter?", "correct": "quarter", "filled_period": "quarter", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 1, "symbol": "AAPL", "question": "What was {SYM}'s total revenue for the last fiscal year?", "correct": "fy", "filled_period": "fy", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 2, "symbol": "AAPL", "question": "What is {SYM}'s cash flow from operations?", "correct": "quarter", "filled_period": "all", "real_error": true, "variant": "S0", "parse_failed": false}
+{"idx": 3, "symbol": "AAPL", "question": "Show {SYM}'s balance sheet.", "correct": "quarter", "filled_period": "all", "real_error": true, "variant": "S0", "parse_failed": false}
+{"idx": 4, "symbol": "AAPL", "question": "What was {SYM}'s net income for the latest quarter?", "correct": "quarter", "filled_period": "quarter", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 5, "symbol": "AAPL", "question": "What was {SYM}'s annual net income for fiscal 2024?", "correct": "fy", "filled_period": "fy", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 6, "symbol": "AAPL", "question": "What is {SYM}'s operating cash flow?", "correct": "quarter", "filled_period": "fy", "real_error": true, "variant": "S0", "parse_failed": false}
+{"idx": 7, "symbol": "AAPL", "question": "Show {SYM}'s total assets from its balance sheet.", "correct": "quarter", "filled_period": "fy", "real_error": true, "variant": "S0", "parse_failed": false}
+{"idx": 8, "symbol": "AAPL", "question": "What was {SYM}'s gross profit last quarter?", "correct": "quarter", "filled_period": "quarter", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 9, "symbol": "AAPL", "question": "What was {SYM}'s annual operating income?", "correct": "fy", "filled_period": "fy", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 10, "symbol": "AAPL", "question": "What was {SYM}'s diluted EPS for the last quarter?", "correct": "quarter", "filled_period": "quarter", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 11, "symbol": "AAPL", "question": "What was {SYM}'s annual diluted EPS for fiscal 2024?", "correct": "fy", "filled_period": "fy", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 12, "symbol": "AAPL", "question": "What is {SYM}'s cash from investing?", "correct": "quarter", "filled_period": "fy", "real_error": true, "variant": "S0", "parse_failed": false}
+{"idx": 13, "symbol": "AAPL", "question": "What was {SYM}'s annual cash flow from operations?", "correct": "fy", "filled_period": "fy", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 14, "symbol": "AAPL", "question": "Show {SYM}'s current assets.", "correct": "quarter", "filled_period": "quarter", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 15, "symbol": "AAPL", "question": "What was {SYM}'s annual revenue for fiscal 2023?", "correct": "fy", "filled_period": "fy", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 16, "symbol": "AAPL", "question": "What is {SYM}'s cash from financing?", "correct": "quarter", "filled_period": "fy", "real_error": true, "variant": "S0", "parse_failed": false}
+{"idx": 17, "symbol": "AAPL", "question": "What was {SYM}'s annual net income for fiscal 2023?", "correct": "fy", "filled_period": "fy", "real_error": false, "variant": "S0", "parse_failed": false}
+{"idx": 18, "symbol": "AAPL", "question": "Show {SYM}'s shareholders' equity.", "correct": "quarter", "filled_period": "all", "real_error": true, "variant": "S0", "parse_failed": false}
+{"idx": 19, "symbol": "AAPL", "question": "What was {SYM}'s annual operating income for fiscal 2023?", "correct": "fy", "filled_period": "fy", "real_error": false, "variant": "S0", "parse_failed": false}

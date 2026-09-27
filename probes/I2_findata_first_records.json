@@ -1,0 +1,36 @@
+{
+ "AAPL": {
+  "quarter": {
+   "period_type": "Q3",
+   "period_end_date": "2026-06-27",
+   "revenue": 109417000000,
+   "kinds": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4"
+   ]
+  },
+  "fy": {
+   "period_type": "FY",
+   "period_end_date": "2024-09-28",
+   "revenue": 391035000000,
+   "kinds": [
+    "FY"
+   ]
+  },
+  "all": {
+   "period_type": "Q3",
+   "period_end_date": "2026-06-27",
+   "revenue": 109417000000,
+   "kinds": [
+    "FY",
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "TTM"
+   ]
+  }
+ }
+}
