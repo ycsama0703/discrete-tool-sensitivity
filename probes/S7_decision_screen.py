@@ -272,25 +272,70 @@ def build_messages(user):
     return [{"role": "system", "content": sys_prompt}, {"role": "user", "content": user}]
 
 
+def _objects(text):
+    """Every balanced {...} span in text, in order (quote-aware)."""
+    out, depth, start, quote, esc = [], 0, None, None, False
+    for i, ch in enumerate(text):
+        if quote:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == quote:
+                quote = None
+            continue
+        if ch in "\"'" and depth:
+            quote = ch
+        elif ch == "{":
+            if depth == 0:
+                start = i
+            depth += 1
+        elif ch == "}" and depth:
+            depth -= 1
+            if depth == 0:
+                out.append((start, text[start:i + 1]))
+    return out
+
+
+def _load(s):
+    try:
+        return json.loads(s)
+    except Exception:
+        import ast
+        try:                                   # llama writes {'name': ..., ...}
+            v = ast.literal_eval(s)
+            return v if isinstance(v, dict) else None
+        except Exception:
+            return None
+
+
 def parse_call(gen):
-    """Same extraction as stageJ.parse_call, returning (tool, period, statement)."""
+    """Returns (tool, period, statement).
+
+    2026-09-28 fix: the stageJ-style extraction took the greedy span from the
+    FIRST '{' to the LAST '}', so any brace in a model's preamble made the call
+    unparseable, and single-quoted (Python-dict) calls failed json.loads. On
+    llama this misread 114/960 well-formed calls as failures (44/48 TECH
+    decisions would have been excluded). Now: scan every balanced object and
+    take the LAST one that looks like a tool call."""
     if gen.startswith("__API_ERROR__"):
         return None, None, None
     m = re.search(r"<tool_call>\s*(\{.*?\})\s*</tool_call>", gen, re.DOTALL)
     raw = m.group(1) if m else gen
-    jm = re.search(r"\{.*\}", raw, re.DOTALL)
-    if not jm:
+    found = None
+    for start, s in _objects(raw):
+        c = _load(s)
+        if isinstance(c, dict) and ("name" in c or "arguments" in c or "parameters" in c or "period" in c):
+            found = (start, c)
+    if found is None:
         return None, None, None
-    try:
-        call = json.loads(jm.group(0))
-    except Exception:
-        return None, None, None
+    start, call = found
     tool = call.get("name") if isinstance(call.get("name"), str) else None
     if tool is None:
         # e.g. sonnet: 'get_fundamentals\n{"symbol": ..., "period": ...}' — the
         # name is written before a bare argument object; take the last tool name
         # mentioned before the JSON
-        names = re.findall(r"get_(?:fundamentals|enterprise_value|key_metrics)", raw[:jm.start()])
+        names = re.findall(r"get_(?:fundamentals|enterprise_value|key_metrics)", raw[:start])
         tool = names[-1] if names else None
     args = call.get("arguments") or call.get("parameters") or call
     if isinstance(args, str):
