@@ -14,44 +14,44 @@ step 2 audit (value classes per tool and enum param, leave-one-universe-out):
     [TECH          ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all', 'quarter'], ['fy']]
     [TECH          ] get_enterprise_value   period=[['all', 'quarter'], ['fy']]
     [TECH          ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
-instances evaluated 90; excluded: {'api_error': 0, 'parse': 6, 'tool_or_value': 0}; param error 26/90 = 28.9%; decision error 17/90 = 18.9%
+instances evaluated 96; excluded: {'api_error': 0, 'parse': 0, 'tool_or_value': 0}; param error 30/96 = 31.2%; decision error 19/96 = 19.8%
 
   method              coverage  sel.risk  released_err  dec.recall  precision
-  none                  100.0%     18.9%            17        0.0%       nan%
-  lipschitz             100.0%     18.9%            17        0.0%       nan%
-  legality              100.0%     18.9%            17        0.0%       nan%
-  output_jump@0.10        0.0%      nan%             0      100.0%      18.9%
-  safer_m1               51.1%     10.9%             5       70.6%      27.3%
-  certdr_union            0.0%      nan%             0      100.0%      18.9%
-  ENUM                    8.9%      0.0%             0      100.0%      20.7%
-  selfcons               93.3%     15.5%            13       23.5%      66.7%
-  self_verify            88.9%     11.2%             9       47.1%      80.0%
-  strong_judge           95.6%     17.4%            15       11.8%      50.0%
-  vote_disagree          71.1%      1.6%             1       94.1%      61.5%
-  CRC[selfcons]          96.7%     17.2%            15       11.8%      66.7%
-  CRC[vote_disagree]     87.8%     11.4%             9       47.1%      72.7%
-  CRC[output_jump]        6.7%     16.7%             1       94.1%      19.0%
-  AURC output_jump   0.1616
-  AURC safer         0.0568
-  AURC selfcons      0.1670
-  AURC vote_disagree 0.0362
-  cost: ENUM 45 extra calls/decision (no audit: 104)
+  none                  100.0%     19.8%            19        0.0%       nan%
+  lipschitz             100.0%     19.8%            19        0.0%       nan%
+  legality              100.0%     19.8%            19        0.0%       nan%
+  output_jump@0.10        0.0%      nan%             0      100.0%      19.8%
+  safer_m1               34.4%      0.0%             0      100.0%      30.2%
+  certdr_union            0.0%      nan%             0      100.0%      19.8%
+  ENUM                    8.3%      0.0%             0      100.0%      21.6%
+  selfcons               78.1%      5.3%             4       78.9%      71.4%
+  self_verify            86.5%     12.0%            10       47.4%      69.2%
+  strong_judge           97.9%     19.1%            18        5.3%      50.0%
+  vote_disagree          66.7%      1.6%             1       94.7%      56.2%
+  CRC[selfcons]          90.6%     11.5%            10       47.4%     100.0%
+  CRC[vote_disagree]     93.8%     15.6%            14       26.3%      83.3%
+  CRC[output_jump]        6.2%     16.7%             1       94.7%      20.0%
+  AURC output_jump   0.1650
+  AURC safer         0.0305
+  AURC selfcons      0.0680
+  AURC vote_disagree 0.0452
+  cost: ENUM 45 extra calls/decision (no audit: 105)
 
   by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors
-    CONSUMER       flow  threshold n= 8  dec_err= 2  coverage= 0.0%  released_err=0
-    CONSUMER       flow  top3      n= 9  dec_err= 3  coverage=22.2%  released_err=0
-    CONSUMER       ratio threshold n= 3  dec_err= 0  coverage= 0.0%  released_err=0
+    CONSUMER       flow  threshold n= 9  dec_err= 2  coverage= 0.0%  released_err=0
+    CONSUMER       flow  top3      n= 9  dec_err= 2  coverage=22.2%  released_err=0
+    CONSUMER       ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     CONSUMER       ratio top3      n= 3  dec_err= 0  coverage=100.0%  released_err=0
-    ENERGY_STAPLES flow  threshold n= 7  dec_err= 1  coverage= 0.0%  released_err=0
-    ENERGY_STAPLES flow  top3      n= 9  dec_err= 1  coverage=33.3%  released_err=0
+    ENERGY_STAPLES flow  threshold n= 9  dec_err= 2  coverage= 0.0%  released_err=0
+    ENERGY_STAPLES flow  top3      n= 9  dec_err= 2  coverage=33.3%  released_err=0
     ENERGY_STAPLES ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     ENERGY_STAPLES ratio top3      n= 3  dec_err= 0  coverage= 0.0%  released_err=0
-    FIN_HEALTH     flow  threshold n= 8  dec_err= 1  coverage= 0.0%  released_err=0
+    FIN_HEALTH     flow  threshold n= 9  dec_err= 1  coverage= 0.0%  released_err=0
     FIN_HEALTH     flow  top3      n= 9  dec_err= 3  coverage= 0.0%  released_err=0
-    FIN_HEALTH     ratio threshold n= 3  dec_err= 0  coverage= 0.0%  released_err=0
+    FIN_HEALTH     ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     FIN_HEALTH     ratio top3      n= 3  dec_err= 0  coverage= 0.0%  released_err=0
-    TECH           flow  threshold n= 7  dec_err= 1  coverage= 0.0%  released_err=0
-    TECH           flow  top3      n= 9  dec_err= 3  coverage= 0.0%  released_err=0
+    TECH           flow  threshold n= 9  dec_err= 1  coverage= 0.0%  released_err=0
+    TECH           flow  top3      n= 9  dec_err= 2  coverage= 0.0%  released_err=0
     TECH           ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     TECH           ratio top3      n= 3  dec_err= 0  coverage= 0.0%  released_err=0
   audit generalisation [CONSUMER]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
@@ -73,43 +73,43 @@ step 2 audit (value classes per tool and enum param, leave-one-universe-out):
     [TECH          ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all'], ['fy'], ['quarter']]
     [TECH          ] get_enterprise_value   period=[['all', 'fy'], ['quarter']]
     [TECH          ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
-instances evaluated 90; excluded: {'api_error': 0, 'parse': 6, 'tool_or_value': 0}; param error 26/90 = 28.9%; decision error 17/90 = 18.9%
+instances evaluated 96; excluded: {'api_error': 0, 'parse': 0, 'tool_or_value': 0}; param error 30/96 = 31.2%; decision error 26/96 = 27.1%
 
   method              coverage  sel.risk  released_err  dec.recall  precision
-  none                  100.0%     18.9%            17        0.0%       nan%
-  lipschitz             100.0%     18.9%            17        0.0%       nan%
-  legality              100.0%     18.9%            17        0.0%       nan%
-  output_jump@0.10        0.0%      nan%             0      100.0%      18.9%
-  safer_m1               52.2%     10.6%             5       70.6%      27.9%
-  certdr_union            0.0%      nan%             0      100.0%      18.9%
-  ENUM                   10.0%      0.0%             0      100.0%      21.0%
-  selfcons               93.3%     15.5%            13       23.5%      66.7%
-  self_verify            88.9%     11.2%             9       47.1%      80.0%
-  strong_judge           95.6%     17.4%            15       11.8%      50.0%
-  vote_disagree          71.1%      1.6%             1       94.1%      61.5%
-  CRC[selfcons]          93.3%     15.5%            13       23.5%      66.7%
-  CRC[vote_disagree]     72.2%      1.5%             1       94.1%      64.0%
-  CRC[output_jump]        6.7%     16.7%             1       94.1%      19.0%
-  AURC output_jump   0.1819
-  AURC safer         0.1492
-  AURC selfcons      0.1709
-  AURC vote_disagree 0.0352
-  cost: ENUM 60 extra calls/decision (no audit: 104)
+  none                  100.0%     27.1%            26        0.0%       nan%
+  lipschitz             100.0%     27.1%            26        0.0%       nan%
+  legality              100.0%     27.1%            26        0.0%       nan%
+  output_jump@0.10        0.0%      nan%             0      100.0%      27.1%
+  safer_m1               33.3%     15.6%             5       80.8%      32.8%
+  certdr_union            0.0%      nan%             0      100.0%      27.1%
+  ENUM                    9.4%      0.0%             0      100.0%      29.9%
+  selfcons               78.1%      8.0%             6       76.9%      95.2%
+  self_verify            86.5%     18.1%            15       42.3%      84.6%
+  strong_judge           97.9%     26.6%            25        3.8%      50.0%
+  vote_disagree          66.7%      1.6%             1       96.2%      78.1%
+  CRC[selfcons]           0.0%      nan%             0      100.0%      27.1%
+  CRC[vote_disagree]     66.7%      1.6%             1       96.2%      78.1%
+  CRC[output_jump]        0.0%      nan%             0      100.0%      27.1%
+  AURC output_jump   0.2831
+  AURC safer         0.2137
+  AURC selfcons      0.1075
+  AURC vote_disagree 0.0580
+  cost: ENUM 60 extra calls/decision (no audit: 105)
 
   by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors
-    CONSUMER       flow  threshold n= 8  dec_err= 2  coverage= 0.0%  released_err=0
+    CONSUMER       flow  threshold n= 9  dec_err= 3  coverage= 0.0%  released_err=0
     CONSUMER       flow  top3      n= 9  dec_err= 2  coverage=33.3%  released_err=0
-    CONSUMER       ratio threshold n= 3  dec_err= 0  coverage= 0.0%  released_err=0
+    CONSUMER       ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     CONSUMER       ratio top3      n= 3  dec_err= 0  coverage=100.0%  released_err=0
-    ENERGY_STAPLES flow  threshold n= 7  dec_err= 1  coverage= 0.0%  released_err=0
+    ENERGY_STAPLES flow  threshold n= 9  dec_err= 3  coverage= 0.0%  released_err=0
     ENERGY_STAPLES flow  top3      n= 9  dec_err= 2  coverage=33.3%  released_err=0
     ENERGY_STAPLES ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     ENERGY_STAPLES ratio top3      n= 3  dec_err= 0  coverage= 0.0%  released_err=0
-    FIN_HEALTH     flow  threshold n= 8  dec_err= 1  coverage= 0.0%  released_err=0
+    FIN_HEALTH     flow  threshold n= 9  dec_err= 3  coverage= 0.0%  released_err=0
     FIN_HEALTH     flow  top3      n= 9  dec_err= 3  coverage= 0.0%  released_err=0
-    FIN_HEALTH     ratio threshold n= 3  dec_err= 0  coverage= 0.0%  released_err=0
+    FIN_HEALTH     ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     FIN_HEALTH     ratio top3      n= 3  dec_err= 0  coverage= 0.0%  released_err=0
-    TECH           flow  threshold n= 7  dec_err= 1  coverage= 0.0%  released_err=0
+    TECH           flow  threshold n= 9  dec_err= 3  coverage= 0.0%  released_err=0
     TECH           flow  top3      n= 9  dec_err= 3  coverage= 0.0%  released_err=0
     TECH           ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     TECH           ratio top3      n= 3  dec_err= 0  coverage= 0.0%  released_err=0
@@ -132,44 +132,44 @@ step 2 audit (value classes per tool and enum param, leave-one-universe-out):
     [TECH          ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all', 'quarter'], ['fy']]
     [TECH          ] get_enterprise_value   period=[['all', 'quarter'], ['fy']]
     [TECH          ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
-instances evaluated 90; excluded: {'api_error': 0, 'parse': 6, 'tool_or_value': 0}; param error 26/90 = 28.9%; decision error 15/90 = 16.7%
+instances evaluated 96; excluded: {'api_error': 0, 'parse': 0, 'tool_or_value': 0}; param error 30/96 = 31.2%; decision error 17/96 = 17.7%
 
   method              coverage  sel.risk  released_err  dec.recall  precision
-  none                  100.0%     16.7%            15        0.0%       nan%
-  lipschitz             100.0%     16.7%            15        0.0%       nan%
-  legality              100.0%     16.7%            15        0.0%       nan%
-  output_jump@0.10        0.0%      nan%             0      100.0%      16.7%
-  safer_m1               56.7%      3.9%             2       86.7%      33.3%
-  certdr_union            0.0%      nan%             0      100.0%      16.7%
-  ENUM                   18.9%      0.0%             0      100.0%      20.5%
-  selfcons               93.3%     13.1%            11       26.7%      66.7%
-  self_verify            88.9%     10.0%             8       46.7%      70.0%
-  strong_judge           95.6%     15.1%            13       13.3%      50.0%
-  vote_disagree          71.1%      1.6%             1       93.3%      53.8%
-  CRC[selfcons]          96.7%     14.9%            13       13.3%      66.7%
-  CRC[vote_disagree]     87.8%      8.9%             7       53.3%      72.7%
-  CRC[output_jump]        6.7%     16.7%             1       93.3%      16.7%
-  AURC output_jump   0.1286
-  AURC safer         0.0386
-  AURC selfcons      0.1495
-  AURC vote_disagree 0.0310
-  cost: ENUM 45 extra calls/decision (no audit: 104)
+  none                  100.0%     17.7%            17        0.0%       nan%
+  lipschitz             100.0%     17.7%            17        0.0%       nan%
+  legality              100.0%     17.7%            17        0.0%       nan%
+  output_jump@0.10        0.0%      nan%             0      100.0%      17.7%
+  safer_m1               54.2%      5.8%             3       82.4%      31.8%
+  certdr_union            0.0%      nan%             0      100.0%      17.7%
+  ENUM                   16.7%      0.0%             0      100.0%      21.2%
+  selfcons               78.1%      4.0%             3       82.4%      66.7%
+  self_verify            86.5%     10.8%             9       47.1%      61.5%
+  strong_judge           97.9%     17.0%            16        5.9%      50.0%
+  vote_disagree          66.7%      1.6%             1       94.1%      50.0%
+  CRC[selfcons]          90.6%      9.2%             8       52.9%     100.0%
+  CRC[vote_disagree]     93.8%     13.3%            12       29.4%      83.3%
+  CRC[output_jump]        6.2%     16.7%             1       94.1%      17.8%
+  AURC output_jump   0.1366
+  AURC safer         0.0208
+  AURC selfcons      0.0572
+  AURC vote_disagree 0.0420
+  cost: ENUM 45 extra calls/decision (no audit: 105)
 
   by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors
-    CONSUMER       flow  threshold n= 8  dec_err= 2  coverage= 0.0%  released_err=0
-    CONSUMER       flow  top3      n= 9  dec_err= 3  coverage=22.2%  released_err=0
-    CONSUMER       ratio threshold n= 3  dec_err= 0  coverage= 0.0%  released_err=0
+    CONSUMER       flow  threshold n= 9  dec_err= 2  coverage= 0.0%  released_err=0
+    CONSUMER       flow  top3      n= 9  dec_err= 2  coverage=22.2%  released_err=0
+    CONSUMER       ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     CONSUMER       ratio top3      n= 3  dec_err= 0  coverage=100.0%  released_err=0
-    ENERGY_STAPLES flow  threshold n= 7  dec_err= 1  coverage= 0.0%  released_err=0
+    ENERGY_STAPLES flow  threshold n= 9  dec_err= 2  coverage= 0.0%  released_err=0
     ENERGY_STAPLES flow  top3      n= 9  dec_err= 0  coverage=100.0%  released_err=0
     ENERGY_STAPLES ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     ENERGY_STAPLES ratio top3      n= 3  dec_err= 0  coverage= 0.0%  released_err=0
-    FIN_HEALTH     flow  threshold n= 8  dec_err= 1  coverage= 0.0%  released_err=0
-    FIN_HEALTH     flow  top3      n= 9  dec_err= 2  coverage=33.3%  released_err=0
-    FIN_HEALTH     ratio threshold n= 3  dec_err= 0  coverage= 0.0%  released_err=0
+    FIN_HEALTH     flow  threshold n= 9  dec_err= 1  coverage= 0.0%  released_err=0
+    FIN_HEALTH     flow  top3      n= 9  dec_err= 3  coverage=22.2%  released_err=0
+    FIN_HEALTH     ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     FIN_HEALTH     ratio top3      n= 3  dec_err= 0  coverage= 0.0%  released_err=0
-    TECH           flow  threshold n= 7  dec_err= 1  coverage= 0.0%  released_err=0
-    TECH           flow  top3      n= 9  dec_err= 3  coverage= 0.0%  released_err=0
+    TECH           flow  threshold n= 9  dec_err= 1  coverage= 0.0%  released_err=0
+    TECH           flow  top3      n= 9  dec_err= 2  coverage= 0.0%  released_err=0
     TECH           ratio threshold n= 3  dec_err= 1  coverage= 0.0%  released_err=0
     TECH           ratio top3      n= 3  dec_err= 0  coverage= 0.0%  released_err=0
   audit generalisation [CONSUMER]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols

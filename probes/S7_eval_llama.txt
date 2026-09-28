@@ -29,12 +29,12 @@ instances evaluated 81; excluded: {'api_error': 0, 'parse': 15, 'tool_or_value':
   strong_judge           88.9%     25.0%            18       28.0%      77.8%
   vote_disagree          66.7%      7.4%             4       84.0%      77.8%
   CRC[selfcons]          80.2%     15.4%            10       60.0%      93.8%
-  CRC[vote_disagree]     70.4%     10.5%             6       76.0%      79.2%
+  CRC[vote_disagree]     77.8%     17.5%            11       56.0%      77.8%
   CRC[output_jump]        7.4%     33.3%             2       92.0%      30.7%
   AURC output_jump   0.2570
   AURC safer         0.0689
   AURC selfcons      0.1292
-  AURC vote_disagree 0.1000
+  AURC vote_disagree 0.1003
   cost: ENUM 46 extra calls/decision (no audit: 103)
 
   by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors
@@ -93,7 +93,7 @@ instances evaluated 81; excluded: {'api_error': 0, 'parse': 15, 'tool_or_value':
   AURC output_jump   0.3778
   AURC safer         0.1431
   AURC selfcons      0.1375
-  AURC vote_disagree 0.1051
+  AURC vote_disagree 0.1079
   cost: ENUM 60 extra calls/decision (no audit: 103)
 
   by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors
@@ -147,12 +147,12 @@ instances evaluated 81; excluded: {'api_error': 0, 'parse': 15, 'tool_or_value':
   strong_judge           88.9%     22.2%            16       30.4%      77.8%
   vote_disagree          66.7%      3.7%             2       91.3%      77.8%
   CRC[selfcons]          80.2%     12.3%             8       65.2%      93.8%
-  CRC[vote_disagree]     70.4%      7.0%             4       82.6%      79.2%
+  CRC[vote_disagree]     77.8%     14.3%             9       60.9%      77.8%
   CRC[output_jump]        7.4%     16.7%             1       95.7%      29.3%
   AURC output_jump   0.2213
   AURC safer         0.0518
   AURC selfcons      0.0990
-  AURC vote_disagree 0.0676
+  AURC vote_disagree 0.0679
   cost: ENUM 46 extra calls/decision (no audit: 103)
 
   by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors

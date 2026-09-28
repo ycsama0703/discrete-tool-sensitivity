@@ -34,7 +34,7 @@ instances evaluated 96; excluded: {'api_error': 0, 'parse': 0, 'tool_or_value': 
   AURC output_jump   0.0474
   AURC safer         0.0113
   AURC selfcons      0.0351
-  AURC vote_disagree 0.0231
+  AURC vote_disagree 0.0204
   cost: ENUM 45 extra calls/decision (no audit: 105)
 
   by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors
@@ -93,7 +93,7 @@ instances evaluated 96; excluded: {'api_error': 0, 'parse': 0, 'tool_or_value': 
   AURC output_jump   0.3175
   AURC safer         0.2364
   AURC selfcons      0.2772
-  AURC vote_disagree 0.0598
+  AURC vote_disagree 0.0608
   cost: ENUM 60 extra calls/decision (no audit: 105)
 
   by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors
@@ -152,7 +152,7 @@ instances evaluated 96; excluded: {'api_error': 0, 'parse': 0, 'tool_or_value': 
   AURC output_jump   0.0574
   AURC safer         0.0095
   AURC selfcons      0.0351
-  AURC vote_disagree 0.0231
+  AURC vote_disagree 0.0204
   cost: ENUM 45 extra calls/decision (no audit: 105)
 
   by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors
