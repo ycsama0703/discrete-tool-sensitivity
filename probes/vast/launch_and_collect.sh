@@ -34,11 +34,24 @@ ID=$(vastai create instance "$OFFER" --image "$IMAGE" --disk 60 --ssh --direct \
 say "instance $ID created"
 echo "$ID" > "$HERE/.instance_id"
 
-# wait for ssh details
+destroy() { echo y | vastai destroy instance "$ID" > /dev/null && say "instance $ID destroyed"; }
+
+# wait for ssh details; a host whose docker daemon errors (seen: broken registry
+# proxy), whose status stops changing for 20 min, or that takes >60 min is
+# abandoned - nothing has run yet, so destroy it. (A flat 15-min cap killed a
+# healthy host mid image-extract: the layer unpack alone can take >5 min.)
+T0=$(date +%s); TCHG=$T0; LAST=
 while :; do
-  read -r HOST PORT STATUS < <(vastai show instance "$ID" --raw | python -c "
-import sys,json; d=json.load(sys.stdin); print(d.get('ssh_host'), d.get('ssh_port'), d.get('actual_status'))")
+  read -r HOST PORT STATUS BAD MSG < <(vastai show instance "$ID" --raw | python -c "
+import sys,json,hashlib; d=json.load(sys.stdin); m=d.get('status_msg') or ''
+print(d.get('ssh_host'), d.get('ssh_port'), d.get('actual_status'), int('Error response from daemon' in m), hashlib.md5(m.encode()).hexdigest())")
   [ "$STATUS" = "running" ] && [ "$HOST" != "None" ] && break
+  NOW=$(date +%s); [ "$MSG" != "$LAST" ] && { LAST=$MSG; TCHG=$NOW; }
+  if [ "$BAD" = "1" ] || [ $(( NOW - TCHG )) -gt 1800 ] || [ $(( NOW - T0 )) -gt 3600 ]; then
+    say "host failed to start the image (daemon error / stalled 30 min / >60 min) - abandoning"
+    vastai logs "$ID" --tail 40 > "$HERE/_boot_fail_$ID.log" 2>&1; say "boot log kept: _boot_fail_$ID.log"
+    destroy; exit 5
+  fi
   sleep 20
 done
 say "running: ssh -p $PORT root@$HOST"
@@ -70,4 +83,4 @@ for f in S7_base_selfcons_llama S7_base_verify_llama; do
 done
 [ $ok -eq 1 ] || { say "verification failed - instance $ID left up"; exit 4; }
 
-vastai destroy instance "$ID" && say "instance $ID destroyed"
+destroy
