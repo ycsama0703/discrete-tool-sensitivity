@@ -60,8 +60,10 @@ assert torch.cuda.is_bf16_supported(), 'no bf16'
 print('torch', torch.__version__, '| transformers', transformers.__version__, '|', torch.cuda.get_device_name(0))" \
   || fail "environment check"
 
-# 3. model weights, same revision as luyao4
-HF_HUB_ENABLE_HF_TRANSFER=1 $PY -c "
+# 3. model weights, same revision as luyao4 (fast transfer only if installed:
+#    with the env var set and the package missing, huggingface_hub errors out)
+HFT=$($PY -c "import hf_transfer" 2>/dev/null && echo 1 || echo 0)
+HF_HUB_ENABLE_HF_TRANSFER=$HFT $PY -c "
 from huggingface_hub import snapshot_download
 print(snapshot_download('$MODEL', revision='$REV', allow_patterns=['*.json', '*.safetensors']))" \
   || fail "model download"
