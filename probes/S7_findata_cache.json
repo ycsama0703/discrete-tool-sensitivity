@@ -1,0 +1,6140 @@
+{
+ "AAPL": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 109417000000,
+    "operating_income": 35695000000,
+    "net_income": 29789000000,
+    "eps": 2.04,
+    "_type": "Q3"
+   },
+   "fy": {
+    "revenue": 391035000000,
+    "operating_income": 123216000000,
+    "net_income": 93736000000,
+    "eps": 6.11,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 109417000000,
+    "operating_income": 35695000000,
+    "net_income": 29789000000,
+    "eps": 2.04,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "revenue": 395760000000,
+    "operating_income": 125675000000,
+    "net_income": 96150000000,
+    "eps": 6.31,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 109417000000,
+    "operating_income": 35695000000,
+    "net_income": 29789000000,
+    "eps": 2.04,
+    "_type": "Q3"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 4169441906699.0,
+    "total_debt": 84307000000.0,
+    "cash_and_short_term": 39544000000.0,
+    "_type": "Q3"
+   },
+   "fy": {
+    "market_cap": 3495160329570.0,
+    "total_debt": 106629000000.0,
+    "cash_and_short_term": 29943000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 4169441906699.0,
+    "total_debt": 84307000000.0,
+    "cash_and_short_term": 39544000000.0,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "market_cap": 3495160329570.0,
+    "total_debt": 106629000000.0,
+    "cash_and_short_term": 29943000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 4169441906699.0,
+    "total_debt": 84307000000.0,
+    "cash_and_short_term": 39544000000.0,
+    "_type": "Q3"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.0032948046555858,
+    "_type": "Q3"
+   },
+   "fy": {
+    "current_ratio": 0.8673125765340832,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.0032948046555858,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "current_ratio": 1.07035746912159,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.0032948046555858,
+    "_type": "Q3"
+   }
+  }
+ },
+ "ABBV": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 16990000000,
+    "operating_income": 6432000000,
+    "net_income": 3613000000,
+    "eps": 2.04,
+    "_type": "Q2"
+   },
+   "fy": {
+    "revenue": 56334000000,
+    "operating_income": 9137000000,
+    "net_income": 4278000000,
+    "eps": 2.42,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 16990000000,
+    "operating_income": 6432000000,
+    "net_income": 3613000000,
+    "eps": 2.04,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "revenue": 57367000000,
+    "operating_income": 10072000000,
+    "net_income": 4195000000,
+    "eps": 4.1,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 16990000000,
+    "operating_income": 6432000000,
+    "net_income": 3613000000,
+    "eps": 2.04,
+    "_type": "Q2"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 445652426880.0,
+    "total_debt": 70822000000.0,
+    "cash_and_short_term": 6569000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 313686166412.0,
+    "total_debt": 67144000000.0,
+    "cash_and_short_term": 5524000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 445652426880.0,
+    "total_debt": 70822000000.0,
+    "cash_and_short_term": 6569000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 313686166412.0,
+    "total_debt": 67144000000.0,
+    "cash_and_short_term": 5524000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 445652426880.0,
+    "total_debt": 70822000000.0,
+    "cash_and_short_term": 6569000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.8085346525142885,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 0.6601976825208392,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.8085346525142885,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "current_ratio": 0.7964133016627079,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.8085346525142885,
+    "_type": "Q2"
+   }
+  }
+ },
+ "ADBE": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 6618000000,
+    "operating_income": 2238000000,
+    "net_income": 1712000000,
+    "eps": 4.26,
+    "_type": "Q2"
+   },
+   "fy": {
+    "revenue": 21505000000,
+    "operating_income": 6741000000,
+    "net_income": 5560000000,
+    "eps": 12.44,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 6618000000,
+    "operating_income": 2238000000,
+    "net_income": 1712000000,
+    "eps": 4.26,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "revenue": 22037000000,
+    "operating_income": 7997000000,
+    "net_income": 6751000000,
+    "eps": 15.2,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 6618000000,
+    "operating_income": 2238000000,
+    "net_income": 1712000000,
+    "eps": 4.26,
+    "_type": "Q2"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 104202419999.0,
+    "total_debt": 7065000000.0,
+    "cash_and_short_term": 4919000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 230620709999.0,
+    "total_debt": 6056000000.0,
+    "cash_and_short_term": 7613000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 104202419999.0,
+    "total_debt": 7065000000.0,
+    "cash_and_short_term": 4919000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 230620709999.0,
+    "total_debt": 6056000000.0,
+    "cash_and_short_term": 7613000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 104202419999.0,
+    "total_debt": 7065000000.0,
+    "cash_and_short_term": 4919000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.7507865540652426,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 1.067579127459367,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.9118525021949078,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.9118525021949078,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.7507865540652426,
+    "_type": "Q2"
+   }
+  }
+ },
+ "AMD": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 11536000000,
+    "operating_income": 1990000000,
+    "net_income": 2297000000,
+    "eps": 1.4,
+    "_type": "Q2"
+   },
+   "fy": {
+    "revenue": 25785000000,
+    "operating_income": 1900000000,
+    "net_income": 1641000000,
+    "eps": 1.01,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 11536000000,
+    "operating_income": 1990000000,
+    "net_income": 2297000000,
+    "eps": 1.4,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "revenue": 25785000000,
+    "operating_income": 1900000000,
+    "net_income": 1641000000,
+    "eps": 1.02,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 11536000000,
+    "operating_income": 1990000000,
+    "net_income": 2297000000,
+    "eps": 1.4,
+    "_type": "Q2"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 850696980000.0,
+    "total_debt": 4276000000.0,
+    "cash_and_short_term": 5086000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 202807800000.0,
+    "total_debt": 2212000000.0,
+    "cash_and_short_term": 3787000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 850696980000.0,
+    "total_debt": 4276000000.0,
+    "cash_and_short_term": 5086000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 202807800000.0,
+    "total_debt": 2212000000.0,
+    "cash_and_short_term": 3787000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 850696980000.0,
+    "total_debt": 4276000000.0,
+    "cash_and_short_term": 5086000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 2.6092210909692906,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 2.6162615025408598,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.6092210909692906,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "current_ratio": 2.7249190938511325,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 2.6092210909692906,
+    "_type": "Q2"
+   }
+  }
+ },
+ "AMZN": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 200606000000,
+    "operating_income": 27461000000,
+    "net_income": 62647000000,
+    "eps": 5.82,
+    "_type": "Q2"
+   },
+   "fy": {
+    "revenue": 637959000000,
+    "operating_income": 68593000000,
+    "net_income": 59248000000,
+    "eps": 5.66,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 200606000000,
+    "operating_income": 27461000000,
+    "net_income": 62647000000,
+    "eps": 5.82,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "revenue": 637959000000,
+    "operating_income": 68593000000,
+    "net_income": 59248000000,
+    "eps": 5.66,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 200606000000,
+    "operating_income": 27461000000,
+    "net_income": 62647000000,
+    "eps": 5.82,
+    "_type": "Q2"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 2563585040000.0,
+    "total_debt": 223232000000.0,
+    "cash_and_short_term": 78213000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 2297671470000.0,
+    "total_debt": 130900000000.0,
+    "cash_and_short_term": 78779000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 2563585040000.0,
+    "total_debt": 223232000000.0,
+    "cash_and_short_term": 78213000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 2297671470000.0,
+    "total_debt": 130900000000.0,
+    "cash_and_short_term": 78779000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 2563585040000.0,
+    "total_debt": 223232000000.0,
+    "cash_and_short_term": 78213000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.0331158765552857,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 1.063734806137178,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.0331158765552857,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "current_ratio": 1.1771531122552548,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.0331158765552857,
+    "_type": "Q2"
+   }
+  }
+ },
+ "AVGO": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 29591000000,
+    "operating_income": 15955000000,
+    "net_income": 13088000000,
+    "eps": 2.75,
+    "_type": "Q3"
+   },
+   "fy": {
+    "revenue": 51574000000,
+    "operating_income": 13463000000,
+    "net_income": 5895000000,
+    "eps": 1.33,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 29591000000,
+    "operating_income": 15955000000,
+    "net_income": 13088000000,
+    "eps": 2.75,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "revenue": 54529000000,
+    "operating_income": 17985000000,
+    "net_income": 10073000000,
+    "eps": 0.91,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 29591000000,
+    "operating_income": 15955000000,
+    "net_income": 13088000000,
+    "eps": 2.75,
+    "_type": "Q3"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 1977125500000.0,
+    "total_debt": 64907000000.0,
+    "cash_and_short_term": 19628000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 779375200000.0,
+    "total_debt": 67566000000.0,
+    "cash_and_short_term": 9348000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 1977125500000.0,
+    "total_debt": 64907000000.0,
+    "cash_and_short_term": 19628000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 779375200000.0,
+    "total_debt": 67566000000.0,
+    "cash_and_short_term": 9348000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 1977125500000.0,
+    "total_debt": 64907000000.0,
+    "cash_and_short_term": 19628000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 2.503743161531817,
+    "_type": "Q3"
+   },
+   "fy": {
+    "current_ratio": 1.1735641133137689,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.503743161531817,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "current_ratio": 1.9017735334242838,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 2.503743161531817,
+    "_type": "Q3"
+   }
+  }
+ },
+ "AXP": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 21595000000,
+    "operating_income": 9338000000,
+    "net_income": 3110000000,
+    "eps": 4.54,
+    "_type": "Q2"
+   },
+   "fy": {
+    "revenue": 50406000000,
+    "operating_income": 36168000000,
+    "net_income": 10129000000,
+    "eps": 13.82,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 21595000000,
+    "operating_income": 9338000000,
+    "net_income": 3110000000,
+    "eps": 4.54,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "revenue": 67890000000,
+    "operating_income": 3771000000,
+    "net_income": 10276000000,
+    "eps": 14.28,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 21595000000,
+    "operating_income": 9338000000,
+    "net_income": 3110000000,
+    "eps": 4.54,
+    "_type": "Q2"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 229333500000.0,
+    "total_debt": 59049000000.0,
+    "cash_and_short_term": 45243000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 211314480000.0,
+    "total_debt": 1374000000.0,
+    "cash_and_short_term": 77646000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 229333500000.0,
+    "total_debt": 59049000000.0,
+    "cash_and_short_term": 45243000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 211314480000.0,
+    "total_debt": 1374000000.0,
+    "cash_and_short_term": 77646000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 229333500000.0,
+    "total_debt": 59049000000.0,
+    "cash_and_short_term": 45243000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.551305274984809,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 0.8864428367308674,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.551305274984809,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "current_ratio": 0.354071661237785,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.551305274984809,
+    "_type": "Q2"
+   }
+  }
+ },
+ "BA": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 24560000000,
+    "operating_income": 78000000,
+    "net_income": -444000000,
+    "eps": -0.67,
+    "_type": "Q2"
+   },
+   "fy": {
+    "revenue": 66517000000,
+    "operating_income": -10707000000,
+    "net_income": -11817000000,
+    "eps": -18.36,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 24560000000,
+    "operating_income": 78000000,
+    "net_income": -444000000,
+    "eps": -0.67,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "revenue": 69444000000,
+    "operating_income": -10160000000,
+    "net_income": -11511000000,
+    "eps": -17.91,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 24560000000,
+    "operating_income": 78000000,
+    "net_income": -444000000,
+    "eps": -0.67,
+    "_type": "Q2"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 171237462660.0,
+    "total_debt": 45890000000.0,
+    "cash_and_short_term": 7239000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 114501300000.0,
+    "total_debt": 54188000000.0,
+    "cash_and_short_term": 13801000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 171237462660.0,
+    "total_debt": 45890000000.0,
+    "cash_and_short_term": 7239000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 114501300000.0,
+    "total_debt": 54188000000.0,
+    "cash_and_short_term": 13801000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 171237462660.0,
+    "total_debt": 45890000000.0,
+    "cash_and_short_term": 7239000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.1375190529649608,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 1.318506767753765,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.1375190529649608,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "current_ratio": 1.1761679630875346,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.1375190529649608,
+    "_type": "Q2"
+   }
+  }
+ },
+ "BAC": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 49393000000,
+    "operating_income": 11565000000,
+    "net_income": 9074000000,
+    "eps": 1.22,
+    "_type": "Q2"
+   },
+   "fy": {
+    "revenue": 101887000000,
+    "operating_income": 29254000000,
+    "net_income": 27132000000,
+    "eps": 3.25,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 49393000000,
+    "operating_income": 11565000000,
+    "net_income": 9074000000,
+    "eps": 1.22,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "revenue": 123058000000,
+    "operating_income": 31588000000,
+    "net_income": 27854000000,
+    "eps": 3.39,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 49393000000,
+    "operating_income": 11565000000,
+    "net_income": 9074000000,
+    "eps": 1.22,
+    "_type": "Q2"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 407475376000.0,
+    "total_debt": 732060000000.0,
+    "cash_and_short_term": 28620000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 340102680000.0,
+    "total_debt": 658428000000.0,
+    "cash_and_short_term": 290114000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 407475376000.0,
+    "total_debt": 732060000000.0,
+    "cash_and_short_term": 28620000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 340102680000.0,
+    "total_debt": 658428000000.0,
+    "cash_and_short_term": 290114000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 407475376000.0,
+    "total_debt": 732060000000.0,
+    "cash_and_short_term": 28620000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.07297353115908586,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 0.39789064789239453,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.07297353115908586,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "current_ratio": 0.5363481572397661,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.07297353115908586,
+    "_type": "Q2"
+   }
+  }
+ },
+ "BLK": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 6698000000,
+    "operating_income": 2261000000,
+    "net_income": 2212000000,
+    "eps": 14.24,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 20407000000,
+    "operating_income": 7574000000,
+    "net_income": 6369000000,
+    "eps": 42.45,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 6698000000,
+    "operating_income": 2261000000,
+    "net_income": 2212000000,
+    "eps": 14.24,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 21303000000,
+    "operating_income": 7922000000,
+    "net_income": 6566000000,
+    "eps": 41.46,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 6698000000,
+    "operating_income": 2261000000,
+    "net_income": 2212000000,
+    "eps": 14.24,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 149353563000.0,
+    "total_debt": 14965000000.0,
+    "cash_and_short_term": 9841000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 153809830374.0,
+    "total_debt": 14222000000.0,
+    "cash_and_short_term": 12762000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 149353563000.0,
+    "total_debt": 14965000000.0,
+    "cash_and_short_term": 9841000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 153809830374.0,
+    "total_debt": 14222000000.0,
+    "cash_and_short_term": 12762000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 149353563000.0,
+    "total_debt": 14965000000.0,
+    "cash_and_short_term": 9841000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 16.397135416666668,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 6.796028880866426,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 6.796028880866426,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.0,
+    "_type": "Q1"
+   }
+  }
+ },
+ "C": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 44141000000,
+    "operating_income": 7517000000,
+    "net_income": 5785000000,
+    "eps": 3.12,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 71363000000,
+    "operating_income": 30235000000,
+    "net_income": 12682000000,
+    "eps": 6.03,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 44141000000,
+    "operating_income": 7517000000,
+    "net_income": 5785000000,
+    "eps": 3.12,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 78123000000,
+    "operating_income": 28209000000,
+    "net_income": 12682000000,
+    "eps": 6.05,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 44141000000,
+    "operating_income": 7517000000,
+    "net_income": 5785000000,
+    "eps": 3.12,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 196981829000.0,
+    "total_debt": 749207000000.0,
+    "cash_and_short_term": 23625000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 133839546000.0,
+    "total_debt": 287300000000.0,
+    "cash_and_short_term": 22782000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 196981829000.0,
+    "total_debt": 749207000000.0,
+    "cash_and_short_term": 23625000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 133839546000.0,
+    "total_debt": 287300000000.0,
+    "cash_and_short_term": 22782000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 196981829000.0,
+    "total_debt": 749207000000.0,
+    "cash_and_short_term": 23625000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.3420669359318929,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 0.3420669359318929,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.05349367472675771,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.05349367472675771,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.3420669359318929,
+    "_type": "Q4"
+   }
+  }
+ },
+ "CAT": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 17415000000,
+    "operating_income": 3085000000,
+    "net_income": 2549000000,
+    "eps": 5.5,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 64809000000,
+    "operating_income": 13072000000,
+    "net_income": 10792000000,
+    "eps": 22.17,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 17415000000,
+    "operating_income": 3085000000,
+    "net_income": 2549000000,
+    "eps": 5.5,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 64809000000,
+    "operating_income": 13324000000,
+    "net_income": 10792000000,
+    "eps": 22.13,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 17415000000,
+    "operating_income": 3085000000,
+    "net_income": 2549000000,
+    "eps": 5.5,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 490279960000.0,
+    "total_debt": 45146000000.0,
+    "cash_and_short_term": 6713000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 176555292000.0,
+    "total_debt": 38409000000.0,
+    "cash_and_short_term": 6889000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 490279960000.0,
+    "total_debt": 45146000000.0,
+    "cash_and_short_term": 6713000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 176555292000.0,
+    "total_debt": 38409000000.0,
+    "cash_and_short_term": 6889000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 490279960000.0,
+    "total_debt": 45146000000.0,
+    "cash_and_short_term": 6713000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.4155304908279622,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.4155304908279622,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.3527937162275083,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.3527937162275083,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.4155304908279622,
+    "_type": "Q4"
+   }
+  }
+ },
+ "CL": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 5324000000,
+    "operating_income": 1156000000,
+    "net_income": 646000000,
+    "eps": 0.81,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 20101000000,
+    "operating_income": 4268000000,
+    "net_income": 2889000000,
+    "eps": 3.53,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 5324000000,
+    "operating_income": 1156000000,
+    "net_income": 646000000,
+    "eps": 0.81,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 19947000000,
+    "operating_income": 4362000000,
+    "net_income": 2897000000,
+    "eps": 3.54,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 5324000000,
+    "operating_income": 1156000000,
+    "net_income": 646000000,
+    "eps": 0.81,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 73027862056.0,
+    "total_debt": 7857000000.0,
+    "cash_and_short_term": 1370000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 74337107000.0,
+    "total_debt": 7289000000.0,
+    "cash_and_short_term": 1096000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 73027862056.0,
+    "total_debt": 7857000000.0,
+    "cash_and_short_term": 1370000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 74337107000.0,
+    "total_debt": 7289000000.0,
+    "cash_and_short_term": 1096000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 73027862056.0,
+    "total_debt": 7857000000.0,
+    "cash_and_short_term": 1370000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.8473983384346305,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 0.9232505643340858,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.0249410178631615,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.0249410178631615,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.8473983384346305,
+    "_type": "Q1"
+   }
+  }
+ },
+ "COP": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 16054000000,
+    "operating_income": 3363000000,
+    "net_income": 2183000000,
+    "eps": 1.78,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 54745000000,
+    "operating_income": 12783000000,
+    "net_income": 9245000000,
+    "eps": 7.86,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 16054000000,
+    "operating_income": 3363000000,
+    "net_income": 2183000000,
+    "eps": 1.78,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 55276000000,
+    "operating_income": 16807000000,
+    "net_income": 9245000000,
+    "eps": 7.87,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 16054000000,
+    "operating_income": 3363000000,
+    "net_income": 2183000000,
+    "eps": 1.78,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 126150573880.0,
+    "total_debt": 23290000000.0,
+    "cash_and_short_term": 6574000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 116913496400.0,
+    "total_debt": 24324000000.0,
+    "cash_and_short_term": 5607000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 126150573880.0,
+    "total_debt": 23290000000.0,
+    "cash_and_short_term": 6574000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 116913496400.0,
+    "total_debt": 24324000000.0,
+    "cash_and_short_term": 5607000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 126150573880.0,
+    "total_debt": 23290000000.0,
+    "cash_and_short_term": 6574000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.2905806664467172,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.2905806664467172,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.2894485936755125,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.2894485936755125,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.2905806664467172,
+    "_type": "Q4"
+   }
+  }
+ },
+ "COST": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 69597000000,
+    "operating_income": 2606000000,
+    "net_income": 2035000000,
+    "eps": 4.58,
+    "_type": "Q2"
+   },
+   "fy": {
+    "revenue": 254453000000,
+    "operating_income": 9285000000,
+    "net_income": 7367000000,
+    "eps": 16.6,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 69597000000,
+    "operating_income": 2606000000,
+    "net_income": 2035000000,
+    "eps": 4.58,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "revenue": 264086000000,
+    "operating_income": 9751000000,
+    "net_income": 7621000000,
+    "eps": 17.17,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 69597000000,
+    "operating_income": 2606000000,
+    "net_income": 2035000000,
+    "eps": 4.58,
+    "_type": "Q2"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 443687720810.0,
+    "total_debt": 8232000000.0,
+    "cash_and_short_term": 18946000000.0,
+    "_type": "Q3"
+   },
+   "fy": {
+    "market_cap": 396139975320.0,
+    "total_debt": 8272000000.0,
+    "cash_and_short_term": 9906000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 443687720810.0,
+    "total_debt": 8232000000.0,
+    "cash_and_short_term": 18946000000.0,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "market_cap": 396139975320.0,
+    "total_debt": 8272000000.0,
+    "cash_and_short_term": 9906000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 443687720810.0,
+    "total_debt": 8232000000.0,
+    "cash_and_short_term": 18946000000.0,
+    "_type": "Q3"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.9972431687342901,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 0.965655312429506,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.0724510385756676,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.0724510385756676,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.9972431687342901,
+    "_type": "Q2"
+   }
+  }
+ },
+ "CRM": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 11201000000,
+    "operating_income": 2451000000,
+    "net_income": 1943000000,
+    "eps": 2.08,
+    "_type": "Q4"
+   },
+   "fy": {
+    "revenue": 37895000000,
+    "operating_income": 7205000000,
+    "net_income": 6197000000,
+    "eps": 6.44,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 11201000000,
+    "operating_income": 2451000000,
+    "net_income": 1943000000,
+    "eps": 2.08,
+    "_type": "Q4"
+   },
+   "all_annual": {
+    "revenue": 37895000000,
+    "operating_income": 7205000000,
+    "net_income": 6197000000,
+    "eps": 6.44,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 11201000000,
+    "operating_income": 2451000000,
+    "net_income": 1943000000,
+    "eps": 2.08,
+    "_type": "Q4"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 153228040000.0,
+    "total_debt": 41884000000.0,
+    "cash_and_short_term": 8935000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 328715400000.0,
+    "total_debt": 11392000000.0,
+    "cash_and_short_term": 8848000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 153228040000.0,
+    "total_debt": 41884000000.0,
+    "cash_and_short_term": 8935000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 328715400000.0,
+    "total_debt": 11392000000.0,
+    "cash_and_short_term": 8848000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 153228040000.0,
+    "total_debt": 41884000000.0,
+    "cash_and_short_term": 8935000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.0624374553252323,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.0624374553252323,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.7858701185368336,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.7858701185368336,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.0624374553252323,
+    "_type": "Q4"
+   }
+  }
+ },
+ "CROX": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 921457000,
+    "operating_income": 200844000,
+    "net_income": 137556000,
+    "eps": 2.74,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 4102108000,
+    "operating_income": 1021911000,
+    "net_income": 950071000,
+    "eps": 16,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 921457000,
+    "operating_income": 200844000,
+    "net_income": 137556000,
+    "eps": 2.74,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 4102108000,
+    "operating_income": 1021911000,
+    "net_income": 950071000,
+    "eps": 16.09,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 921457000,
+    "operating_income": 200844000,
+    "net_income": 137556000,
+    "eps": 2.74,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 5995204800.0,
+    "total_debt": 1689202000.0,
+    "cash_and_short_term": 170276000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 6504000930.0,
+    "total_debt": 1701296000.0,
+    "cash_and_short_term": 180485000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 5995204800.0,
+    "total_debt": 1689202000.0,
+    "cash_and_short_term": 170276000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 6504000930.0,
+    "total_debt": 1701296000.0,
+    "cash_and_short_term": 180485000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 5995204800.0,
+    "total_debt": 1689202000.0,
+    "cash_and_short_term": 170276000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.1784106629487927,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.1784106629487927,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.6656393272412262,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.6656393272412262,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.1784106629487927,
+    "_type": "Q4"
+   }
+  }
+ },
+ "CSCO": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 15841000000,
+    "operating_income": 3960000000,
+    "net_income": 3373000000,
+    "eps": 0.85,
+    "_type": "Q3"
+   },
+   "fy": {
+    "revenue": 53803000000,
+    "operating_income": 12181000000,
+    "net_income": 10320000000,
+    "eps": 2.55,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 15841000000,
+    "operating_income": 3960000000,
+    "net_income": 3373000000,
+    "eps": 0.85,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "revenue": 54176000000,
+    "operating_income": 10855000000,
+    "net_income": 9187000000,
+    "eps": 2.3,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 15841000000,
+    "operating_income": 3960000000,
+    "net_income": 3373000000,
+    "eps": 0.85,
+    "_type": "Q3"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 351945540000.0,
+    "total_debt": 31303000000.0,
+    "cash_and_short_term": 7083000000.0,
+    "_type": "Q3"
+   },
+   "fy": {
+    "market_cap": 193578840000.0,
+    "total_debt": 30962000000.0,
+    "cash_and_short_term": 7508000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 351945540000.0,
+    "total_debt": 31303000000.0,
+    "cash_and_short_term": 7083000000.0,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "market_cap": 193578840000.0,
+    "total_debt": 30962000000.0,
+    "cash_and_short_term": 7508000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 351945540000.0,
+    "total_debt": 31303000000.0,
+    "cash_and_short_term": 7083000000.0,
+    "_type": "Q3"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.8666133586546391,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 0.9082889808791642,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.924584608381174,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.924584608381174,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.8666133586546391,
+    "_type": "Q2"
+   }
+  }
+ },
+ "CVS": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 100426000000,
+    "operating_income": 4680000000,
+    "net_income": 2943000000,
+    "eps": 2.31,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 372809000000,
+    "operating_income": 8516000000,
+    "net_income": 4614000000,
+    "eps": 3.66,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 100426000000,
+    "operating_income": 4680000000,
+    "net_income": 2943000000,
+    "eps": 2.31,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 372809000000,
+    "operating_income": 8516000000,
+    "net_income": 4614000000,
+    "eps": 3.67,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 100426000000,
+    "operating_income": 4680000000,
+    "net_income": 2943000000,
+    "eps": 2.31,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 132002200000.0,
+    "total_debt": 76306000000.0,
+    "cash_and_short_term": 11329000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 56516510000.0,
+    "total_debt": 82920000000.0,
+    "cash_and_short_term": 8586000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 132002200000.0,
+    "total_debt": 76306000000.0,
+    "cash_and_short_term": 11329000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 56516510000.0,
+    "total_debt": 82920000000.0,
+    "cash_and_short_term": 8586000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 132002200000.0,
+    "total_debt": 76306000000.0,
+    "cash_and_short_term": 11329000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.811320308714203,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 0.811320308714203,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.8658773696271093,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.8658773696271093,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.811320308714203,
+    "_type": "Q4"
+   }
+  }
+ },
+ "CVX": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 47556000000,
+    "operating_income": 3240000000,
+    "net_income": 2210000000,
+    "eps": 1.12,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 202792000000,
+    "operating_income": 27506000000,
+    "net_income": 17661000000,
+    "eps": 9.76,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 47556000000,
+    "operating_income": 3240000000,
+    "net_income": 2210000000,
+    "eps": 1.12,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 197306000000,
+    "operating_income": 22560000000,
+    "net_income": 17661000000,
+    "eps": 9.76,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 47556000000,
+    "operating_income": 3240000000,
+    "net_income": 2210000000,
+    "eps": 1.12,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 409692207400.0,
+    "total_debt": 45428000000.0,
+    "cash_and_short_term": 5323000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 262100001720.0,
+    "total_debt": 24541000000.0,
+    "cash_and_short_term": 6781000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 409692207400.0,
+    "total_debt": 45428000000.0,
+    "cash_and_short_term": 5323000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 262100001720.0,
+    "total_debt": 24541000000.0,
+    "cash_and_short_term": 6781000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 409692207400.0,
+    "total_debt": 45428000000.0,
+    "cash_and_short_term": 5323000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.0,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.0610249494268376,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.0944613050075873,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.0944613050075873,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.0,
+    "_type": "Q4"
+   }
+  }
+ },
+ "DECK": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 1119369000,
+    "operating_income": 156729000,
+    "net_income": 135571000,
+    "eps": 0.96,
+    "_type": "Q4"
+   },
+   "fy": {
+    "revenue": 4287763000,
+    "operating_income": 927514000,
+    "net_income": 759563000,
+    "eps": 4.89,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 1119369000,
+    "operating_income": 156729000,
+    "net_income": 135571000,
+    "eps": 0.96,
+    "_type": "Q4"
+   },
+   "all_annual": {
+    "revenue": 4923590000,
+    "operating_income": 1149428999,
+    "net_income": 942225000,
+    "eps": 6.19,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 1119369000,
+    "operating_income": 156729000,
+    "net_income": 135571000,
+    "eps": 0.96,
+    "_type": "Q4"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 13728133270.0,
+    "total_debt": 472334000.0,
+    "cash_and_short_term": 1602589000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 24072448080.0,
+    "total_debt": 266879000.0,
+    "cash_and_short_term": 1502051000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 13728133270.0,
+    "total_debt": 472334000.0,
+    "cash_and_short_term": 1602589000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 24072448080.0,
+    "total_debt": 266879000.0,
+    "cash_and_short_term": 1502051000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 13728133270.0,
+    "total_debt": 472334000.0,
+    "cash_and_short_term": 1602589000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 3.1698800056540826,
+    "_type": "Q3"
+   },
+   "fy": {
+    "current_ratio": 3.3937593837717865,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 3.5449722289242036,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 3.5449722289242036,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 3.1698800056540826,
+    "_type": "Q3"
+   }
+  }
+ },
+ "ETSY": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 631277000,
+    "operating_income": 119846000,
+    "net_income": 69680000,
+    "eps": 0.72,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 2808332000,
+    "operating_income": 380208000,
+    "net_income": 303281000,
+    "eps": 2.58,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 631277000,
+    "operating_income": 119846000,
+    "net_income": 69680000,
+    "eps": 0.72,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 2808332000,
+    "operating_income": 382264000,
+    "net_income": 303281000,
+    "eps": 2.67,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 631277000,
+    "operating_income": 119846000,
+    "net_income": 69680000,
+    "eps": 0.72,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 7107988140.0,
+    "total_debt": 3075807000.0,
+    "cash_and_short_term": 901281000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 6079388160.0,
+    "total_debt": 2387713000.0,
+    "cash_and_short_term": 811178000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 7107988140.0,
+    "total_debt": 3075807000.0,
+    "cash_and_short_term": 901281000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 6079388160.0,
+    "total_debt": 2387713000.0,
+    "cash_and_short_term": 811178000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 7107988140.0,
+    "total_debt": 3075807000.0,
+    "cash_and_short_term": 901281000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.9961886175732544,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.9961886175732544,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.6894997653038295,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.6894997653038295,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.9961886175732544,
+    "_type": "Q4"
+   }
+  }
+ },
+ "FIVE": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 1728480000,
+    "operating_income": 310882000,
+    "net_income": 238226000,
+    "eps": 4.32,
+    "_type": "Q4"
+   },
+   "fy": {
+    "revenue": 3876527000,
+    "operating_income": 323817000,
+    "net_income": 253611000,
+    "eps": 1.1525,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 1728480000,
+    "operating_income": 310882000,
+    "net_income": 238226000,
+    "eps": 4.32,
+    "_type": "Q4"
+   },
+   "all_annual": {
+    "revenue": 3876527000,
+    "operating_income": 323817000,
+    "net_income": 253611000,
+    "eps": 1.1475,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 1728480000,
+    "operating_income": 310882000,
+    "net_income": 238226000,
+    "eps": 4.32,
+    "_type": "Q4"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 12739209240.0,
+    "total_debt": 1998709000.0,
+    "cash_and_short_term": 638892000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 20652255607.0,
+    "total_debt": 1981567000.0,
+    "cash_and_short_term": 331718000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 12739209240.0,
+    "total_debt": 1998709000.0,
+    "cash_and_short_term": 638892000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 20652255607.0,
+    "total_debt": 1981567000.0,
+    "cash_and_short_term": 331718000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 12739209240.0,
+    "total_debt": 1998709000.0,
+    "cash_and_short_term": 638892000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.7864780115329397,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.7864780115329397,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.0091309698261854,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 2.0091309698261854,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.7864780115329397,
+    "_type": "Q4"
+   }
+  }
+ },
+ "GE": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 12392000000,
+    "operating_income": 1698000000,
+    "net_income": 1936000000,
+    "eps": 1.82,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 38702000000,
+    "operating_income": 6657000000,
+    "net_income": 6556000000,
+    "eps": 6.04,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 12392000000,
+    "operating_income": 1698000000,
+    "net_income": 1936000000,
+    "eps": 1.82,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 39682000000,
+    "operating_income": 7496000000,
+    "net_income": 6995000000,
+    "eps": 6.43,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 12392000000,
+    "operating_income": 1698000000,
+    "net_income": 1936000000,
+    "eps": 1.82,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 388482499921.0,
+    "total_debt": 19157000000.0,
+    "cash_and_short_term": 9345000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 180967150000.0,
+    "total_debt": 19273000000.0,
+    "cash_and_short_term": 13619000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 388482499921.0,
+    "total_debt": 19157000000.0,
+    "cash_and_short_term": 9345000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 180967150000.0,
+    "total_debt": 19273000000.0,
+    "cash_and_short_term": 13619000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 388482499921.0,
+    "total_debt": 19157000000.0,
+    "cash_and_short_term": 9345000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.0753842191122178,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 1.094295184926727,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.008294194064155,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.008294194064155,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.0753842191122178,
+    "_type": "Q1"
+   }
+  }
+ },
+ "GOOGL": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 109896000000,
+    "operating_income": 39696000000,
+    "net_income": 62578000000,
+    "eps": 5.17,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 350018000000,
+    "operating_income": 112390000000,
+    "net_income": 100118000000,
+    "eps": 8.04,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 109896000000,
+    "operating_income": 39696000000,
+    "net_income": 62578000000,
+    "eps": 5.17,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 359713000000,
+    "operating_income": 117524000000,
+    "net_income": 110996000000,
+    "eps": 9.06,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 109896000000,
+    "operating_income": 39696000000,
+    "net_income": 62578000000,
+    "eps": 5.17,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 3479188440000.0,
+    "total_debt": 90484000000.0,
+    "cash_and_short_term": 38063000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 2356217284188.0,
+    "total_debt": 25461000000.0,
+    "cash_and_short_term": 23466000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 3479188440000.0,
+    "total_debt": 90484000000.0,
+    "cash_and_short_term": 38063000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 2356217284188.0,
+    "total_debt": 25461000000.0,
+    "cash_and_short_term": 23466000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 3479188440000.0,
+    "total_debt": 90484000000.0,
+    "cash_and_short_term": 38063000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.7680843171056364,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 1.8369313974102914,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.9224466669065008,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.9224466669065008,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.7680843171056364,
+    "_type": "Q1"
+   }
+  }
+ },
+ "GS": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 17227000000,
+    "operating_income": 6486000000,
+    "net_income": 5630000000,
+    "eps": 17.74,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 53512000000,
+    "operating_income": 18397000000,
+    "net_income": 14276000000,
+    "eps": 41.22,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 17227000000,
+    "operating_income": 6486000000,
+    "net_income": 5630000000,
+    "eps": 17.74,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 51466000000,
+    "operating_income": 16199000000,
+    "net_income": 14882000000,
+    "eps": 43.67,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 17227000000,
+    "operating_income": 6486000000,
+    "net_income": 5630000000,
+    "eps": 17.74,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 303512137000.0,
+    "total_debt": 437874000000.0,
+    "cash_and_short_term": 187266000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 187876622000.0,
+    "total_debt": 342555000000.0,
+    "cash_and_short_term": 182092000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 303512137000.0,
+    "total_debt": 437874000000.0,
+    "cash_and_short_term": 187266000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 187876622000.0,
+    "total_debt": 342555000000.0,
+    "cash_and_short_term": 182092000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 303512137000.0,
+    "total_debt": 437874000000.0,
+    "cash_and_short_term": 187266000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 2.352112676056338,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 2.0082980225988702,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.01664332011681189,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.01664332011681189,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 2.352112676056338,
+    "_type": "Q1"
+   }
+  }
+ },
+ "HD": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 41765000000,
+    "operating_income": 4981000000,
+    "net_income": 3289000000,
+    "eps": 3.31,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 159514000000,
+    "operating_income": 21526000000,
+    "net_income": 14806000000,
+    "eps": 14.96,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 41765000000,
+    "operating_income": 4981000000,
+    "net_income": 3289000000,
+    "eps": 3.31,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 159514000000,
+    "operating_income": 21526000000,
+    "net_income": 14806000000,
+    "eps": 14.95,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 41765000000,
+    "operating_income": 4981000000,
+    "net_income": 3289000000,
+    "eps": 3.31,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 310545480000.0,
+    "total_debt": 57975000000.0,
+    "cash_and_short_term": 1601000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 404672400000.0,
+    "total_debt": 62290000000.0,
+    "cash_and_short_term": 1659000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 310545480000.0,
+    "total_debt": 57975000000.0,
+    "cash_and_short_term": 1601000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 404672400000.0,
+    "total_debt": 62290000000.0,
+    "cash_and_short_term": 1659000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 310545480000.0,
+    "total_debt": 57975000000.0,
+    "cash_and_short_term": 1601000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.1054394473326123,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.1054394473326123,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.0447442383361438,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.0447442383361438,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.1054394473326123,
+    "_type": "Q4"
+   }
+  }
+ },
+ "HON": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 9143000000,
+    "operating_income": 886000000,
+    "net_income": 821000000,
+    "eps": 1.29,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 38498000000,
+    "operating_income": 7213000000,
+    "net_income": 5705000000,
+    "eps": 8.76,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 9143000000,
+    "operating_income": 886000000,
+    "net_income": 821000000,
+    "eps": 1.29,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 39213000000,
+    "operating_income": 7878000000,
+    "net_income": 5691000000,
+    "eps": 8.76,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 9143000000,
+    "operating_income": 886000000,
+    "net_income": 821000000,
+    "eps": 1.29,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 71021080000.0,
+    "total_debt": 28706000000.0,
+    "cash_and_short_term": 8751000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 147031801000.0,
+    "total_debt": 32225000000.0,
+    "cash_and_short_term": 10567000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 71021080000.0,
+    "total_debt": 28706000000.0,
+    "cash_and_short_term": 8751000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 147031801000.0,
+    "total_debt": 32225000000.0,
+    "cash_and_short_term": 10567000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 71021080000.0,
+    "total_debt": 28706000000.0,
+    "cash_and_short_term": 8751000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.2525485931765665,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 2.4407894736842106,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.3851030110935023,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.3851030110935023,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.2525485931765665,
+    "_type": "Q1"
+   }
+  }
+ },
+ "IBM": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 15917000000,
+    "operating_income": 1360000000,
+    "net_income": 1216000000,
+    "eps": 1.3,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 62753000000,
+    "operating_income": 10074000000,
+    "net_income": 6023000000,
+    "eps": 6.53,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 15917000000,
+    "operating_income": 1360000000,
+    "net_income": 1216000000,
+    "eps": 1.3,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 62830000000,
+    "operating_income": 10277000000,
+    "net_income": 5473000000,
+    "eps": 5.92,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 15917000000,
+    "operating_income": 1360000000,
+    "net_income": 1216000000,
+    "eps": 1.3,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 264309278999.0,
+    "total_debt": 65272000000.0,
+    "cash_and_short_term": 7172000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 206236150921.0,
+    "total_debt": 58396000000.0,
+    "cash_and_short_term": 13947000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 264309278999.0,
+    "total_debt": 65272000000.0,
+    "cash_and_short_term": 7172000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 206236150921.0,
+    "total_debt": 58396000000.0,
+    "cash_and_short_term": 13947000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 264309278999.0,
+    "total_debt": 65272000000.0,
+    "cash_and_short_term": 7172000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.0065515866233692,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 1.0404320801400035,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.7958405027306052,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.7958405027306052,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.0065515866233692,
+    "_type": "Q1"
+   }
+  }
+ },
+ "INTC": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 13577000000,
+    "operating_income": -3136000000,
+    "net_income": -3728000000,
+    "eps": -0.73,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 53101000000,
+    "operating_income": -11678000000,
+    "net_income": -18756000000,
+    "eps": -4.38,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 13577000000,
+    "operating_income": -3136000000,
+    "net_income": -3728000000,
+    "eps": -0.73,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 53044000000,
+    "operating_income": -9967000000,
+    "net_income": -19196000000,
+    "eps": -4.48,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 13577000000,
+    "operating_income": -3136000000,
+    "net_income": -3728000000,
+    "eps": -0.73,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 654945280000.0,
+    "total_debt": 50537000000.0,
+    "cash_and_short_term": 12874000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 86884000000.0,
+    "total_debt": 50011000000.0,
+    "cash_and_short_term": 8249000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 654945280000.0,
+    "total_debt": 50537000000.0,
+    "cash_and_short_term": 12874000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 86884000000.0,
+    "total_debt": 50011000000.0,
+    "cash_and_short_term": 8249000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 654945280000.0,
+    "total_debt": 50537000000.0,
+    "cash_and_short_term": 12874000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.3095667309007273,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 1.3268659227275277,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.311958341082388,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 2.311958341082388,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.3095667309007273,
+    "_type": "Q1"
+   }
+  }
+ },
+ "JNJ": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 24062000000,
+    "operating_income": 6395000000,
+    "net_income": 5235000000,
+    "eps": 2.14,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 88821000000,
+    "operating_income": 22149000000,
+    "net_income": 14066000000,
+    "eps": 5.84,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 24062000000,
+    "operating_income": 6395000000,
+    "net_income": 5235000000,
+    "eps": 2.14,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 89331000000,
+    "operating_income": 22075000000,
+    "net_income": 21810000000,
+    "eps": 9.07,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 24062000000,
+    "operating_income": 6395000000,
+    "net_income": 5235000000,
+    "eps": 2.14,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 630801366930.0,
+    "total_debt": 49036000000.0,
+    "cash_and_short_term": 20422000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 345062382000.0,
+    "total_debt": 36634000000.0,
+    "cash_and_short_term": 24105000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 630801366930.0,
+    "total_debt": 49036000000.0,
+    "cash_and_short_term": 20422000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 345062382000.0,
+    "total_debt": 36634000000.0,
+    "cash_and_short_term": 24105000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 630801366930.0,
+    "total_debt": 49036000000.0,
+    "cash_and_short_term": 20422000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.2574205226437973,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 1.1107291190556627,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.025244299674267,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.025244299674267,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.2574205226437973,
+    "_type": "Q1"
+   }
+  }
+ },
+ "JPM": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 73661000000,
+    "operating_income": 20479000000,
+    "net_income": 16494000000,
+    "eps": 5.95,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 166878000000,
+    "operating_income": 84633000000,
+    "net_income": 58471000000,
+    "eps": 19.79,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 73661000000,
+    "operating_income": 20479000000,
+    "net_income": 16494000000,
+    "eps": 5.95,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 204372000000,
+    "operating_income": 102038000000,
+    "net_income": 59695000000,
+    "eps": 20.41,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 73661000000,
+    "operating_income": 20479000000,
+    "net_income": 16494000000,
+    "eps": 5.95,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 820323992000.0,
+    "total_debt": 1233435000000.0,
+    "cash_and_short_term": 312142000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 688902569000.0,
+    "total_debt": 454311000000.0,
+    "cash_and_short_term": 469317000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 820323992000.0,
+    "total_debt": 1233435000000.0,
+    "cash_and_short_term": 312142000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 688902569000.0,
+    "total_debt": 454311000000.0,
+    "cash_and_short_term": 469317000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 820323992000.0,
+    "total_debt": 1233435000000.0,
+    "cash_and_short_term": 312142000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.5838951765595836,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 33.34930898228499,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.617859309007189,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.617859309007189,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.5838951765595836,
+    "_type": "Q1"
+   }
+  }
+ },
+ "KO": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 12472000000,
+    "operating_income": 4359000000,
+    "net_income": 3924000000,
+    "eps": 0.91,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 47061000000,
+    "operating_income": 9992000000,
+    "net_income": 10631000000,
+    "eps": 2.47,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 12472000000,
+    "operating_income": 4359000000,
+    "net_income": 3924000000,
+    "eps": 0.91,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 46890000000,
+    "operating_income": 11510000000,
+    "net_income": 10784000000,
+    "eps": 2.5,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 12472000000,
+    "operating_income": 4359000000,
+    "net_income": 3924000000,
+    "eps": 0.91,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 361970280000.0,
+    "total_debt": 43543000000.0,
+    "cash_and_short_term": 12907000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 268278340000.0,
+    "total_debt": 44522000000.0,
+    "cash_and_short_term": 10828000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 361970280000.0,
+    "total_debt": 43543000000.0,
+    "cash_and_short_term": 12907000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 268278340000.0,
+    "total_debt": 44522000000.0,
+    "cash_and_short_term": 10828000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 361970280000.0,
+    "total_debt": 43543000000.0,
+    "cash_and_short_term": 12907000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.099546370967742,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 1.0296249356410154,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.358030208240236,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.358030208240236,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.099546370967742,
+    "_type": "Q1"
+   }
+  }
+ },
+ "LLY": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 19799000000,
+    "operating_income": 8850000000,
+    "net_income": 7396000000,
+    "eps": 8.27,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 45042700000,
+    "operating_income": 17501700000,
+    "net_income": 10590000000,
+    "eps": 11.8,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 19799000000,
+    "operating_income": 8850000000,
+    "net_income": 7396000000,
+    "eps": 8.27,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 45042700000,
+    "operating_income": 16622900000,
+    "net_income": 10590000000,
+    "eps": 11.74,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 19799000000,
+    "operating_income": 8850000000,
+    "net_income": 7396000000,
+    "eps": 8.27,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 822734265000.0,
+    "total_debt": 43370000000.0,
+    "cash_and_short_term": 5282000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 692899336000.0,
+    "total_debt": 33644200000.0,
+    "cash_and_short_term": 3268400000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 822734265000.0,
+    "total_debt": 43370000000.0,
+    "cash_and_short_term": 5282000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 692899336000.0,
+    "total_debt": 33644200000.0,
+    "cash_and_short_term": 3268400000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 822734265000.0,
+    "total_debt": 43370000000.0,
+    "cash_and_short_term": 5282000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.12398948429339667,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 0.12398948429339667,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.4968335426106896,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.4968335426106896,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.12398948429339667,
+    "_type": "Q4"
+   }
+  }
+ },
+ "LMT": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 18021000000,
+    "operating_income": 2063000000,
+    "net_income": 1488000000,
+    "eps": 6.47,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 71043000000,
+    "operating_income": 7013000000,
+    "net_income": 5336000000,
+    "eps": 22.39,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 18021000000,
+    "operating_income": 2063000000,
+    "net_income": 1488000000,
+    "eps": 6.47,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 71811000000,
+    "operating_income": 7425000000,
+    "net_income": 5503000000,
+    "eps": 23.23,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 18021000000,
+    "operating_income": 2063000000,
+    "net_income": 1488000000,
+    "eps": 6.47,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 115576514000.0,
+    "total_debt": 20538000000.0,
+    "cash_and_short_term": 3791000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 115799502000.0,
+    "total_debt": 20270000000.0,
+    "cash_and_short_term": 2483000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 115576514000.0,
+    "total_debt": 20538000000.0,
+    "cash_and_short_term": 3791000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 115799502000.0,
+    "total_debt": 20270000000.0,
+    "cash_and_short_term": 2483000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 115576514000.0,
+    "total_debt": 20538000000.0,
+    "cash_and_short_term": 3791000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.0761787888799736,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 1.1250772399588054,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.1353553644182888,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.1353553644182888,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.0761787888799736,
+    "_type": "Q1"
+   }
+  }
+ },
+ "LOW": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 23078000000,
+    "operating_income": 2554000000,
+    "net_income": 1628000000,
+    "eps": 2.9,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 83674000000,
+    "operating_income": 10466000000,
+    "net_income": 6957000000,
+    "eps": 12.25,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 23078000000,
+    "operating_income": 2554000000,
+    "net_income": 1628000000,
+    "eps": 2.9,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 83673000000,
+    "operating_income": 10466000000,
+    "net_income": 6957000000,
+    "eps": 12.23,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 23078000000,
+    "operating_income": 2554000000,
+    "net_income": 1628000000,
+    "eps": 2.9,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 130431470000.0,
+    "total_debt": 42540000000.0,
+    "cash_and_short_term": 786000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 147442680000.0,
+    "total_debt": 6777000000.0,
+    "cash_and_short_term": 1761000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 130431470000.0,
+    "total_debt": 42540000000.0,
+    "cash_and_short_term": 786000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 147442680000.0,
+    "total_debt": 6777000000.0,
+    "cash_and_short_term": 1761000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 130431470000.0,
+    "total_debt": 42540000000.0,
+    "cash_and_short_term": 786000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.0853548008743403,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.0853548008743403,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.0931241984808129,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.0931241984808129,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.0853548008743403,
+    "_type": "Q4"
+   }
+  }
+ },
+ "MCD": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 6517000000,
+    "operating_income": 2884000000,
+    "net_income": 1983000000,
+    "eps": 2.79,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 25920000000,
+    "operating_income": 11712000000,
+    "net_income": 8223000000,
+    "eps": 11.5,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 6517000000,
+    "operating_income": 2884000000,
+    "net_income": 1983000000,
+    "eps": 2.79,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 25921000000,
+    "operating_income": 11712000000,
+    "net_income": 8222000000,
+    "eps": 11.44,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 6517000000,
+    "operating_income": 2884000000,
+    "net_income": 1983000000,
+    "eps": 2.79,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 220878453000.0,
+    "total_debt": 54881000000.0,
+    "cash_and_short_term": 1170000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 207329328000.0,
+    "total_debt": 51948000000.0,
+    "cash_and_short_term": 1085000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 220878453000.0,
+    "total_debt": 54881000000.0,
+    "cash_and_short_term": 1170000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 207329328000.0,
+    "total_debt": 51948000000.0,
+    "cash_and_short_term": 1085000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 220878453000.0,
+    "total_debt": 54881000000.0,
+    "cash_and_short_term": 1170000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.191142191142191,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.191142191142191,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.1357935359382538,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.1357935359382538,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.191142191142191,
+    "_type": "Q4"
+   }
+  }
+ },
+ "META": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 56311000000,
+    "operating_income": 22872000000,
+    "net_income": 26773000000,
+    "eps": 10.57,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 164501000000,
+    "operating_income": 69380000000,
+    "net_income": 62360000000,
+    "eps": 24.61,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 56311000000,
+    "operating_income": 22872000000,
+    "net_income": 26773000000,
+    "eps": 10.57,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 164500000000,
+    "operating_income": 69380000000,
+    "net_income": 62360000000,
+    "eps": 24.59,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 56311000000,
+    "operating_income": 22872000000,
+    "net_income": 26773000000,
+    "eps": 10.57,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 1432446470000.0,
+    "total_debt": 112318000000.0,
+    "cash_and_short_term": 15462000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 1483682340000.0,
+    "total_debt": 49060000000.0,
+    "cash_and_short_term": 43889000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 1432446470000.0,
+    "total_debt": 112318000000.0,
+    "cash_and_short_term": 15462000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 1483682340000.0,
+    "total_debt": 49060000000.0,
+    "cash_and_short_term": 43889000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 1432446470000.0,
+    "total_debt": 112318000000.0,
+    "cash_and_short_term": 15462000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 2.9778842719371355,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 2.9778842719371355,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.3477637798643936,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 2.3477637798643936,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 2.9778842719371355,
+    "_type": "Q4"
+   }
+  }
+ },
+ "MO": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 5428000000,
+    "operating_income": 2956000000,
+    "net_income": 2183000000,
+    "eps": 1.3,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 20444000000,
+    "operating_income": 11241000000,
+    "net_income": 11264000000,
+    "eps": 6.54,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 5428000000,
+    "operating_income": 2956000000,
+    "net_income": 2183000000,
+    "eps": 1.3,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 20986000000,
+    "operating_income": 10355000000,
+    "net_income": 10212000000,
+    "eps": 5.98,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 5428000000,
+    "operating_income": 2956000000,
+    "net_income": 2183000000,
+    "eps": 1.3,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 120300400000.0,
+    "total_debt": 24577000000.0,
+    "cash_and_short_term": 2367000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 89834220000.0,
+    "total_debt": 24926000000.0,
+    "cash_and_short_term": 3127000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 120300400000.0,
+    "total_debt": 24577000000.0,
+    "cash_and_short_term": 2367000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 89834220000.0,
+    "total_debt": 24926000000.0,
+    "cash_and_short_term": 3127000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 120300400000.0,
+    "total_debt": 24577000000.0,
+    "cash_and_short_term": 2367000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 0.513950575105341,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.5563221125252765,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.5563221125252765,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.0,
+    "_type": "Q1"
+   }
+  }
+ },
+ "MRK": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 16286000000,
+    "operating_income": -1884000000,
+    "net_income": -4240000000,
+    "eps": -1.72,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 64168000000,
+    "operating_income": 22692000000,
+    "net_income": 17117000000,
+    "eps": 6.74,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 16286000000,
+    "operating_income": -1884000000,
+    "net_income": -4240000000,
+    "eps": -1.72,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 64168000000,
+    "operating_income": 22692000000,
+    "net_income": 17117000000,
+    "eps": 6.74,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 16286000000,
+    "operating_income": -1884000000,
+    "net_income": -4240000000,
+    "eps": -1.72,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 297358684350.0,
+    "total_debt": 49117000000.0,
+    "cash_and_short_term": 5327000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 252778690544.0,
+    "total_debt": 37111000000.0,
+    "cash_and_short_term": 13242000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 297358684350.0,
+    "total_debt": 49117000000.0,
+    "cash_and_short_term": 5327000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 252778690544.0,
+    "total_debt": 37111000000.0,
+    "cash_and_short_term": 13242000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 297358684350.0,
+    "total_debt": 49117000000.0,
+    "cash_and_short_term": 5327000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.3646023926812103,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.3646023926812103,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.2994989794024865,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.2994989794024865,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.3646023926812103,
+    "_type": "Q4"
+   }
+  }
+ },
+ "MS": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 33150000000,
+    "operating_income": 7011000000,
+    "net_income": 5638000000,
+    "eps": 3.44,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 61497000000,
+    "operating_income": 29548000000,
+    "net_income": 13390000000,
+    "eps": 8.05,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 33150000000,
+    "operating_income": 7011000000,
+    "net_income": 5638000000,
+    "eps": 3.44,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 59380000000,
+    "operating_income": 27876000000,
+    "net_income": 13390000000,
+    "eps": 7.93,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 33150000000,
+    "operating_income": 7011000000,
+    "net_income": 5638000000,
+    "eps": 3.44,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 258539470000.0,
+    "total_debt": 394234000000.0,
+    "cash_and_short_term": 133529000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 200020520000.0,
+    "total_debt": 360488000000.0,
+    "cash_and_short_term": 75743000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 258539470000.0,
+    "total_debt": 394234000000.0,
+    "cash_and_short_term": 133529000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 200020520000.0,
+    "total_debt": 360488000000.0,
+    "cash_and_short_term": 75743000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 258539470000.0,
+    "total_debt": 394234000000.0,
+    "cash_and_short_term": 133529000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.6595712456270597,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 0.6595712456270597,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.6140991305261105,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.6140991305261105,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.6595712456270597,
+    "_type": "Q4"
+   }
+  }
+ },
+ "MSFT": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 82886000000,
+    "operating_income": 38398000000,
+    "net_income": 31778000000,
+    "eps": 4.28,
+    "_type": "Q3"
+   },
+   "fy": {
+    "revenue": 245122000000,
+    "operating_income": 109433000000,
+    "net_income": 88136000000,
+    "eps": 11.86,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 82886000000,
+    "operating_income": 38398000000,
+    "net_income": 31778000000,
+    "eps": 4.28,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "revenue": 261802000000,
+    "operating_income": 117711000000,
+    "net_income": 92750000000,
+    "eps": 12.47,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 82886000000,
+    "operating_income": 38398000000,
+    "net_income": 31778000000,
+    "eps": 4.28,
+    "_type": "Q3"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 2771165580000.0,
+    "total_debt": 128808300000.0,
+    "cash_and_short_term": 20935000000.0,
+    "_type": "Q4"
+   },
+   "fy": {
+    "market_cap": 3393960630000.0,
+    "total_debt": 67127000000.0,
+    "cash_and_short_term": 18315000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 2771165580000.0,
+    "total_debt": 128808300000.0,
+    "cash_and_short_term": 20935000000.0,
+    "_type": "Q4"
+   },
+   "all_annual": {
+    "market_cap": 3393960630000.0,
+    "total_debt": 67127000000.0,
+    "cash_and_short_term": 18315000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 2771165580000.0,
+    "total_debt": 128808300000.0,
+    "cash_and_short_term": 20935000000.0,
+    "_type": "Q4"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.3508201539281057,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 1.2749549031815206,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.2829483173692569,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.2829483173692569,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.3508201539281057,
+    "_type": "Q2"
+   }
+  }
+ },
+ "MU": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 23860000000,
+    "operating_income": 16135000000,
+    "net_income": 13789000000,
+    "eps": 12.25,
+    "_type": "Q2"
+   },
+   "fy": {
+    "revenue": 25111000000,
+    "operating_income": 1304000000,
+    "net_income": 778000000,
+    "eps": 0.7,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 23860000000,
+    "operating_income": 16135000000,
+    "net_income": 13789000000,
+    "eps": 12.25,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "revenue": 31323000000,
+    "operating_income": 6160000000,
+    "net_income": 4672000000,
+    "eps": 4.2,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 23860000000,
+    "operating_income": 16135000000,
+    "net_income": 13789000000,
+    "eps": 12.25,
+    "_type": "Q2"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 1041730560000.0,
+    "total_debt": 6376000000.0,
+    "cash_and_short_term": 24995000000.0,
+    "_type": "Q3"
+   },
+   "fy": {
+    "market_cap": 105604850000.0,
+    "total_debt": 14007000000.0,
+    "cash_and_short_term": 7041000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 1041730560000.0,
+    "total_debt": 6376000000.0,
+    "cash_and_short_term": 24995000000.0,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "market_cap": 105604850000.0,
+    "total_debt": 14007000000.0,
+    "cash_and_short_term": 7041000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 1041730560000.0,
+    "total_debt": 6376000000.0,
+    "cash_and_short_term": 24995000000.0,
+    "_type": "Q3"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 3.1343150945791547,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 2.63538062283737,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.89682428651371,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 2.89682428651371,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 3.1343150945791547,
+    "_type": "Q2"
+   }
+  }
+ },
+ "NFLX": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 12249757000,
+    "operating_income": 3956997000,
+    "net_income": 5282791000,
+    "eps": 1.25,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 39000966000,
+    "operating_income": 10417614000,
+    "net_income": 8711631000,
+    "eps": 20.28,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 12249757000,
+    "operating_income": 3956997000,
+    "net_income": 5282791000,
+    "eps": 1.25,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 40140026000,
+    "operating_income": 11098705000,
+    "net_income": 9269773000,
+    "eps": 21.64,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 12249757000,
+    "operating_income": 3956997000,
+    "net_income": 5282791000,
+    "eps": 1.25,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 299116234200.0,
+    "total_debt": 14309306000.0,
+    "cash_and_short_term": 9099232000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 382838875080.0,
+    "total_debt": 15582804000.0,
+    "cash_and_short_term": 7804733000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 299116234200.0,
+    "total_debt": 14309306000.0,
+    "cash_and_short_term": 9099232000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 382838875080.0,
+    "total_debt": 15582804000.0,
+    "cash_and_short_term": 7804733000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 299116234200.0,
+    "total_debt": 14309306000.0,
+    "cash_and_short_term": 9099232000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.2036434769536388,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 1.2180280603231866,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.4071526391702711,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.4071526391702711,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.2036434769536388,
+    "_type": "Q1"
+   }
+  }
+ },
+ "NKE": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 11279000000,
+    "operating_income": 553000000,
+    "net_income": 520000000,
+    "eps": 0.35,
+    "_type": "Q3"
+   },
+   "fy": {
+    "revenue": 51362000000,
+    "operating_income": 6690000000,
+    "net_income": 5700000000,
+    "eps": 3.76,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 11279000000,
+    "operating_income": 553000000,
+    "net_income": 520000000,
+    "eps": 0.35,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "revenue": 47818000000,
+    "operating_income": 4966000000,
+    "net_income": 4508000000,
+    "eps": 3.01,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 11279000000,
+    "operating_income": 553000000,
+    "net_income": 520000000,
+    "eps": 0.35,
+    "_type": "Q3"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 68095818000.0,
+    "total_debt": 11033000000.0,
+    "cash_and_short_term": 7563000000.0,
+    "_type": "Q4"
+   },
+   "fy": {
+    "market_cap": 144247880000.0,
+    "total_debt": 11952000000.0,
+    "cash_and_short_term": 9860000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 68095818000.0,
+    "total_debt": 11033000000.0,
+    "cash_and_short_term": 7563000000.0,
+    "_type": "Q4"
+   },
+   "all_annual": {
+    "market_cap": 144247880000.0,
+    "total_debt": 11952000000.0,
+    "cash_and_short_term": 9860000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 68095818000.0,
+    "total_debt": 11033000000.0,
+    "cash_and_short_term": 7563000000.0,
+    "_type": "Q4"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 2.1927292167869554,
+    "_type": "Q3"
+   },
+   "fy": {
+    "current_ratio": 2.3961106391012934,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.1391400627422033,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 2.1391400627422033,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 2.1927292167869554,
+    "_type": "Q3"
+   }
+  }
+ },
+ "NVDA": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 81615000000,
+    "operating_income": 53536000000,
+    "net_income": 58321000000,
+    "eps": 2.4,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 130497000000,
+    "operating_income": 81453000000,
+    "net_income": 72880000000,
+    "eps": 2.97,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 81615000000,
+    "operating_income": 53536000000,
+    "net_income": 58321000000,
+    "eps": 2.4,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 130497000000,
+    "operating_income": 81454000000,
+    "net_income": 72880000000,
+    "eps": 2.97,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 81615000000,
+    "operating_income": 53536000000,
+    "net_income": 58321000000,
+    "eps": 2.4,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 5260590460000.0,
+    "total_debt": 12814000000.0,
+    "cash_and_short_term": 13237000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 2907803100000.0,
+    "total_debt": 10270000000.0,
+    "cash_and_short_term": 8589000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 5260590460000.0,
+    "total_debt": 12814000000.0,
+    "cash_and_short_term": 13237000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 2907803100000.0,
+    "total_debt": 10270000000.0,
+    "cash_and_short_term": 8589000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 5260590460000.0,
+    "total_debt": 12814000000.0,
+    "cash_and_short_term": 13237000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 4.439851498864077,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 4.439851498864077,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 3.440775681341719,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 3.440775681341719,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 4.439851498864077,
+    "_type": "Q4"
+   }
+  }
+ },
+ "OLLI": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 779256000,
+    "operating_income": 111343000,
+    "net_income": 85554000,
+    "eps": 1.4,
+    "_type": "Q4"
+   },
+   "fy": {
+    "revenue": 2271705000,
+    "operating_income": 249503000,
+    "net_income": 199762000,
+    "eps": 3.26,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 779256000,
+    "operating_income": 111343000,
+    "net_income": 85554000,
+    "eps": 1.4,
+    "_type": "Q4"
+   },
+   "all_annual": {
+    "revenue": 2271705000,
+    "operating_income": 252229000,
+    "net_income": 199762000,
+    "eps": 3.27,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 779256000,
+    "operating_income": 111343000,
+    "net_income": 85554000,
+    "eps": 1.4,
+    "_type": "Q4"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 5212279240.0,
+    "total_debt": 710296000.0,
+    "cash_and_short_term": 197673000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 6839911890.0,
+    "total_debt": 564870000.0,
+    "cash_and_short_term": 205123000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 5212279240.0,
+    "total_debt": 710296000.0,
+    "cash_and_short_term": 197673000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 6839911890.0,
+    "total_debt": 564870000.0,
+    "cash_and_short_term": 205123000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 5212279240.0,
+    "total_debt": 710296000.0,
+    "cash_and_short_term": 197673000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 3.2653865236691737,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 3.2653865236691737,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.4074661379255233,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 2.4074661379255233,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 3.2653865236691737,
+    "_type": "Q4"
+   }
+  }
+ },
+ "ORCL": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 17190000000,
+    "operating_income": 5637000000,
+    "net_income": 3721000000,
+    "eps": 1.28,
+    "_type": "Q3"
+   },
+   "fy": {
+    "revenue": 52961000000,
+    "operating_income": 15353000000,
+    "net_income": 10467000000,
+    "eps": 3.81,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 17190000000,
+    "operating_income": 5637000000,
+    "net_income": 3721000000,
+    "eps": 1.28,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "revenue": 55783000000,
+    "operating_income": 17448000000,
+    "net_income": 12160000000,
+    "eps": 4.38,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 17190000000,
+    "operating_income": 5637000000,
+    "net_income": 3721000000,
+    "eps": 1.28,
+    "_type": "Q3"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 714175700000.0,
+    "total_debt": 156189000000.0,
+    "cash_and_short_term": 31289000000.0,
+    "_type": "Q4"
+   },
+   "fy": {
+    "market_cap": 321569360000.0,
+    "total_debt": 94469000000.0,
+    "cash_and_short_term": 10454000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 714175700000.0,
+    "total_debt": 156189000000.0,
+    "cash_and_short_term": 31289000000.0,
+    "_type": "Q4"
+   },
+   "all_annual": {
+    "market_cap": 321569360000.0,
+    "total_debt": 94469000000.0,
+    "cash_and_short_term": 10454000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 714175700000.0,
+    "total_debt": 156189000000.0,
+    "cash_and_short_term": 31289000000.0,
+    "_type": "Q4"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.0166424737535023,
+    "_type": "Q3"
+   },
+   "fy": {
+    "current_ratio": 0.7150012680699974,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.3470309546603825,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.3470309546603825,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.0166424737535023,
+    "_type": "Q3"
+   }
+  }
+ },
+ "PEP": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 19443000000,
+    "operating_income": 3213000000,
+    "net_income": 2338000000,
+    "eps": 1.7,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 91854000000,
+    "operating_income": 12887000000,
+    "net_income": 9578000000,
+    "eps": 6.98,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 19443000000,
+    "operating_income": 3213000000,
+    "net_income": 2338000000,
+    "eps": 1.7,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 91523000000,
+    "operating_income": 12753000000,
+    "net_income": 9370000000,
+    "eps": 6.82,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 19443000000,
+    "operating_income": 3213000000,
+    "net_income": 2338000000,
+    "eps": 1.7,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 197072820000.0,
+    "total_debt": 53214000000.0,
+    "cash_and_short_term": 10251000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 209917969999.0,
+    "total_debt": 44948000000.0,
+    "cash_and_short_term": 8505000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 197072820000.0,
+    "total_debt": 53214000000.0,
+    "cash_and_short_term": 10251000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 209917969999.0,
+    "total_debt": 44948000000.0,
+    "cash_and_short_term": 8505000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 197072820000.0,
+    "total_debt": 53214000000.0,
+    "cash_and_short_term": 10251000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.834248357716353,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 0.8189370877727042,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.8967137511964498,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.8967137511964498,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.834248357716353,
+    "_type": "Q1"
+   }
+  }
+ },
+ "PFE": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 14451000000,
+    "operating_income": 4032000000,
+    "net_income": 2688000000,
+    "eps": 0.47,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 63627000000,
+    "operating_income": 14938000000,
+    "net_income": 8031000000,
+    "eps": 1.42,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 14451000000,
+    "operating_income": 4032000000,
+    "net_income": 2688000000,
+    "eps": 0.47,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 63627000000,
+    "operating_income": 14909000000,
+    "net_income": 8014000000,
+    "eps": 1.41,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 14451000000,
+    "operating_income": 4032000000,
+    "net_income": 2688000000,
+    "eps": 0.47,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 138884630000.0,
+    "total_debt": 63194000000.0,
+    "cash_and_short_term": 976000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 150265920000.0,
+    "total_debt": 63649000000.0,
+    "cash_and_short_term": 1043000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 138884630000.0,
+    "total_debt": 63194000000.0,
+    "cash_and_short_term": 976000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 150265920000.0,
+    "total_debt": 63649000000.0,
+    "cash_and_short_term": 1043000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 138884630000.0,
+    "total_debt": 63194000000.0,
+    "cash_and_short_term": 976000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.1712524712175834,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.1712524712175834,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.2467101432397811,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.2467101432397811,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.1712524712175834,
+    "_type": "Q4"
+   }
+  }
+ },
+ "PG": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 21235000000,
+    "operating_income": 4576000000,
+    "net_income": 3968000000,
+    "eps": 1.66,
+    "_type": "Q3"
+   },
+   "fy": {
+    "revenue": 84039000000,
+    "operating_income": 18545000000,
+    "net_income": 14879000000,
+    "eps": 6.18,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 21235000000,
+    "operating_income": 4576000000,
+    "net_income": 3968000000,
+    "eps": 1.66,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "revenue": 83927000000,
+    "operating_income": 19981000000,
+    "net_income": 15495000000,
+    "eps": 6.47,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 21235000000,
+    "operating_income": 4576000000,
+    "net_income": 3968000000,
+    "eps": 1.66,
+    "_type": "Q3"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 355235399999.0,
+    "total_debt": 35026000000.0,
+    "cash_and_short_term": 9942000000.0,
+    "_type": "Q4"
+   },
+   "fy": {
+    "market_cap": 384035472000.0,
+    "total_debt": 33369000000.0,
+    "cash_and_short_term": 9482000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 355235399999.0,
+    "total_debt": 35026000000.0,
+    "cash_and_short_term": 9942000000.0,
+    "_type": "Q4"
+   },
+   "all_annual": {
+    "market_cap": 384035472000.0,
+    "total_debt": 33369000000.0,
+    "cash_and_short_term": 9482000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 355235399999.0,
+    "total_debt": 35026000000.0,
+    "cash_and_short_term": 9942000000.0,
+    "_type": "Q4"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.7134723195515067,
+    "_type": "Q3"
+   },
+   "fy": {
+    "current_ratio": 0.7347964433342254,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.7319733228717143,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.7319733228717143,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.7134723195515067,
+    "_type": "Q3"
+   }
+  }
+ },
+ "PYPL": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 8353000000,
+    "operating_income": 1488000000,
+    "net_income": 1113000000,
+    "eps": 1.22,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 31797000000,
+    "operating_income": 5325000000,
+    "net_income": 4147000000,
+    "eps": 4.03,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 8353000000,
+    "operating_income": 1488000000,
+    "net_income": 1113000000,
+    "eps": 1.22,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 31866000000,
+    "operating_income": 5777000000,
+    "net_income": 4546000000,
+    "eps": 4.51,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 8353000000,
+    "operating_income": 1488000000,
+    "net_income": 1113000000,
+    "eps": 1.22,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 38646100000.0,
+    "total_debt": 14221000000.0,
+    "cash_and_short_term": 8306000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 87825150000.0,
+    "total_debt": 9879000000.0,
+    "cash_and_short_term": 6561000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 38646100000.0,
+    "total_debt": 14221000000.0,
+    "cash_and_short_term": 8306000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 87825150000.0,
+    "total_debt": 9879000000.0,
+    "cash_and_short_term": 6561000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 38646100000.0,
+    "total_debt": 14221000000.0,
+    "cash_and_short_term": 8306000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.3000514778430783,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 1.2628576153464528,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.2594201985851334,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.2594201985851334,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.3000514778430783,
+    "_type": "Q1"
+   }
+  }
+ },
+ "QCOM": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 10599000000,
+    "operating_income": 2309000000,
+    "net_income": 7370000000,
+    "eps": 6.92,
+    "_type": "Q2"
+   },
+   "fy": {
+    "revenue": 38962000000,
+    "operating_income": 10071000000,
+    "net_income": 10142000000,
+    "eps": 9.09,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 10599000000,
+    "operating_income": 2309000000,
+    "net_income": 7370000000,
+    "eps": 6.92,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "revenue": 40695000000,
+    "operating_income": 10773000000,
+    "net_income": 10555000000,
+    "eps": 9.47,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 10599000000,
+    "operating_income": 2309000000,
+    "net_income": 7370000000,
+    "eps": 6.92,
+    "_type": "Q2"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 199477040000.0,
+    "total_debt": 15270000000.0,
+    "cash_and_short_term": 4533000000.0,
+    "_type": "Q3"
+   },
+   "fy": {
+    "market_cap": 189775800000.0,
+    "total_debt": 14634000000.0,
+    "cash_and_short_term": 7849000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 199477040000.0,
+    "total_debt": 15270000000.0,
+    "cash_and_short_term": 4533000000.0,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "market_cap": 189775800000.0,
+    "total_debt": 14634000000.0,
+    "cash_and_short_term": 7849000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 199477040000.0,
+    "total_debt": 15270000000.0,
+    "cash_and_short_term": 4533000000.0,
+    "_type": "Q3"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 2.6185453084187262,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 2.402037319116527,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.366335619944712,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 2.366335619944712,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 2.6185453084187262,
+    "_type": "Q1"
+   }
+  }
+ },
+ "SBUX": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 9531500000,
+    "operating_income": 777300000,
+    "net_income": 510900000,
+    "eps": 0.45,
+    "_type": "Q2"
+   },
+   "fy": {
+    "revenue": 36176200000,
+    "operating_income": 5408800000,
+    "net_income": 3760900000,
+    "eps": 3.31,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 9531500000,
+    "operating_income": 777300000,
+    "net_income": 510900000,
+    "eps": 0.45,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "revenue": 36347200000,
+    "operating_income": 4547100000,
+    "net_income": 3129000000,
+    "eps": 2.76,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 9531500000,
+    "operating_income": 777300000,
+    "net_income": 510900000,
+    "eps": 0.45,
+    "_type": "Q2"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 119023828000.0,
+    "total_debt": 22434100000.0,
+    "cash_and_short_term": 3449800000.0,
+    "_type": "Q3"
+   },
+   "fy": {
+    "market_cap": 110875381679.0,
+    "total_debt": 25803100000.0,
+    "cash_and_short_term": 3286200000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 119023828000.0,
+    "total_debt": 22434100000.0,
+    "cash_and_short_term": 3449800000.0,
+    "_type": "Q3"
+   },
+   "all_annual": {
+    "market_cap": 110875381679.0,
+    "total_debt": 25803100000.0,
+    "cash_and_short_term": 3286200000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 119023828000.0,
+    "total_debt": 22434100000.0,
+    "cash_and_short_term": 3449800000.0,
+    "_type": "Q3"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.6437344788240822,
+    "_type": "Q2"
+   },
+   "fy": {
+    "current_ratio": 0.7549503858875414,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.9222492008314847,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.9222492008314847,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.6437344788240822,
+    "_type": "Q2"
+   }
+  }
+ },
+ "SLB": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 8721000000,
+    "operating_income": 1070000000,
+    "net_income": 752000000,
+    "eps": 0.5,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 36289000000,
+    "operating_income": 6326000000,
+    "net_income": 4461000000,
+    "eps": 3.14,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 8721000000,
+    "operating_income": 1070000000,
+    "net_income": 752000000,
+    "eps": 0.5,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 36080000000,
+    "operating_income": 6307000000,
+    "net_income": 4190000000,
+    "eps": 2.98,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 8721000000,
+    "operating_income": 1070000000,
+    "net_income": 752000000,
+    "eps": 0.5,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 69688510000.0,
+    "total_debt": 12798000000.0,
+    "cash_and_short_term": 2743000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 54481140000.0,
+    "total_debt": 12074000000.0,
+    "cash_and_short_term": 3544000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 69688510000.0,
+    "total_debt": 12798000000.0,
+    "cash_and_short_term": 2743000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 54481140000.0,
+    "total_debt": 12074000000.0,
+    "cash_and_short_term": 3544000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 69688510000.0,
+    "total_debt": 12798000000.0,
+    "cash_and_short_term": 2743000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 3.8882339605531624,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 0.3644524236983842,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.3414972594185806,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.3414972594185806,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 3.8882339605531624,
+    "_type": "Q1"
+   }
+  }
+ },
+ "TGT": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 24531000000,
+    "operating_income": 1296000000,
+    "net_income": 942000000,
+    "eps": 1.72,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 106566000000,
+    "operating_income": 5566000000,
+    "net_income": 4091000000,
+    "eps": 8.89,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 24531000000,
+    "operating_income": 1296000000,
+    "net_income": 942000000,
+    "eps": 1.72,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 106566000000,
+    "operating_income": 5566000000,
+    "net_income": 4091000000,
+    "eps": 8.88,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 24531000000,
+    "operating_income": 1296000000,
+    "net_income": 942000000,
+    "eps": 1.72,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 58490281999.0,
+    "total_debt": 18831000000.0,
+    "cash_and_short_term": 3534000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 63493764000.0,
+    "total_debt": 5218000000.0,
+    "cash_and_short_term": 4762000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 58490281999.0,
+    "total_debt": 18831000000.0,
+    "cash_and_short_term": 3534000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 63493764000.0,
+    "total_debt": 5218000000.0,
+    "cash_and_short_term": 4762000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 58490281999.0,
+    "total_debt": 18831000000.0,
+    "cash_and_short_term": 3534000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.9353334294918025,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 0.9353334294918025,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.9319541890218737,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.9319541890218737,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.9353334294918025,
+    "_type": "Q4"
+   }
+  }
+ },
+ "TMO": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 11005000000,
+    "operating_income": 1863000000,
+    "net_income": 1651000000,
+    "eps": 4.44,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 42879000000,
+    "operating_income": 7337000000,
+    "net_income": 6335000000,
+    "eps": 16.58,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 11005000000,
+    "operating_income": 1863000000,
+    "net_income": 1651000000,
+    "eps": 4.44,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 42898000000,
+    "operating_income": 7328000000,
+    "net_income": 6515000000,
+    "eps": 17.1,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 11005000000,
+    "operating_income": 1863000000,
+    "net_income": 1651000000,
+    "eps": 4.44,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 190334130000.0,
+    "total_debt": 42549000000.0,
+    "cash_and_short_term": 4064000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 198727860000.0,
+    "total_debt": 31275000000.0,
+    "cash_and_short_term": 4009000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 190334130000.0,
+    "total_debt": 42549000000.0,
+    "cash_and_short_term": 4064000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 198727860000.0,
+    "total_debt": 31275000000.0,
+    "cash_and_short_term": 4009000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 190334130000.0,
+    "total_debt": 42549000000.0,
+    "cash_and_short_term": 4064000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.7745559435251252,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 1.6604410441044104,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.5262977908487791,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.5262977908487791,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.7745559435251252,
+    "_type": "Q1"
+   }
+  }
+ },
+ "TSLA": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 22387000000,
+    "operating_income": 941000000,
+    "net_income": 491000000,
+    "eps": 0.15,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 97690000000,
+    "operating_income": 7076000000,
+    "net_income": 7130000000,
+    "eps": 2.23,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 22387000000,
+    "operating_income": 941000000,
+    "net_income": 491000000,
+    "eps": 0.15,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 95724000000,
+    "operating_income": 6304000000,
+    "net_income": 6410000000,
+    "eps": 1.99,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 22387000000,
+    "operating_income": 941000000,
+    "net_income": 491000000,
+    "eps": 0.15,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 1361482200000.0,
+    "total_debt": 9342000000.0,
+    "cash_and_short_term": 15219000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 1297537920000.0,
+    "total_debt": 13623000000.0,
+    "cash_and_short_term": 16139000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 1361482200000.0,
+    "total_debt": 9342000000.0,
+    "cash_and_short_term": 15219000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 1297537920000.0,
+    "total_debt": 13623000000.0,
+    "cash_and_short_term": 16139000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 1361482200000.0,
+    "total_debt": 9342000000.0,
+    "cash_and_short_term": 15219000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.996067623432931,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 2.024912390270983,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.043119104809889,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 2.043119104809889,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.996067623432931,
+    "_type": "Q1"
+   }
+  }
+ },
+ "TXN": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 4825000000,
+    "operating_income": 1808000000,
+    "net_income": 1545000000,
+    "eps": 1.7,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 15641000000,
+    "operating_income": 5465000000,
+    "net_income": 4799000000,
+    "eps": 5.24,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 4825000000,
+    "operating_income": 1808000000,
+    "net_income": 1545000000,
+    "eps": 1.7,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 16049000000,
+    "operating_income": 5503000000,
+    "net_income": 4873000000,
+    "eps": 5.32,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 4825000000,
+    "operating_income": 1808000000,
+    "net_income": 1545000000,
+    "eps": 1.7,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 271839840000.0,
+    "total_debt": 14052000000.0,
+    "cash_and_short_term": 3660000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 171009120000.0,
+    "total_debt": 13596000000.0,
+    "cash_and_short_term": 3200000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 271839840000.0,
+    "total_debt": 14052000000.0,
+    "cash_and_short_term": 3660000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 171009120000.0,
+    "total_debt": 13596000000.0,
+    "cash_and_short_term": 3200000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 271839840000.0,
+    "total_debt": 14052000000.0,
+    "cash_and_short_term": 3660000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 5.257533145841704,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 4.124622563821027,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 4.456072351421189,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 4.456072351421189,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 5.257533145841704,
+    "_type": "Q1"
+   }
+  }
+ },
+ "UNH": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 111721000000,
+    "operating_income": 8990000000,
+    "net_income": 6280000000,
+    "eps": 6.9,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 400278000000,
+    "operating_income": 32287000000,
+    "net_income": 14405000000,
+    "eps": 15.51,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 111721000000,
+    "operating_income": 8990000000,
+    "net_income": 6280000000,
+    "eps": 6.9,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 407417000000,
+    "operating_income": 33475000000,
+    "net_income": 22106000000,
+    "eps": 24.32,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 111721000000,
+    "operating_income": 8990000000,
+    "net_income": 6280000000,
+    "eps": 6.9,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 246236899999.0,
+    "total_debt": 77917000000.0,
+    "cash_and_short_term": 28001000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 469943940000.0,
+    "total_debt": 76904000000.0,
+    "cash_and_short_term": 25312000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 246236899999.0,
+    "total_debt": 77917000000.0,
+    "cash_and_short_term": 28001000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 469943940000.0,
+    "total_debt": 76904000000.0,
+    "cash_and_short_term": 25312000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 246236899999.0,
+    "total_debt": 77917000000.0,
+    "cash_and_short_term": 28001000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.8485427994818059,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 0.8266341585637329,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.7984911149276226,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.7984911149276226,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.8485427994818059,
+    "_type": "Q1"
+   }
+  }
+ },
+ "UPS": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 21202000000,
+    "operating_income": 1267000000,
+    "net_income": 864000000,
+    "eps": 1.02,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 91070000000,
+    "operating_income": 8468000000,
+    "net_income": 5782000000,
+    "eps": 6.76,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 21202000000,
+    "operating_income": 1267000000,
+    "net_income": 864000000,
+    "eps": 1.02,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 90982000000,
+    "operating_income": 8546000000,
+    "net_income": 5782000000,
+    "eps": 6.77,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 21202000000,
+    "operating_income": 1267000000,
+    "net_income": 864000000,
+    "eps": 1.02,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 91375000000.0,
+    "total_debt": 28673000000.0,
+    "cash_and_short_term": 4653000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 107815500000.0,
+    "total_debt": 22017000000.0,
+    "cash_and_short_term": 6112000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 91375000000.0,
+    "total_debt": 28673000000.0,
+    "cash_and_short_term": 4653000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 107815500000.0,
+    "total_debt": 22017000000.0,
+    "cash_and_short_term": 6112000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 91375000000.0,
+    "total_debt": 28673000000.0,
+    "cash_and_short_term": 4653000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.174502767471565,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.174502767471565,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.2126209622461497,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.2126209622461497,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.174502767471565,
+    "_type": "Q4"
+   }
+  }
+ },
+ "WFC": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 31795000000,
+    "operating_income": 5851000000,
+    "net_income": 5290000000,
+    "eps": 1.62,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 77962000000,
+    "operating_income": 28489000000,
+    "net_income": 19722000000,
+    "eps": 5.43,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 31795000000,
+    "operating_income": 5851000000,
+    "net_income": 5290000000,
+    "eps": 1.62,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 79422000000,
+    "operating_income": 51108000000,
+    "net_income": 19997000000,
+    "eps": 5.64,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 31795000000,
+    "operating_income": 5851000000,
+    "net_income": 5290000000,
+    "eps": 1.62,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 252011093200.0,
+    "total_debt": 459139000000.0,
+    "cash_and_short_term": 203375000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 257965229027.0,
+    "total_debt": 173078000000.0,
+    "cash_and_short_term": 142410000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 252011093200.0,
+    "total_debt": 459139000000.0,
+    "cash_and_short_term": 203375000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 257965229027.0,
+    "total_debt": 173078000000.0,
+    "cash_and_short_term": 142410000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 252011093200.0,
+    "total_debt": 459139000000.0,
+    "cash_and_short_term": 203375000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.25223214285714285,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 1.8082431814718878,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.344795264186963,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.344795264186963,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.25223214285714285,
+    "_type": "Q1"
+   }
+  }
+ },
+ "WING": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 183725000,
+    "operating_income": 53344000,
+    "net_income": 29883000,
+    "eps": 1.09,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 625807000,
+    "operating_income": 165616000,
+    "net_income": 108717000,
+    "eps": 3.72,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 183725000,
+    "operating_income": 53344000,
+    "net_income": 29883000,
+    "eps": 1.09,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 651112000,
+    "operating_income": 161139000,
+    "net_income": 172235000,
+    "eps": 5.99,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 183725000,
+    "operating_income": 53344000,
+    "net_income": 29883000,
+    "eps": 1.09,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 4541708600.0,
+    "total_debt": 61886000.0,
+    "cash_and_short_term": 127455000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 8350496940.0,
+    "total_debt": 1265429000.0,
+    "cash_and_short_term": 315910000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 4541708600.0,
+    "total_debt": 61886000.0,
+    "cash_and_short_term": 127455000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 8350496940.0,
+    "total_debt": 1265429000.0,
+    "cash_and_short_term": 315910000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 4541708600.0,
+    "total_debt": 61886000.0,
+    "cash_and_short_term": 127455000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 3.5630178230006813,
+    "_type": "Q1"
+   },
+   "fy": {
+    "current_ratio": 4.524295826995871,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.2425573702708292,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 2.2425573702708292,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 3.5630178230006813,
+    "_type": "Q1"
+   }
+  }
+ },
+ "WMT": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 177751000000,
+    "operating_income": 7493000000,
+    "net_income": 5650000000,
+    "eps": 0.67,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 680985000000,
+    "operating_income": 29348000000,
+    "net_income": 19436000000,
+    "eps": 2.42,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 177751000000,
+    "operating_income": 7493000000,
+    "net_income": 5650000000,
+    "eps": 0.67,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 680985000000,
+    "operating_income": 29348000000,
+    "net_income": 19436000000,
+    "eps": 2.41,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 177751000000,
+    "operating_income": 7493000000,
+    "net_income": 5650000000,
+    "eps": 0.67,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 1051350170000.0,
+    "total_debt": 74179000000.0,
+    "cash_and_short_term": 10729000000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 789304560000.0,
+    "total_debt": 60114000000.0,
+    "cash_and_short_term": 9037000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 1051350170000.0,
+    "total_debt": 74179000000.0,
+    "cash_and_short_term": 10729000000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 789304560000.0,
+    "total_debt": 60114000000.0,
+    "cash_and_short_term": 9037000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 1051350170000.0,
+    "total_debt": 74179000000.0,
+    "cash_and_short_term": 10729000000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 0.8226828460200447,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 0.8226828460200447,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 0.7694731710714161,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 0.7694731710714161,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 0.8226828460200447,
+    "_type": "Q4"
+   }
+  }
+ },
+ "XOM": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 83161000000,
+    "operating_income": 5285000000,
+    "net_income": 4183000000,
+    "eps": 1,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 339247000000,
+    "operating_income": 39652000000,
+    "net_income": 33680000000,
+    "eps": 7.84,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 83161000000,
+    "operating_income": 5285000000,
+    "net_income": 4183000000,
+    "eps": 1,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 339247000000,
+    "operating_income": 39652000000,
+    "net_income": 33680000000,
+    "eps": 7.84,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 83161000000,
+    "operating_income": 5285000000,
+    "net_income": 4183000000,
+    "eps": 1,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 570648908720.0,
+    "total_debt": 42368000000.0,
+    "cash_and_short_term": 10588000000.0,
+    "_type": "Q2"
+   },
+   "fy": {
+    "market_cap": 462335860000.0,
+    "total_debt": 68775000000.0,
+    "cash_and_short_term": 23187000000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 570648908720.0,
+    "total_debt": 42368000000.0,
+    "cash_and_short_term": 10588000000.0,
+    "_type": "Q2"
+   },
+   "all_annual": {
+    "market_cap": 462335860000.0,
+    "total_debt": 68775000000.0,
+    "cash_and_short_term": 23187000000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 570648908720.0,
+    "total_debt": 42368000000.0,
+    "cash_and_short_term": 10588000000.0,
+    "_type": "Q2"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 1.3084045685351386,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 1.3084045685351386,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 1.0361207060967599,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 1.0361207060967599,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 1.3084045685351386,
+    "_type": "Q4"
+   }
+  }
+ },
+ "YETI": {
+  "fundamentals": {
+   "quarter": {
+    "revenue": 380414000,
+    "operating_income": 12438000,
+    "net_income": 9851000,
+    "eps": 0.13,
+    "_type": "Q1"
+   },
+   "fy": {
+    "revenue": 1829873000,
+    "operating_income": 245376000,
+    "net_income": 175689000,
+    "eps": 2.07,
+    "_type": "FY"
+   },
+   "all": {
+    "revenue": 380414000,
+    "operating_income": 12438000,
+    "net_income": 9851000,
+    "eps": 0.13,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "revenue": 1829873000,
+    "operating_income": 245376000,
+    "net_income": 175689000,
+    "eps": 2.06,
+    "_type": "TTM"
+   },
+   "default": {
+    "revenue": 380414000,
+    "operating_income": 12438000,
+    "net_income": 9851000,
+    "eps": 0.13,
+    "_type": "Q1"
+   }
+  },
+  "enterprise-value": {
+   "quarter": {
+    "market_cap": 2738598840.0,
+    "total_debt": 224631000.0,
+    "cash_and_short_term": 127791000.0,
+    "_type": "Q1"
+   },
+   "fy": {
+    "market_cap": 3342192250.0,
+    "total_debt": 99682000.0,
+    "cash_and_short_term": 358795000.0,
+    "_type": "FY"
+   },
+   "all": {
+    "market_cap": 2738598840.0,
+    "total_debt": 224631000.0,
+    "cash_and_short_term": 127791000.0,
+    "_type": "Q1"
+   },
+   "all_annual": {
+    "market_cap": 3342192250.0,
+    "total_debt": 99682000.0,
+    "cash_and_short_term": 358795000.0,
+    "_type": "FY"
+   },
+   "default": {
+    "market_cap": 2738598840.0,
+    "total_debt": 224631000.0,
+    "cash_and_short_term": 127791000.0,
+    "_type": "Q1"
+   }
+  },
+  "key-metrics": {
+   "quarter": {
+    "current_ratio": 2.1785435726632656,
+    "_type": "Q4"
+   },
+   "fy": {
+    "current_ratio": 2.1785435726632656,
+    "_type": "FY"
+   },
+   "all": {
+    "current_ratio": 2.101677556990148,
+    "_type": "TTM"
+   },
+   "all_annual": {
+    "current_ratio": 2.101677556990148,
+    "_type": "TTM"
+   },
+   "default": {
+    "current_ratio": 2.1785435726632656,
+    "_type": "Q4"
+   }
+  }
+ }
+}

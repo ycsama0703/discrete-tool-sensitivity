@@ -1,0 +1,3104 @@
+{
+ "AAPL": {
+  "quarter": {
+   "revenue": 109417000000,
+   "gross_profit": 54770000000,
+   "operating_income": 35695000000,
+   "ebitda": 39015000000,
+   "net_income": 29789000000,
+   "eps": 2.04,
+   "_type": "Q3"
+  },
+  "fy": {
+   "revenue": 391035000000,
+   "gross_profit": 180683000000,
+   "operating_income": 123216000000,
+   "ebitda": 134661000000,
+   "net_income": 93736000000,
+   "eps": 6.11,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 109417000000,
+   "gross_profit": 54770000000,
+   "operating_income": 35695000000,
+   "ebitda": 39015000000,
+   "net_income": 29789000000,
+   "eps": 2.04,
+   "_type": "Q3"
+  },
+  "all_annual": {
+   "revenue": 395760000000,
+   "gross_profit": 184103000000,
+   "operating_income": 125675000000,
+   "ebitda": 137352000000,
+   "net_income": 96150000000,
+   "eps": 6.31,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 109417000000,
+   "gross_profit": 54770000000,
+   "operating_income": 35695000000,
+   "ebitda": 39015000000,
+   "net_income": 29789000000,
+   "eps": 2.04,
+   "_type": "Q3"
+  }
+ },
+ "ABBV": {
+  "quarter": {
+   "revenue": 16990000000,
+   "gross_profit": 12699000000,
+   "operating_income": 6432000000,
+   "ebitda": 8659000000,
+   "net_income": 3613000000,
+   "eps": 2.04,
+   "_type": "Q2"
+  },
+  "fy": {
+   "revenue": 56334000000,
+   "gross_profit": 39430000000,
+   "operating_income": 9137000000,
+   "ebitda": 14910000000,
+   "net_income": 4278000000,
+   "eps": 2.42,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 16990000000,
+   "gross_profit": 12699000000,
+   "operating_income": 6432000000,
+   "ebitda": 8659000000,
+   "net_income": 3613000000,
+   "eps": 2.04,
+   "_type": "Q2"
+  },
+  "all_annual": {
+   "revenue": 57367000000,
+   "gross_profit": 46583000000,
+   "operating_income": 10072000000,
+   "ebitda": 16330000000,
+   "net_income": 4195000000,
+   "eps": 4.1,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 16990000000,
+   "gross_profit": 12699000000,
+   "operating_income": 6432000000,
+   "ebitda": 8659000000,
+   "net_income": 3613000000,
+   "eps": 2.04,
+   "_type": "Q2"
+  }
+ },
+ "ADBE": {
+  "quarter": {
+   "revenue": 6618000000,
+   "gross_profit": 5903000000,
+   "operating_income": 2238000000,
+   "ebitda": 2496000000,
+   "net_income": 1712000000,
+   "eps": 4.26,
+   "_type": "Q2"
+  },
+  "fy": {
+   "revenue": 21505000000,
+   "gross_profit": 19147000000,
+   "operating_income": 6741000000,
+   "ebitda": 7957000000,
+   "net_income": 5560000000,
+   "eps": 12.44,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 6618000000,
+   "gross_profit": 5903000000,
+   "operating_income": 2238000000,
+   "ebitda": 2496000000,
+   "net_income": 1712000000,
+   "eps": 4.26,
+   "_type": "Q2"
+  },
+  "all_annual": {
+   "revenue": 22037000000,
+   "gross_profit": 19605000000,
+   "operating_income": 7997000000,
+   "ebitda": 9144000000,
+   "net_income": 6751000000,
+   "eps": 15.2,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 6618000000,
+   "gross_profit": 5903000000,
+   "operating_income": 2238000000,
+   "ebitda": 2496000000,
+   "net_income": 1712000000,
+   "eps": 4.26,
+   "_type": "Q2"
+  }
+ },
+ "AMD": {
+  "quarter": {
+   "revenue": 11536000000,
+   "gross_profit": 6203000000,
+   "operating_income": 1990000000,
+   "ebitda": 3353000000,
+   "net_income": 2297000000,
+   "eps": 1.4,
+   "_type": "Q2"
+  },
+  "fy": {
+   "revenue": 25785000000,
+   "gross_profit": 12725000000,
+   "operating_income": 1900000000,
+   "ebitda": 1900000000,
+   "net_income": 1641000000,
+   "eps": 1.01,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 11536000000,
+   "gross_profit": 6203000000,
+   "operating_income": 1990000000,
+   "ebitda": 3353000000,
+   "net_income": 2297000000,
+   "eps": 1.4,
+   "_type": "Q2"
+  },
+  "all_annual": {
+   "revenue": 25785000000,
+   "gross_profit": 13186000000,
+   "operating_income": 1900000000,
+   "ebitda": 4435000000,
+   "net_income": 1641000000,
+   "eps": 1.02,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 11536000000,
+   "gross_profit": 6203000000,
+   "operating_income": 1990000000,
+   "ebitda": 3353000000,
+   "net_income": 2297000000,
+   "eps": 1.4,
+   "_type": "Q2"
+  }
+ },
+ "AMZN": {
+  "quarter": {
+   "revenue": 200606000000,
+   "gross_profit": 104828000000,
+   "operating_income": 27461000000,
+   "ebitda": 102159000000,
+   "net_income": 62647000000,
+   "eps": 5.82,
+   "_type": "Q2"
+  },
+  "fy": {
+   "revenue": 637959000000,
+   "gross_profit": 311671000000,
+   "operating_income": 68593000000,
+   "ebitda": 123815000000,
+   "net_income": 59248000000,
+   "eps": 5.66,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 200606000000,
+   "gross_profit": 104828000000,
+   "operating_income": 27461000000,
+   "ebitda": 102159000000,
+   "net_income": 62647000000,
+   "eps": 5.82,
+   "_type": "Q2"
+  },
+  "all_annual": {
+   "revenue": 637959000000,
+   "gross_profit": 311671000000,
+   "operating_income": 68593000000,
+   "ebitda": 123815000000,
+   "net_income": 59248000000,
+   "eps": 5.66,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 200606000000,
+   "gross_profit": 104828000000,
+   "operating_income": 27461000000,
+   "ebitda": 102159000000,
+   "net_income": 62647000000,
+   "eps": 5.82,
+   "_type": "Q2"
+  }
+ },
+ "AVGO": {
+  "quarter": {
+   "revenue": 29591000000,
+   "gross_profit": 20456000000,
+   "operating_income": 15955000000,
+   "ebitda": 18266000000,
+   "net_income": 13088000000,
+   "eps": 2.75,
+   "_type": "Q3"
+  },
+  "fy": {
+   "revenue": 51574000000,
+   "gross_profit": 32509000000,
+   "operating_income": 13463000000,
+   "ebitda": 23722000000,
+   "net_income": 5895000000,
+   "eps": 1.33,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 29591000000,
+   "gross_profit": 20456000000,
+   "operating_income": 15955000000,
+   "ebitda": 18266000000,
+   "net_income": 13088000000,
+   "eps": 2.75,
+   "_type": "Q3"
+  },
+  "all_annual": {
+   "revenue": 54529000000,
+   "gross_profit": 34505000000,
+   "operating_income": 17985000000,
+   "ebitda": 25474000000,
+   "net_income": 10073000000,
+   "eps": 0.91,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 29591000000,
+   "gross_profit": 20456000000,
+   "operating_income": 15955000000,
+   "ebitda": 18266000000,
+   "net_income": 13088000000,
+   "eps": 2.75,
+   "_type": "Q3"
+  }
+ },
+ "AXP": {
+  "quarter": {
+   "revenue": 21595000000,
+   "gross_profit": 18553000000,
+   "operating_income": 9338000000,
+   "ebitda": 9826000000,
+   "net_income": 3110000000,
+   "eps": 4.54,
+   "_type": "Q2"
+  },
+  "fy": {
+   "revenue": 50406000000,
+   "gross_profit": 42208000000,
+   "operating_income": 36168000000,
+   "ebitda": 0,
+   "net_income": 10129000000,
+   "eps": 13.82,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 21595000000,
+   "gross_profit": 18553000000,
+   "operating_income": 9338000000,
+   "ebitda": 9826000000,
+   "net_income": 3110000000,
+   "eps": 4.54,
+   "_type": "Q2"
+  },
+  "all_annual": {
+   "revenue": 67890000000,
+   "gross_profit": 53433000000,
+   "operating_income": 3771000000,
+   "ebitda": 8653000000,
+   "net_income": 10276000000,
+   "eps": 14.28,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 21595000000,
+   "gross_profit": 18553000000,
+   "operating_income": 9338000000,
+   "ebitda": 9826000000,
+   "net_income": 3110000000,
+   "eps": 4.54,
+   "_type": "Q2"
+  }
+ },
+ "BA": {
+  "quarter": {
+   "revenue": 24560000000,
+   "gross_profit": 2414000000,
+   "operating_income": 78000000,
+   "ebitda": 235000000,
+   "net_income": -444000000,
+   "eps": -0.67,
+   "_type": "Q2"
+  },
+  "fy": {
+   "revenue": 66517000000,
+   "gross_profit": -1991000000,
+   "operating_income": -10707000000,
+   "ebitda": -7649000000,
+   "net_income": -11817000000,
+   "eps": -18.36,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 24560000000,
+   "gross_profit": 2414000000,
+   "operating_income": 78000000,
+   "ebitda": 235000000,
+   "net_income": -444000000,
+   "eps": -0.67,
+   "_type": "Q2"
+  },
+  "all_annual": {
+   "revenue": 69444000000,
+   "gross_profit": -1450000000,
+   "operating_income": -10160000000,
+   "ebitda": -7032000000,
+   "net_income": -11511000000,
+   "eps": -17.91,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 24560000000,
+   "gross_profit": 2414000000,
+   "operating_income": 78000000,
+   "ebitda": 235000000,
+   "net_income": -444000000,
+   "eps": -0.67,
+   "_type": "Q2"
+  }
+ },
+ "BAC": {
+  "quarter": {
+   "revenue": 49393000000,
+   "gross_profit": 30192000000,
+   "operating_income": 11565000000,
+   "ebitda": 11565000000,
+   "net_income": 9074000000,
+   "eps": 1.22,
+   "_type": "Q2"
+  },
+  "fy": {
+   "revenue": 101887000000,
+   "gross_profit": 101887000000,
+   "operating_income": 29254000000,
+   "ebitda": 29254000000,
+   "net_income": 27132000000,
+   "eps": 3.25,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 49393000000,
+   "gross_profit": 30192000000,
+   "operating_income": 11565000000,
+   "ebitda": 11565000000,
+   "net_income": 9074000000,
+   "eps": 1.22,
+   "_type": "Q2"
+  },
+  "all_annual": {
+   "revenue": 123058000000,
+   "gross_profit": 103435000000,
+   "operating_income": 31588000000,
+   "ebitda": 50823000000,
+   "net_income": 27854000000,
+   "eps": 3.39,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 49393000000,
+   "gross_profit": 30192000000,
+   "operating_income": 11565000000,
+   "ebitda": 11565000000,
+   "net_income": 9074000000,
+   "eps": 1.22,
+   "_type": "Q2"
+  }
+ },
+ "BLK": {
+  "quarter": {
+   "revenue": 6698000000,
+   "gross_profit": 3216000000,
+   "operating_income": 2261000000,
+   "ebitda": 3356000000,
+   "net_income": 2212000000,
+   "eps": 14.24,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 20407000000,
+   "gross_profit": 10086000000,
+   "operating_income": 7574000000,
+   "ebitda": 8116666557,
+   "net_income": 6369000000,
+   "eps": 42.45,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 6698000000,
+   "gross_profit": 3216000000,
+   "operating_income": 2261000000,
+   "ebitda": 3356000000,
+   "net_income": 2212000000,
+   "eps": 14.24,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 21303000000,
+   "gross_profit": 14597000000,
+   "operating_income": 7922000000,
+   "ebitda": 7999000000,
+   "net_income": 6566000000,
+   "eps": 41.46,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 6698000000,
+   "gross_profit": 3216000000,
+   "operating_income": 2261000000,
+   "ebitda": 3356000000,
+   "net_income": 2212000000,
+   "eps": 14.24,
+   "_type": "Q1"
+  }
+ },
+ "C": {
+  "quarter": {
+   "revenue": 44141000000,
+   "gross_profit": 21764000000,
+   "operating_income": 7517000000,
+   "ebitda": 7517000000,
+   "net_income": 5785000000,
+   "eps": 3.12,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 71363000000,
+   "gross_profit": 71363000000,
+   "operating_income": 30235000000,
+   "ebitda": 17736000000,
+   "net_income": 12682000000,
+   "eps": 6.03,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 44141000000,
+   "gross_profit": 21764000000,
+   "operating_income": 7517000000,
+   "ebitda": 7517000000,
+   "net_income": 5785000000,
+   "eps": 3.12,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 78123000000,
+   "gross_profit": 78123000000,
+   "operating_income": 28209000000,
+   "ebitda": 28782000000,
+   "net_income": 12682000000,
+   "eps": 6.05,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 44141000000,
+   "gross_profit": 21764000000,
+   "operating_income": 7517000000,
+   "ebitda": 7517000000,
+   "net_income": 5785000000,
+   "eps": 3.12,
+   "_type": "Q1"
+  }
+ },
+ "CAT": {
+  "quarter": {
+   "revenue": 17415000000,
+   "gross_profit": 6109000000,
+   "operating_income": 3085000000,
+   "ebitda": 3680000000,
+   "net_income": 2549000000,
+   "eps": 5.5,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 64809000000,
+   "gross_profit": 23324000000,
+   "operating_income": 13072000000,
+   "ebitda": 16038000000,
+   "net_income": 10792000000,
+   "eps": 22.17,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 17415000000,
+   "gross_profit": 6109000000,
+   "operating_income": 3085000000,
+   "ebitda": 3680000000,
+   "net_income": 2549000000,
+   "eps": 5.5,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 64809000000,
+   "gross_profit": 23372000000,
+   "operating_income": 13324000000,
+   "ebitda": 16254000000,
+   "net_income": 10792000000,
+   "eps": 22.13,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 17415000000,
+   "gross_profit": 6109000000,
+   "operating_income": 3085000000,
+   "ebitda": 3680000000,
+   "net_income": 2549000000,
+   "eps": 5.5,
+   "_type": "Q1"
+  }
+ },
+ "CL": {
+  "quarter": {
+   "revenue": 5324000000,
+   "gross_profit": 3226000000,
+   "operating_income": 1156000000,
+   "ebitda": 1312000000,
+   "net_income": 646000000,
+   "eps": 0.81,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 20101000000,
+   "gross_profit": 12161000000,
+   "operating_income": 4268000000,
+   "ebitda": 4268000000,
+   "net_income": 2889000000,
+   "eps": 3.53,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 5324000000,
+   "gross_profit": 3226000000,
+   "operating_income": 1156000000,
+   "ebitda": 1312000000,
+   "net_income": 646000000,
+   "eps": 0.81,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 19947000000,
+   "gross_profit": 12112000000,
+   "operating_income": 4362000000,
+   "ebitda": 4731000000,
+   "net_income": 2897000000,
+   "eps": 3.54,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 5324000000,
+   "gross_profit": 3226000000,
+   "operating_income": 1156000000,
+   "ebitda": 1312000000,
+   "net_income": 646000000,
+   "eps": 0.81,
+   "_type": "Q1"
+  }
+ },
+ "COP": {
+  "quarter": {
+   "revenue": 16054000000,
+   "gross_profit": 7495000000,
+   "operating_income": 3363000000,
+   "ebitda": 6269000000,
+   "net_income": 2183000000,
+   "eps": 1.78,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 54745000000,
+   "gross_profit": 16383000000,
+   "operating_income": 12783000000,
+   "ebitda": 24379000000,
+   "net_income": 9245000000,
+   "eps": 7.86,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 16054000000,
+   "gross_profit": 7495000000,
+   "operating_income": 3363000000,
+   "ebitda": 6269000000,
+   "net_income": 2183000000,
+   "eps": 1.78,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 55276000000,
+   "gross_profit": 16841000000,
+   "operating_income": 16807000000,
+   "ebitda": 24425000000,
+   "net_income": 9245000000,
+   "eps": 7.87,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 16054000000,
+   "gross_profit": 7495000000,
+   "operating_income": 3363000000,
+   "ebitda": 6269000000,
+   "net_income": 2183000000,
+   "eps": 1.78,
+   "_type": "Q1"
+  }
+ },
+ "COST": {
+  "quarter": {
+   "revenue": 69597000000,
+   "gross_profit": 8878000000,
+   "operating_income": 2606000000,
+   "ebitda": 3358000000,
+   "net_income": 2035000000,
+   "eps": 4.58,
+   "_type": "Q2"
+  },
+  "fy": {
+   "revenue": 254453000000,
+   "gross_profit": 32095000000,
+   "operating_income": 9285000000,
+   "ebitda": 12146000000,
+   "net_income": 7367000000,
+   "eps": 16.6,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 69597000000,
+   "gross_profit": 8878000000,
+   "operating_income": 2606000000,
+   "ebitda": 3358000000,
+   "net_income": 2035000000,
+   "eps": 4.58,
+   "_type": "Q2"
+  },
+  "all_annual": {
+   "revenue": 264086000000,
+   "gross_profit": 35107000000,
+   "operating_income": 9751000000,
+   "ebitda": 11254000000,
+   "net_income": 7621000000,
+   "eps": 17.17,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 69597000000,
+   "gross_profit": 8878000000,
+   "operating_income": 2606000000,
+   "ebitda": 3358000000,
+   "net_income": 2035000000,
+   "eps": 4.58,
+   "_type": "Q2"
+  }
+ },
+ "CRM": {
+  "quarter": {
+   "revenue": 11201000000,
+   "gross_profit": 8693000000,
+   "operating_income": 2451000000,
+   "ebitda": 3748000000,
+   "net_income": 1943000000,
+   "eps": 2.08,
+   "_type": "Q4"
+  },
+  "fy": {
+   "revenue": 37895000000,
+   "gross_profit": 29252000000,
+   "operating_income": 7205000000,
+   "ebitda": 11143000000,
+   "net_income": 6197000000,
+   "eps": 6.44,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 11201000000,
+   "gross_profit": 8693000000,
+   "operating_income": 2451000000,
+   "ebitda": 3748000000,
+   "net_income": 1943000000,
+   "eps": 2.08,
+   "_type": "Q4"
+  },
+  "all_annual": {
+   "revenue": 37895000000,
+   "gross_profit": 29252000000,
+   "operating_income": 7205000000,
+   "ebitda": 8102000000,
+   "net_income": 6197000000,
+   "eps": 6.44,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 11201000000,
+   "gross_profit": 8693000000,
+   "operating_income": 2451000000,
+   "ebitda": 3748000000,
+   "net_income": 1943000000,
+   "eps": 2.08,
+   "_type": "Q4"
+  }
+ },
+ "CROX": {
+  "quarter": {
+   "revenue": 921457000,
+   "gross_profit": 522945000,
+   "operating_income": 200844000,
+   "ebitda": 221084000,
+   "net_income": 137556000,
+   "eps": 2.74,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 4102108000,
+   "gross_profit": 2410258000,
+   "operating_income": 1021911000,
+   "ebitda": 1021911000,
+   "net_income": 950071000,
+   "eps": 16,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 921457000,
+   "gross_profit": 522945000,
+   "operating_income": 200844000,
+   "ebitda": 221084000,
+   "net_income": 137556000,
+   "eps": 2.74,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 4102108000,
+   "gross_profit": 2410258000,
+   "operating_income": 1021911000,
+   "ebitda": 1089689000,
+   "net_income": 950071000,
+   "eps": 16.09,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 921457000,
+   "gross_profit": 522945000,
+   "operating_income": 200844000,
+   "ebitda": 221084000,
+   "net_income": 137556000,
+   "eps": 2.74,
+   "_type": "Q1"
+  }
+ },
+ "CSCO": {
+  "quarter": {
+   "revenue": 15841000000,
+   "gross_profit": 10080000000,
+   "operating_income": 3960000000,
+   "ebitda": 4416000000,
+   "net_income": 3373000000,
+   "eps": 0.85,
+   "_type": "Q3"
+  },
+  "fy": {
+   "revenue": 53803000000,
+   "gross_profit": 34828000000,
+   "operating_income": 12181000000,
+   "ebitda": 15747000000,
+   "net_income": 10320000000,
+   "eps": 2.55,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 15841000000,
+   "gross_profit": 10080000000,
+   "operating_income": 3960000000,
+   "ebitda": 4416000000,
+   "net_income": 3373000000,
+   "eps": 0.85,
+   "_type": "Q3"
+  },
+  "all_annual": {
+   "revenue": 54176000000,
+   "gross_profit": 35107000000,
+   "operating_income": 10855000000,
+   "ebitda": 14616000000,
+   "net_income": 9187000000,
+   "eps": 2.3,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 15841000000,
+   "gross_profit": 10080000000,
+   "operating_income": 3960000000,
+   "ebitda": 4416000000,
+   "net_income": 3373000000,
+   "eps": 0.85,
+   "_type": "Q3"
+  }
+ },
+ "CVS": {
+  "quarter": {
+   "revenue": 100426000000,
+   "gross_profit": 15624000000,
+   "operating_income": 4680000000,
+   "ebitda": 5827000000,
+   "net_income": 2943000000,
+   "eps": 2.31,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 372809000000,
+   "gross_profit": 51401000000,
+   "operating_income": 8516000000,
+   "ebitda": 13703000000,
+   "net_income": 4614000000,
+   "eps": 3.66,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 100426000000,
+   "gross_profit": 15624000000,
+   "operating_income": 4680000000,
+   "ebitda": 5827000000,
+   "net_income": 2943000000,
+   "eps": 2.31,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 372809000000,
+   "gross_profit": 51401000000,
+   "operating_income": 8516000000,
+   "ebitda": 13703000000,
+   "net_income": 4614000000,
+   "eps": 3.67,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 100426000000,
+   "gross_profit": 15624000000,
+   "operating_income": 4680000000,
+   "ebitda": 5827000000,
+   "net_income": 2943000000,
+   "eps": 2.31,
+   "_type": "Q1"
+  }
+ },
+ "CVX": {
+  "quarter": {
+   "revenue": 47556000000,
+   "gross_profit": 4554000000,
+   "operating_income": 3240000000,
+   "ebitda": 9048000000,
+   "net_income": 2210000000,
+   "eps": 1.12,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 202792000000,
+   "gross_profit": 66304000000,
+   "operating_income": 27506000000,
+   "ebitda": 45382000000,
+   "net_income": 17661000000,
+   "eps": 9.76,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 47556000000,
+   "gross_profit": 4554000000,
+   "operating_income": 3240000000,
+   "ebitda": 9048000000,
+   "net_income": 2210000000,
+   "eps": 1.12,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 197306000000,
+   "gross_profit": 60818000000,
+   "operating_income": 22560000000,
+   "ebitda": 45591000000,
+   "net_income": 17661000000,
+   "eps": 9.76,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 47556000000,
+   "gross_profit": 4554000000,
+   "operating_income": 3240000000,
+   "ebitda": 9048000000,
+   "net_income": 2210000000,
+   "eps": 1.12,
+   "_type": "Q1"
+  }
+ },
+ "DECK": {
+  "quarter": {
+   "revenue": 1119369000,
+   "gross_profit": 644638000,
+   "operating_income": 156729000,
+   "ebitda": 156729000,
+   "net_income": 135571000,
+   "eps": 0.96,
+   "_type": "Q4"
+  },
+  "fy": {
+   "revenue": 4287763000,
+   "gross_profit": 2385488000,
+   "operating_income": 927514000,
+   "ebitda": 1041167000,
+   "net_income": 759563000,
+   "eps": 4.89,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 1119369000,
+   "gross_profit": 644638000,
+   "operating_income": 156729000,
+   "ebitda": 156729000,
+   "net_income": 135571000,
+   "eps": 0.96,
+   "_type": "Q4"
+  },
+  "all_annual": {
+   "revenue": 4923590000,
+   "gross_profit": 2827845000,
+   "operating_income": 1149428999,
+   "ebitda": 1242044724,
+   "net_income": 942225000,
+   "eps": 6.19,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 1119369000,
+   "gross_profit": 644638000,
+   "operating_income": 156729000,
+   "ebitda": 156729000,
+   "net_income": 135571000,
+   "eps": 0.96,
+   "_type": "Q4"
+  }
+ },
+ "ETSY": {
+  "quarter": {
+   "revenue": 631277000,
+   "gross_profit": 455598000,
+   "operating_income": 119846000,
+   "ebitda": 135161000,
+   "net_income": 69680000,
+   "eps": 0.72,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 2808332000,
+   "gross_profit": 2033778000,
+   "operating_income": 380208000,
+   "ebitda": 532655000,
+   "net_income": 303281000,
+   "eps": 2.58,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 631277000,
+   "gross_profit": 455598000,
+   "operating_income": 119846000,
+   "ebitda": 135161000,
+   "net_income": 69680000,
+   "eps": 0.72,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 2808332000,
+   "gross_profit": 2033778000,
+   "operating_income": 382264000,
+   "ebitda": 532655000,
+   "net_income": 303281000,
+   "eps": 2.67,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 631277000,
+   "gross_profit": 455598000,
+   "operating_income": 119846000,
+   "ebitda": 135161000,
+   "net_income": 69680000,
+   "eps": 0.72,
+   "_type": "Q1"
+  }
+ },
+ "FIVE": {
+  "quarter": {
+   "revenue": 1728480000,
+   "gross_profit": 647992000,
+   "operating_income": 310882000,
+   "ebitda": 359874000,
+   "net_income": 238226000,
+   "eps": 4.32,
+   "_type": "Q4"
+  },
+  "fy": {
+   "revenue": 3876527000,
+   "gross_profit": 1352662000,
+   "operating_income": 323817000,
+   "ebitda": 517378000,
+   "net_income": 253611000,
+   "eps": 1.1525,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 1728480000,
+   "gross_profit": 647992000,
+   "operating_income": 310882000,
+   "ebitda": 359874000,
+   "net_income": 238226000,
+   "eps": 4.32,
+   "_type": "Q4"
+  },
+  "all_annual": {
+   "revenue": 3876527000,
+   "gross_profit": 1277940000,
+   "operating_income": 323817000,
+   "ebitda": 495194000,
+   "net_income": 253611000,
+   "eps": 1.1475,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 1728480000,
+   "gross_profit": 647992000,
+   "operating_income": 310882000,
+   "ebitda": 359874000,
+   "net_income": 238226000,
+   "eps": 4.32,
+   "_type": "Q4"
+  }
+ },
+ "GE": {
+  "quarter": {
+   "revenue": 12392000000,
+   "gross_profit": 3846000000,
+   "operating_income": 1698000000,
+   "ebitda": 1698000000,
+   "net_income": 1936000000,
+   "eps": 1.82,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 38702000000,
+   "gross_profit": 14394000000,
+   "operating_income": 6657000000,
+   "ebitda": 9790000000,
+   "net_income": 6556000000,
+   "eps": 6.04,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 12392000000,
+   "gross_profit": 3846000000,
+   "operating_income": 1698000000,
+   "ebitda": 1698000000,
+   "net_income": 1936000000,
+   "eps": 1.82,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 39682000000,
+   "gross_profit": 15119000000,
+   "operating_income": 7496000000,
+   "ebitda": 9826000000,
+   "net_income": 6995000000,
+   "eps": 6.43,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 12392000000,
+   "gross_profit": 3846000000,
+   "operating_income": 1698000000,
+   "ebitda": 1698000000,
+   "net_income": 1936000000,
+   "eps": 1.82,
+   "_type": "Q1"
+  }
+ },
+ "GOOGL": {
+  "quarter": {
+   "revenue": 109896000000,
+   "gross_profit": 68625000000,
+   "operating_income": 39696000000,
+   "ebitda": 84427000000,
+   "net_income": 62578000000,
+   "eps": 5.17,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 350018000000,
+   "gross_profit": 203712000000,
+   "operating_income": 112390000000,
+   "ebitda": 135394000000,
+   "net_income": 100118000000,
+   "eps": 8.04,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 109896000000,
+   "gross_profit": 68625000000,
+   "operating_income": 39696000000,
+   "ebitda": 84427000000,
+   "net_income": 62578000000,
+   "eps": 5.17,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 359713000000,
+   "gross_profit": 210758000000,
+   "operating_income": 117524000000,
+   "ebitda": 134178000000,
+   "net_income": 110996000000,
+   "eps": 9.06,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 109896000000,
+   "gross_profit": 68625000000,
+   "operating_income": 39696000000,
+   "ebitda": 84427000000,
+   "net_income": 62578000000,
+   "eps": 5.17,
+   "_type": "Q1"
+  }
+ },
+ "GS": {
+  "quarter": {
+   "revenue": 17227000000,
+   "gross_profit": 16912000000,
+   "operating_income": 6486000000,
+   "ebitda": 7055000000,
+   "net_income": 5630000000,
+   "eps": 17.74,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 53512000000,
+   "gross_profit": 53512000000,
+   "operating_income": 18397000000,
+   "ebitda": 20789000000,
+   "net_income": 14276000000,
+   "eps": 41.22,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 17227000000,
+   "gross_profit": 16912000000,
+   "operating_income": 6486000000,
+   "ebitda": 7055000000,
+   "net_income": 5630000000,
+   "eps": 17.74,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 51466000000,
+   "gross_profit": 46357000000,
+   "operating_income": 16199000000,
+   "ebitda": 18470000000,
+   "net_income": 14882000000,
+   "eps": 43.67,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 17227000000,
+   "gross_profit": 16912000000,
+   "operating_income": 6486000000,
+   "ebitda": 7055000000,
+   "net_income": 5630000000,
+   "eps": 17.74,
+   "_type": "Q1"
+  }
+ },
+ "HD": {
+  "quarter": {
+   "revenue": 41765000000,
+   "gross_profit": 13781000000,
+   "operating_income": 4981000000,
+   "ebitda": 4988000000,
+   "net_income": 3289000000,
+   "eps": 3.31,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 159514000000,
+   "gross_profit": 53308000000,
+   "operating_income": 21526000000,
+   "ebitda": 25488000000,
+   "net_income": 14806000000,
+   "eps": 14.96,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 41765000000,
+   "gross_profit": 13781000000,
+   "operating_income": 4981000000,
+   "ebitda": 4988000000,
+   "net_income": 3289000000,
+   "eps": 3.31,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 159514000000,
+   "gross_profit": 52621000000,
+   "operating_income": 21526000000,
+   "ebitda": 24952000000,
+   "net_income": 14806000000,
+   "eps": 14.95,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 41765000000,
+   "gross_profit": 13781000000,
+   "operating_income": 4981000000,
+   "ebitda": 4988000000,
+   "net_income": 3289000000,
+   "eps": 3.31,
+   "_type": "Q1"
+  }
+ },
+ "HON": {
+  "quarter": {
+   "revenue": 9143000000,
+   "gross_profit": 3539000000,
+   "operating_income": 886000000,
+   "ebitda": 886000000,
+   "net_income": 821000000,
+   "eps": 1.29,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 38498000000,
+   "gross_profit": 14662000000,
+   "operating_income": 7213000000,
+   "ebitda": 9605000000,
+   "net_income": 5705000000,
+   "eps": 8.76,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 9143000000,
+   "gross_profit": 3539000000,
+   "operating_income": 886000000,
+   "ebitda": 886000000,
+   "net_income": 821000000,
+   "eps": 1.29,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 39213000000,
+   "gross_profit": 14943000000,
+   "operating_income": 7878000000,
+   "ebitda": 8891000000,
+   "net_income": 5691000000,
+   "eps": 8.76,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 9143000000,
+   "gross_profit": 3539000000,
+   "operating_income": 886000000,
+   "ebitda": 886000000,
+   "net_income": 821000000,
+   "eps": 1.29,
+   "_type": "Q1"
+  }
+ },
+ "IBM": {
+  "quarter": {
+   "revenue": 15917000000,
+   "gross_profit": 8950000000,
+   "operating_income": 1360000000,
+   "ebitda": 1827000000,
+   "net_income": 1216000000,
+   "eps": 1.3,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 62753000000,
+   "gross_profit": 35551000000,
+   "operating_income": 10074000000,
+   "ebitda": 12176000000,
+   "net_income": 6023000000,
+   "eps": 6.53,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 15917000000,
+   "gross_profit": 8950000000,
+   "operating_income": 1360000000,
+   "ebitda": 1827000000,
+   "net_income": 1216000000,
+   "eps": 1.3,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 62830000000,
+   "gross_profit": 35840000000,
+   "operating_income": 10277000000,
+   "ebitda": 12329000000,
+   "net_income": 5473000000,
+   "eps": 5.92,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 15917000000,
+   "gross_profit": 8950000000,
+   "operating_income": 1360000000,
+   "ebitda": 1827000000,
+   "net_income": 1216000000,
+   "eps": 1.3,
+   "_type": "Q1"
+  }
+ },
+ "INTC": {
+  "quarter": {
+   "revenue": 13577000000,
+   "gross_profit": 5347000000,
+   "operating_income": -3136000000,
+   "ebitda": -565000000,
+   "net_income": -3728000000,
+   "eps": -0.73,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 53101000000,
+   "gross_profit": 17345000000,
+   "operating_income": -11678000000,
+   "ebitda": 1203000000,
+   "net_income": -18756000000,
+   "eps": -4.38,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 13577000000,
+   "gross_profit": 5347000000,
+   "operating_income": -3136000000,
+   "ebitda": -565000000,
+   "net_income": -3728000000,
+   "eps": -0.73,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 53044000000,
+   "gross_profit": 16800000000,
+   "operating_income": -9967000000,
+   "ebitda": -1188000000,
+   "net_income": -19196000000,
+   "eps": -4.48,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 13577000000,
+   "gross_profit": 5347000000,
+   "operating_income": -3136000000,
+   "ebitda": -565000000,
+   "net_income": -3728000000,
+   "eps": -0.73,
+   "_type": "Q1"
+  }
+ },
+ "JNJ": {
+  "quarter": {
+   "revenue": 24062000000,
+   "gross_profit": 17203000000,
+   "operating_income": 6395000000,
+   "ebitda": 6395000000,
+   "net_income": 5235000000,
+   "eps": 2.14,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 88821000000,
+   "gross_profit": 61350000000,
+   "operating_income": 22149000000,
+   "ebitda": 24781000000,
+   "net_income": 14066000000,
+   "eps": 5.84,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 24062000000,
+   "gross_profit": 17203000000,
+   "operating_income": 6395000000,
+   "ebitda": 6395000000,
+   "net_income": 5235000000,
+   "eps": 2.14,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 89331000000,
+   "gross_profit": 61014000000,
+   "operating_income": 22075000000,
+   "ebitda": 34704000000,
+   "net_income": 21810000000,
+   "eps": 9.07,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 24062000000,
+   "gross_profit": 17203000000,
+   "operating_income": 6395000000,
+   "ebitda": 6395000000,
+   "net_income": 5235000000,
+   "eps": 2.14,
+   "_type": "Q1"
+  }
+ },
+ "JPM": {
+  "quarter": {
+   "revenue": 73661000000,
+   "gross_profit": 47329000000,
+   "operating_income": 20479000000,
+   "ebitda": 20479000000,
+   "net_income": 16494000000,
+   "eps": 5.95,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 166878000000,
+   "gross_profit": 166878000000,
+   "operating_income": 84633000000,
+   "ebitda": 74633000000,
+   "net_income": 58471000000,
+   "eps": 19.79,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 73661000000,
+   "gross_profit": 47329000000,
+   "operating_income": 20479000000,
+   "ebitda": 20479000000,
+   "net_income": 16494000000,
+   "eps": 5.95,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 204372000000,
+   "gross_profit": 180792000000,
+   "operating_income": 102038000000,
+   "ebitda": 83193000000,
+   "net_income": 59695000000,
+   "eps": 20.41,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 73661000000,
+   "gross_profit": 47329000000,
+   "operating_income": 20479000000,
+   "ebitda": 20479000000,
+   "net_income": 16494000000,
+   "eps": 5.95,
+   "_type": "Q1"
+  }
+ },
+ "KO": {
+  "quarter": {
+   "revenue": 12472000000,
+   "gross_profit": 7852000000,
+   "operating_income": 4359000000,
+   "ebitda": 4623000000,
+   "net_income": 3924000000,
+   "eps": 0.91,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 47061000000,
+   "gross_profit": 28737000000,
+   "operating_income": 9992000000,
+   "ebitda": 15817000000,
+   "net_income": 10631000000,
+   "eps": 2.47,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 12472000000,
+   "gross_profit": 7852000000,
+   "operating_income": 4359000000,
+   "ebitda": 4623000000,
+   "net_income": 3924000000,
+   "eps": 0.91,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 46890000000,
+   "gross_profit": 28638000000,
+   "operating_income": 11510000000,
+   "ebitda": 14957000000,
+   "net_income": 10784000000,
+   "eps": 2.5,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 12472000000,
+   "gross_profit": 7852000000,
+   "operating_income": 4359000000,
+   "ebitda": 4623000000,
+   "net_income": 3924000000,
+   "eps": 0.91,
+   "_type": "Q1"
+  }
+ },
+ "LLY": {
+  "quarter": {
+   "revenue": 19799000000,
+   "gross_profit": 16222000000,
+   "operating_income": 8850000000,
+   "ebitda": 9359000000,
+   "net_income": 7396000000,
+   "eps": 8.27,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 45042700000,
+   "gross_profit": 36624400001,
+   "operating_income": 17501700000,
+   "ebitda": 15227600000,
+   "net_income": 10590000000,
+   "eps": 11.8,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 19799000000,
+   "gross_profit": 16222000000,
+   "operating_income": 8850000000,
+   "ebitda": 9359000000,
+   "net_income": 7396000000,
+   "eps": 8.27,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 45042700000,
+   "gross_profit": 36624400000,
+   "operating_income": 16622900000,
+   "ebitda": 15628200000,
+   "net_income": 10590000000,
+   "eps": 11.74,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 19799000000,
+   "gross_profit": 16222000000,
+   "operating_income": 8850000000,
+   "ebitda": 9359000000,
+   "net_income": 7396000000,
+   "eps": 8.27,
+   "_type": "Q1"
+  }
+ },
+ "LMT": {
+  "quarter": {
+   "revenue": 18021000000,
+   "gross_profit": 2078000000,
+   "operating_income": 2063000000,
+   "ebitda": 2063000000,
+   "net_income": 1488000000,
+   "eps": 6.47,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 71043000000,
+   "gross_profit": 6930000000,
+   "operating_income": 7013000000,
+   "ebitda": 8815000000,
+   "net_income": 5336000000,
+   "eps": 22.39,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 18021000000,
+   "gross_profit": 2078000000,
+   "operating_income": 2063000000,
+   "ebitda": 2063000000,
+   "net_income": 1488000000,
+   "eps": 6.47,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 71811000000,
+   "gross_profit": 7347000000,
+   "operating_income": 7425000000,
+   "ebitda": 9075000000,
+   "net_income": 5503000000,
+   "eps": 23.23,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 18021000000,
+   "gross_profit": 2078000000,
+   "operating_income": 2063000000,
+   "ebitda": 2063000000,
+   "net_income": 1488000000,
+   "eps": 6.47,
+   "_type": "Q1"
+  }
+ },
+ "LOW": {
+  "quarter": {
+   "revenue": 23078000000,
+   "gross_profit": 7543000000,
+   "operating_income": 2554000000,
+   "ebitda": 2554000000,
+   "net_income": 1628000000,
+   "eps": 2.9,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 83674000000,
+   "gross_profit": 27877000000,
+   "operating_income": 10466000000,
+   "ebitda": 12597000000,
+   "net_income": 6957000000,
+   "eps": 12.25,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 23078000000,
+   "gross_profit": 7543000000,
+   "operating_income": 2554000000,
+   "ebitda": 2554000000,
+   "net_income": 1628000000,
+   "eps": 2.9,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 83673000000,
+   "gross_profit": 27450000000,
+   "operating_income": 10466000000,
+   "ebitda": 12473000000,
+   "net_income": 6957000000,
+   "eps": 12.23,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 23078000000,
+   "gross_profit": 7543000000,
+   "operating_income": 2554000000,
+   "ebitda": 2554000000,
+   "net_income": 1628000000,
+   "eps": 2.9,
+   "_type": "Q1"
+  }
+ },
+ "MCD": {
+  "quarter": {
+   "revenue": 6517000000,
+   "gross_profit": 3643000000,
+   "operating_income": 2884000000,
+   "ebitda": 3508000000,
+   "net_income": 1983000000,
+   "eps": 2.79,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 25920000000,
+   "gross_profit": 14710000000,
+   "operating_income": 11712000000,
+   "ebitda": 13948000000,
+   "net_income": 8223000000,
+   "eps": 11.5,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 6517000000,
+   "gross_profit": 3643000000,
+   "operating_income": 2884000000,
+   "ebitda": 3508000000,
+   "net_income": 1983000000,
+   "eps": 2.79,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 25921000000,
+   "gross_profit": 14712000000,
+   "operating_income": 11712000000,
+   "ebitda": 13948000000,
+   "net_income": 8222000000,
+   "eps": 11.44,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 6517000000,
+   "gross_profit": 3643000000,
+   "operating_income": 2884000000,
+   "ebitda": 3508000000,
+   "net_income": 1983000000,
+   "eps": 2.79,
+   "_type": "Q1"
+  }
+ },
+ "META": {
+  "quarter": {
+   "revenue": 56311000000,
+   "gross_profit": 46093000000,
+   "operating_income": 22872000000,
+   "ebitda": 29991000000,
+   "net_income": 26773000000,
+   "eps": 10.57,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 164501000000,
+   "gross_profit": 134340000000,
+   "operating_income": 69380000000,
+   "ebitda": 86876000000,
+   "net_income": 62360000000,
+   "eps": 24.61,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 56311000000,
+   "gross_profit": 46093000000,
+   "operating_income": 22872000000,
+   "ebitda": 29991000000,
+   "net_income": 26773000000,
+   "eps": 10.57,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 164500000000,
+   "gross_profit": 134338000000,
+   "operating_income": 69380000000,
+   "ebitda": 81631000000,
+   "net_income": 62360000000,
+   "eps": 24.59,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 56311000000,
+   "gross_profit": 46093000000,
+   "operating_income": 22872000000,
+   "ebitda": 29991000000,
+   "net_income": 26773000000,
+   "eps": 10.57,
+   "_type": "Q1"
+  }
+ },
+ "MO": {
+  "quarter": {
+   "revenue": 5428000000,
+   "gross_profit": 3506000000,
+   "operating_income": 2956000000,
+   "ebitda": 3012000000,
+   "net_income": 2183000000,
+   "eps": 1.3,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 20444000000,
+   "gross_profit": 14367000000,
+   "operating_income": 11241000000,
+   "ebitda": 15068000000,
+   "net_income": 11264000000,
+   "eps": 6.54,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 5428000000,
+   "gross_profit": 3506000000,
+   "operating_income": 2956000000,
+   "ebitda": 3012000000,
+   "net_income": 2183000000,
+   "eps": 1.3,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 20986000000,
+   "gross_profit": 15076000000,
+   "operating_income": 10355000000,
+   "ebitda": 12010000000,
+   "net_income": 10212000000,
+   "eps": 5.98,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 5428000000,
+   "gross_profit": 3506000000,
+   "operating_income": 2956000000,
+   "ebitda": 3012000000,
+   "net_income": 2183000000,
+   "eps": 1.3,
+   "_type": "Q1"
+  }
+ },
+ "MRK": {
+  "quarter": {
+   "revenue": 16286000000,
+   "gross_profit": 13342000000,
+   "operating_income": -1884000000,
+   "ebitda": -1884000000,
+   "net_income": -4240000000,
+   "eps": -1.72,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 64168000000,
+   "gross_profit": 51879000000,
+   "operating_income": 22692000000,
+   "ebitda": 26939665623,
+   "net_income": 17117000000,
+   "eps": 6.74,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 16286000000,
+   "gross_profit": 13342000000,
+   "operating_income": -1884000000,
+   "ebitda": -1884000000,
+   "net_income": -4240000000,
+   "eps": -1.72,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 64168000000,
+   "gross_profit": 51879000000,
+   "operating_income": 22692000000,
+   "ebitda": 26939665623,
+   "net_income": 17117000000,
+   "eps": 6.74,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 16286000000,
+   "gross_profit": 13342000000,
+   "operating_income": -1884000000,
+   "ebitda": -1884000000,
+   "net_income": -4240000000,
+   "eps": -1.72,
+   "_type": "Q1"
+  }
+ },
+ "MS": {
+  "quarter": {
+   "revenue": 33150000000,
+   "gross_profit": 20482000000,
+   "operating_income": 7011000000,
+   "ebitda": 7011000000,
+   "net_income": 5638000000,
+   "eps": 3.44,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 61497000000,
+   "gross_profit": 61497000000,
+   "operating_income": 29548000000,
+   "ebitda": 17596000000,
+   "net_income": 13390000000,
+   "eps": 8.05,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 33150000000,
+   "gross_profit": 20482000000,
+   "operating_income": 7011000000,
+   "ebitda": 7011000000,
+   "net_income": 5638000000,
+   "eps": 3.44,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 59380000000,
+   "gross_profit": 21378000000,
+   "operating_income": 27876000000,
+   "ebitda": 10262000000,
+   "net_income": 13390000000,
+   "eps": 7.93,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 33150000000,
+   "gross_profit": 20482000000,
+   "operating_income": 7011000000,
+   "ebitda": 7011000000,
+   "net_income": 5638000000,
+   "eps": 3.44,
+   "_type": "Q1"
+  }
+ },
+ "MSFT": {
+  "quarter": {
+   "revenue": 82886000000,
+   "gross_profit": 56058000000,
+   "operating_income": 38398000000,
+   "ebitda": 50285000000,
+   "net_income": 31778000000,
+   "eps": 4.28,
+   "_type": "Q3"
+  },
+  "fy": {
+   "revenue": 245122000000,
+   "gross_profit": 171008000000,
+   "operating_income": 109433000000,
+   "ebitda": 133009000000,
+   "net_income": 88136000000,
+   "eps": 11.86,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 82886000000,
+   "gross_profit": 56058000000,
+   "operating_income": 38398000000,
+   "ebitda": 50285000000,
+   "net_income": 31778000000,
+   "eps": 4.28,
+   "_type": "Q3"
+  },
+  "all_annual": {
+   "revenue": 261802000000,
+   "gross_profit": 181715000000,
+   "operating_income": 117711000000,
+   "ebitda": 142905000000,
+   "net_income": 92750000000,
+   "eps": 12.47,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 82886000000,
+   "gross_profit": 56058000000,
+   "operating_income": 38398000000,
+   "ebitda": 50285000000,
+   "net_income": 31778000000,
+   "eps": 4.28,
+   "_type": "Q3"
+  }
+ },
+ "MU": {
+  "quarter": {
+   "revenue": 23860000000,
+   "gross_profit": 17749000000,
+   "operating_income": 16135000000,
+   "ebitda": 18519000000,
+   "net_income": 13789000000,
+   "eps": 12.25,
+   "_type": "Q2"
+  },
+  "fy": {
+   "revenue": 25111000000,
+   "gross_profit": 5613000000,
+   "operating_income": 1304000000,
+   "ebitda": 9582000000,
+   "net_income": 778000000,
+   "eps": 0.7,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 23860000000,
+   "gross_profit": 17749000000,
+   "operating_income": 16135000000,
+   "ebitda": 18519000000,
+   "net_income": 13789000000,
+   "eps": 12.25,
+   "_type": "Q2"
+  },
+  "all_annual": {
+   "revenue": 31323000000,
+   "gross_profit": 10880000000,
+   "operating_income": 6160000000,
+   "ebitda": 12525000000,
+   "net_income": 4672000000,
+   "eps": 4.2,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 23860000000,
+   "gross_profit": 17749000000,
+   "operating_income": 16135000000,
+   "ebitda": 18519000000,
+   "net_income": 13789000000,
+   "eps": 12.25,
+   "_type": "Q2"
+  }
+ },
+ "NFLX": {
+  "quarter": {
+   "revenue": 12249757000,
+   "gross_profit": 6361519000,
+   "operating_income": 3956997000,
+   "ebitda": 11125638000,
+   "net_income": 5282791000,
+   "eps": 1.25,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 39000966000,
+   "gross_profit": 17962502000,
+   "operating_income": 10417614000,
+   "ebitda": 24877355000,
+   "net_income": 8711631000,
+   "eps": 20.28,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 12249757000,
+   "gross_profit": 6361519000,
+   "operating_income": 3956997000,
+   "ebitda": 11125638000,
+   "net_income": 5282791000,
+   "eps": 1.25,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 40140026000,
+   "gross_profit": 18815415000,
+   "operating_income": 11098705000,
+   "ebitda": 22730682000,
+   "net_income": 9269773000,
+   "eps": 21.64,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 12249757000,
+   "gross_profit": 6361519000,
+   "operating_income": 3956997000,
+   "ebitda": 11125638000,
+   "net_income": 5282791000,
+   "eps": 1.25,
+   "_type": "Q1"
+  }
+ },
+ "NKE": {
+  "quarter": {
+   "revenue": 11279000000,
+   "gross_profit": 4530000000,
+   "operating_income": 553000000,
+   "ebitda": 502000000,
+   "net_income": 520000000,
+   "eps": 0.35,
+   "_type": "Q3"
+  },
+  "fy": {
+   "revenue": 51362000000,
+   "gross_profit": 22887000000,
+   "operating_income": 6690000000,
+   "ebitda": 7155000000,
+   "net_income": 5700000000,
+   "eps": 3.76,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 11279000000,
+   "gross_profit": 4530000000,
+   "operating_income": 553000000,
+   "ebitda": 502000000,
+   "net_income": 520000000,
+   "eps": 0.35,
+   "_type": "Q3"
+  },
+  "all_annual": {
+   "revenue": 47818000000,
+   "gross_profit": 20955000000,
+   "operating_income": 4966000000,
+   "ebitda": 4766000000,
+   "net_income": 4508000000,
+   "eps": 3.01,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 11279000000,
+   "gross_profit": 4530000000,
+   "operating_income": 553000000,
+   "ebitda": 502000000,
+   "net_income": 520000000,
+   "eps": 0.35,
+   "_type": "Q3"
+  }
+ },
+ "NVDA": {
+  "quarter": {
+   "revenue": 81615000000,
+   "gross_profit": 61157000000,
+   "operating_income": 53536000000,
+   "ebitda": 70796000000,
+   "net_income": 58321000000,
+   "eps": 2.4,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 130497000000,
+   "gross_profit": 97858000000,
+   "operating_income": 81453000000,
+   "ebitda": 86137000000,
+   "net_income": 72880000000,
+   "eps": 2.97,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 81615000000,
+   "gross_profit": 61157000000,
+   "operating_income": 53536000000,
+   "ebitda": 70796000000,
+   "net_income": 58321000000,
+   "eps": 2.4,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 130497000000,
+   "gross_profit": 97859000000,
+   "operating_income": 81454000000,
+   "ebitda": 86137000000,
+   "net_income": 72880000000,
+   "eps": 2.97,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 81615000000,
+   "gross_profit": 61157000000,
+   "operating_income": 53536000000,
+   "ebitda": 70796000000,
+   "net_income": 58321000000,
+   "eps": 2.4,
+   "_type": "Q1"
+  }
+ },
+ "OLLI": {
+  "quarter": {
+   "revenue": 779256000,
+   "gross_profit": 280491000,
+   "operating_income": 111343000,
+   "ebitda": 126130000,
+   "net_income": 85554000,
+   "eps": 1.4,
+   "_type": "Q4"
+  },
+  "fy": {
+   "revenue": 2271705000,
+   "gross_profit": 914452000,
+   "operating_income": 249503000,
+   "ebitda": 293461000,
+   "net_income": 199762000,
+   "eps": 3.26,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 779256000,
+   "gross_profit": 280491000,
+   "operating_income": 111343000,
+   "ebitda": 126130000,
+   "net_income": 85554000,
+   "eps": 1.4,
+   "_type": "Q4"
+  },
+  "all_annual": {
+   "revenue": 2271705000,
+   "gross_profit": 906736000,
+   "operating_income": 252229000,
+   "ebitda": 304563000,
+   "net_income": 199762000,
+   "eps": 3.27,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 779256000,
+   "gross_profit": 280491000,
+   "operating_income": 111343000,
+   "ebitda": 126130000,
+   "net_income": 85554000,
+   "eps": 1.4,
+   "_type": "Q4"
+  }
+ },
+ "ORCL": {
+  "quarter": {
+   "revenue": 17190000000,
+   "gross_profit": 10685000000,
+   "operating_income": 5637000000,
+   "ebitda": 8203000000,
+   "net_income": 3721000000,
+   "eps": 1.28,
+   "_type": "Q3"
+  },
+  "fy": {
+   "revenue": 52961000000,
+   "gross_profit": 37818000000,
+   "operating_income": 15353000000,
+   "ebitda": 21580000000,
+   "net_income": 10467000000,
+   "eps": 3.81,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 17190000000,
+   "gross_profit": 10685000000,
+   "operating_income": 5637000000,
+   "ebitda": 8203000000,
+   "net_income": 3721000000,
+   "eps": 1.28,
+   "_type": "Q3"
+  },
+  "all_annual": {
+   "revenue": 55783000000,
+   "gross_profit": 38931000000,
+   "operating_income": 17448000000,
+   "ebitda": 23720000000,
+   "net_income": 12160000000,
+   "eps": 4.38,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 17190000000,
+   "gross_profit": 10685000000,
+   "operating_income": 5637000000,
+   "ebitda": 8203000000,
+   "net_income": 3721000000,
+   "eps": 1.28,
+   "_type": "Q3"
+  }
+ },
+ "PEP": {
+  "quarter": {
+   "revenue": 19443000000,
+   "gross_profit": 10731000000,
+   "operating_income": 3213000000,
+   "ebitda": 2970000000,
+   "net_income": 2338000000,
+   "eps": 1.7,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 91854000000,
+   "gross_profit": 50110000000,
+   "operating_income": 12887000000,
+   "ebitda": 16680000000,
+   "net_income": 9578000000,
+   "eps": 6.98,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 19443000000,
+   "gross_profit": 10731000000,
+   "operating_income": 3213000000,
+   "ebitda": 2970000000,
+   "net_income": 2338000000,
+   "eps": 1.7,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 91523000000,
+   "gross_profit": 50101000000,
+   "operating_income": 12753000000,
+   "ebitda": 15720000000,
+   "net_income": 9370000000,
+   "eps": 6.82,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 19443000000,
+   "gross_profit": 10731000000,
+   "operating_income": 3213000000,
+   "ebitda": 2970000000,
+   "net_income": 2338000000,
+   "eps": 1.7,
+   "_type": "Q1"
+  }
+ },
+ "PFE": {
+  "quarter": {
+   "revenue": 14451000000,
+   "gross_profit": 9720000000,
+   "operating_income": 4032000000,
+   "ebitda": 5215000000,
+   "net_income": 2688000000,
+   "eps": 0.47,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 63627000000,
+   "gross_profit": 47207000000,
+   "operating_income": 14938000000,
+   "ebitda": 18127000000,
+   "net_income": 8031000000,
+   "eps": 1.42,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 14451000000,
+   "gross_profit": 9720000000,
+   "operating_income": 4032000000,
+   "ebitda": 5215000000,
+   "net_income": 2688000000,
+   "eps": 0.47,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 63627000000,
+   "gross_profit": 41722000000,
+   "operating_income": 14909000000,
+   "ebitda": 18126000000,
+   "net_income": 8014000000,
+   "eps": 1.41,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 14451000000,
+   "gross_profit": 9720000000,
+   "operating_income": 4032000000,
+   "ebitda": 5215000000,
+   "net_income": 2688000000,
+   "eps": 0.47,
+   "_type": "Q1"
+  }
+ },
+ "PG": {
+  "quarter": {
+   "revenue": 21235000000,
+   "gross_profit": 10513000000,
+   "operating_income": 4576000000,
+   "ebitda": 5212000000,
+   "net_income": 3968000000,
+   "eps": 1.66,
+   "_type": "Q3"
+  },
+  "fy": {
+   "revenue": 84039000000,
+   "gross_profit": 43191000000,
+   "operating_income": 18545000000,
+   "ebitda": 22702000000,
+   "net_income": 14879000000,
+   "eps": 6.18,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 21235000000,
+   "gross_profit": 10513000000,
+   "operating_income": 4576000000,
+   "ebitda": 5212000000,
+   "net_income": 3968000000,
+   "eps": 1.66,
+   "_type": "Q3"
+  },
+  "all_annual": {
+   "revenue": 83927000000,
+   "gross_profit": 43046000000,
+   "operating_income": 19981000000,
+   "ebitda": 22380000000,
+   "net_income": 15495000000,
+   "eps": 6.47,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 21235000000,
+   "gross_profit": 10513000000,
+   "operating_income": 4576000000,
+   "ebitda": 5212000000,
+   "net_income": 3968000000,
+   "eps": 1.66,
+   "_type": "Q3"
+  }
+ },
+ "PYPL": {
+  "quarter": {
+   "revenue": 8353000000,
+   "gross_profit": 3810000000,
+   "operating_income": 1488000000,
+   "ebitda": 1488000000,
+   "net_income": 1113000000,
+   "eps": 1.22,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 31797000000,
+   "gross_profit": 14658000000,
+   "operating_income": 5325000000,
+   "ebitda": 6743000000,
+   "net_income": 4147000000,
+   "eps": 4.03,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 8353000000,
+   "gross_profit": 3810000000,
+   "operating_income": 1488000000,
+   "ebitda": 1488000000,
+   "net_income": 1113000000,
+   "eps": 1.22,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 31866000000,
+   "gross_profit": 14454000000,
+   "operating_income": 5777000000,
+   "ebitda": 6629000000,
+   "net_income": 4546000000,
+   "eps": 4.51,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 8353000000,
+   "gross_profit": 3810000000,
+   "operating_income": 1488000000,
+   "ebitda": 1488000000,
+   "net_income": 1113000000,
+   "eps": 1.22,
+   "_type": "Q1"
+  }
+ },
+ "QCOM": {
+  "quarter": {
+   "revenue": 10599000000,
+   "gross_profit": 5699000000,
+   "operating_income": 2309000000,
+   "ebitda": 2722000000,
+   "net_income": 7370000000,
+   "eps": 6.92,
+   "_type": "Q2"
+  },
+  "fy": {
+   "revenue": 38962000000,
+   "gross_profit": 21902000000,
+   "operating_income": 10071000000,
+   "ebitda": 12739000000,
+   "net_income": 10142000000,
+   "eps": 9.09,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 10599000000,
+   "gross_profit": 5699000000,
+   "operating_income": 2309000000,
+   "ebitda": 2722000000,
+   "net_income": 7370000000,
+   "eps": 6.92,
+   "_type": "Q2"
+  },
+  "all_annual": {
+   "revenue": 40695000000,
+   "gross_profit": 22787000000,
+   "operating_income": 10773000000,
+   "ebitda": 12915000000,
+   "net_income": 10555000000,
+   "eps": 9.47,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 10599000000,
+   "gross_profit": 5699000000,
+   "operating_income": 2309000000,
+   "ebitda": 2722000000,
+   "net_income": 7370000000,
+   "eps": 6.92,
+   "_type": "Q2"
+  }
+ },
+ "SBUX": {
+  "quarter": {
+   "revenue": 9531500000,
+   "gross_profit": 1914400000,
+   "operating_income": 777300000,
+   "ebitda": 1184500000,
+   "net_income": 510900000,
+   "eps": 0.45,
+   "_type": "Q2"
+  },
+  "fy": {
+   "revenue": 36176200000,
+   "gross_profit": 9709100000,
+   "operating_income": 5408800000,
+   "ebitda": 7124000000,
+   "net_income": 3760900000,
+   "eps": 3.31,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 9531500000,
+   "gross_profit": 1914400000,
+   "operating_income": 777300000,
+   "ebitda": 1184500000,
+   "net_income": 510900000,
+   "eps": 0.45,
+   "_type": "Q2"
+  },
+  "all_annual": {
+   "revenue": 36347200000,
+   "gross_profit": 13250700000,
+   "operating_income": 4547100000,
+   "ebitda": 6063600000,
+   "net_income": 3129000000,
+   "eps": 2.76,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 9531500000,
+   "gross_profit": 1914400000,
+   "operating_income": 777300000,
+   "ebitda": 1184500000,
+   "net_income": 510900000,
+   "eps": 0.45,
+   "_type": "Q2"
+  }
+ },
+ "SLB": {
+  "quarter": {
+   "revenue": 8721000000,
+   "gross_profit": 1331000000,
+   "operating_income": 1070000000,
+   "ebitda": 1755000000,
+   "net_income": 752000000,
+   "eps": 0.5,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 36289000000,
+   "gross_profit": 7460000000,
+   "operating_income": 6326000000,
+   "ebitda": 8069000000,
+   "net_income": 4461000000,
+   "eps": 3.14,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 8721000000,
+   "gross_profit": 1331000000,
+   "operating_income": 1070000000,
+   "ebitda": 1755000000,
+   "net_income": 752000000,
+   "eps": 0.5,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 36080000000,
+   "gross_profit": 7406000000,
+   "operating_income": 6307000000,
+   "ebitda": 7254000000,
+   "net_income": 4190000000,
+   "eps": 2.98,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 8721000000,
+   "gross_profit": 1331000000,
+   "operating_income": 1070000000,
+   "ebitda": 1755000000,
+   "net_income": 752000000,
+   "eps": 0.5,
+   "_type": "Q1"
+  }
+ },
+ "TGT": {
+  "quarter": {
+   "revenue": 24531000000,
+   "gross_profit": 6464000000,
+   "operating_income": 1296000000,
+   "ebitda": 2049000000,
+   "net_income": 942000000,
+   "eps": 1.72,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 106566000000,
+   "gross_profit": 30064000000,
+   "operating_income": 5566000000,
+   "ebitda": 5566000000,
+   "net_income": 4091000000,
+   "eps": 8.89,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 24531000000,
+   "gross_profit": 6464000000,
+   "operating_income": 1296000000,
+   "ebitda": 2049000000,
+   "net_income": 942000000,
+   "eps": 1.72,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 106566000000,
+   "gross_profit": 30064000000,
+   "operating_income": 5566000000,
+   "ebitda": 5679000000,
+   "net_income": 4091000000,
+   "eps": 8.88,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 24531000000,
+   "gross_profit": 6464000000,
+   "operating_income": 1296000000,
+   "ebitda": 2049000000,
+   "net_income": 942000000,
+   "eps": 1.72,
+   "_type": "Q1"
+  }
+ },
+ "TMO": {
+  "quarter": {
+   "revenue": 11005000000,
+   "gross_profit": 4476000000,
+   "operating_income": 1863000000,
+   "ebitda": 2310000000,
+   "net_income": 1651000000,
+   "eps": 4.44,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 42879000000,
+   "gross_profit": 18108000000,
+   "operating_income": 7337000000,
+   "ebitda": 11535000000,
+   "net_income": 6335000000,
+   "eps": 16.58,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 11005000000,
+   "gross_profit": 4476000000,
+   "operating_income": 1863000000,
+   "ebitda": 2310000000,
+   "net_income": 1651000000,
+   "eps": 4.44,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 42898000000,
+   "gross_profit": 17905000000,
+   "operating_income": 7328000000,
+   "ebitda": 10599000000,
+   "net_income": 6515000000,
+   "eps": 17.1,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 11005000000,
+   "gross_profit": 4476000000,
+   "operating_income": 1863000000,
+   "ebitda": 2310000000,
+   "net_income": 1651000000,
+   "eps": 4.44,
+   "_type": "Q1"
+  }
+ },
+ "TSLA": {
+  "quarter": {
+   "revenue": 22387000000,
+   "gross_profit": 4720000000,
+   "operating_income": 941000000,
+   "ebitda": 840000000,
+   "net_income": 491000000,
+   "eps": 0.15,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 97690000000,
+   "gross_profit": 17450000000,
+   "operating_income": 7076000000,
+   "ebitda": 14708000000,
+   "net_income": 7130000000,
+   "eps": 2.23,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 22387000000,
+   "gross_profit": 4720000000,
+   "operating_income": 941000000,
+   "ebitda": 840000000,
+   "net_income": 491000000,
+   "eps": 0.15,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 95724000000,
+   "gross_profit": 16907000000,
+   "operating_income": 6304000000,
+   "ebitda": 13960000000,
+   "net_income": 6410000000,
+   "eps": 1.99,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 22387000000,
+   "gross_profit": 4720000000,
+   "operating_income": 941000000,
+   "ebitda": 840000000,
+   "net_income": 491000000,
+   "eps": 0.15,
+   "_type": "Q1"
+  }
+ },
+ "TXN": {
+  "quarter": {
+   "revenue": 4825000000,
+   "gross_profit": 2799000000,
+   "operating_income": 1808000000,
+   "ebitda": 1855000000,
+   "net_income": 1545000000,
+   "eps": 1.7,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 15641000000,
+   "gross_profit": 9094000000,
+   "operating_income": 5465000000,
+   "ebitda": 7541000000,
+   "net_income": 4799000000,
+   "eps": 5.24,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 4825000000,
+   "gross_profit": 2799000000,
+   "operating_income": 1808000000,
+   "ebitda": 1855000000,
+   "net_income": 1545000000,
+   "eps": 1.7,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 16049000000,
+   "gross_profit": 9312000000,
+   "operating_income": 5503000000,
+   "ebitda": 7094000000,
+   "net_income": 4873000000,
+   "eps": 5.32,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 4825000000,
+   "gross_profit": 2799000000,
+   "operating_income": 1808000000,
+   "ebitda": 1855000000,
+   "net_income": 1545000000,
+   "eps": 1.7,
+   "_type": "Q1"
+  }
+ },
+ "UNH": {
+  "quarter": {
+   "revenue": 111721000000,
+   "gross_profit": 25409000000,
+   "operating_income": 8990000000,
+   "ebitda": 10091000000,
+   "net_income": 6280000000,
+   "eps": 6.9,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 400278000000,
+   "gross_profit": 89399000000,
+   "operating_income": 32287000000,
+   "ebitda": 9769000000,
+   "net_income": 14405000000,
+   "eps": 15.51,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 111721000000,
+   "gross_profit": 25409000000,
+   "operating_income": 8990000000,
+   "ebitda": 10091000000,
+   "net_income": 6280000000,
+   "eps": 6.9,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 407417000000,
+   "gross_profit": 87528000000,
+   "operating_income": 33475000000,
+   "ebitda": 26696000000,
+   "net_income": 22106000000,
+   "eps": 24.32,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 111721000000,
+   "gross_profit": 25409000000,
+   "operating_income": 8990000000,
+   "ebitda": 10091000000,
+   "net_income": 6280000000,
+   "eps": 6.9,
+   "_type": "Q1"
+  }
+ },
+ "UPS": {
+  "quarter": {
+   "revenue": 21202000000,
+   "gross_profit": 3599000000,
+   "operating_income": 1267000000,
+   "ebitda": 1267000000,
+   "net_income": 864000000,
+   "eps": 1.02,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 91070000000,
+   "gross_profit": 16356000000,
+   "operating_income": 8468000000,
+   "ebitda": 11917000000,
+   "net_income": 5782000000,
+   "eps": 6.76,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 21202000000,
+   "gross_profit": 3599000000,
+   "operating_income": 1267000000,
+   "ebitda": 1267000000,
+   "net_income": 864000000,
+   "eps": 1.02,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 90982000000,
+   "gross_profit": 16319000000,
+   "operating_income": 8546000000,
+   "ebitda": 12050000000,
+   "net_income": 5782000000,
+   "eps": 6.77,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 21202000000,
+   "gross_profit": 3599000000,
+   "operating_income": 1267000000,
+   "ebitda": 1267000000,
+   "net_income": 864000000,
+   "eps": 1.02,
+   "_type": "Q1"
+  }
+ },
+ "WFC": {
+  "quarter": {
+   "revenue": 31795000000,
+   "gross_profit": 20311000000,
+   "operating_income": 5851000000,
+   "ebitda": 5851000000,
+   "net_income": 5290000000,
+   "eps": 1.62,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 77962000000,
+   "gross_profit": 77962000000,
+   "operating_income": 28489000000,
+   "ebitda": 23997000000,
+   "net_income": 19722000000,
+   "eps": 5.43,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 31795000000,
+   "gross_profit": 20311000000,
+   "operating_income": 5851000000,
+   "ebitda": 5851000000,
+   "net_income": 5290000000,
+   "eps": 1.62,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 79422000000,
+   "gross_profit": 79726000000,
+   "operating_income": 51108000000,
+   "ebitda": 32043000000,
+   "net_income": 19997000000,
+   "eps": 5.64,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 31795000000,
+   "gross_profit": 20311000000,
+   "operating_income": 5851000000,
+   "ebitda": 5851000000,
+   "net_income": 5290000000,
+   "eps": 1.62,
+   "_type": "Q1"
+  }
+ },
+ "WING": {
+  "quarter": {
+   "revenue": 183725000,
+   "gross_profit": 152168000,
+   "operating_income": 53344000,
+   "ebitda": 60185000,
+   "net_income": 29883000,
+   "eps": 1.09,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 625807000,
+   "gross_profit": 300869000,
+   "operating_income": 165616000,
+   "ebitda": 187972000,
+   "net_income": 108717000,
+   "eps": 3.72,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 183725000,
+   "gross_profit": 152168000,
+   "operating_income": 53344000,
+   "ebitda": 60185000,
+   "net_income": 29883000,
+   "eps": 1.09,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 651112000,
+   "gross_profit": 454024000,
+   "operating_income": 161139000,
+   "ebitda": 279849000,
+   "net_income": 172235000,
+   "eps": 5.99,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 183725000,
+   "gross_profit": 152168000,
+   "operating_income": 53344000,
+   "ebitda": 60185000,
+   "net_income": 29883000,
+   "eps": 1.09,
+   "_type": "Q1"
+  }
+ },
+ "WMT": {
+  "quarter": {
+   "revenue": 177751000000,
+   "gross_profit": 44693000000,
+   "operating_income": 7493000000,
+   "ebitda": 7847000000,
+   "net_income": 5650000000,
+   "eps": 0.67,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 680985000000,
+   "gross_profit": 169232000000,
+   "operating_income": 29348000000,
+   "ebitda": 29348000000,
+   "net_income": 19436000000,
+   "eps": 2.42,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 177751000000,
+   "gross_profit": 44693000000,
+   "operating_income": 7493000000,
+   "ebitda": 7847000000,
+   "net_income": 5650000000,
+   "eps": 0.67,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 680985000000,
+   "gross_profit": 169232000000,
+   "operating_income": 29348000000,
+   "ebitda": 38882000000,
+   "net_income": 19436000000,
+   "eps": 2.41,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 177751000000,
+   "gross_profit": 44693000000,
+   "operating_income": 7493000000,
+   "ebitda": 7847000000,
+   "net_income": 5650000000,
+   "eps": 0.67,
+   "_type": "Q1"
+  }
+ },
+ "XOM": {
+  "quarter": {
+   "revenue": 83161000000,
+   "gross_profit": 31359000000,
+   "operating_income": 5285000000,
+   "ebitda": 10079000000,
+   "net_income": 4183000000,
+   "eps": 1,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 339247000000,
+   "gross_profit": 76742000000,
+   "operating_income": 39652000000,
+   "ebitda": 73311000000,
+   "net_income": 33680000000,
+   "eps": 7.84,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 83161000000,
+   "gross_profit": 31359000000,
+   "operating_income": 5285000000,
+   "ebitda": 10079000000,
+   "net_income": 4183000000,
+   "eps": 1,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 339247000000,
+   "gross_profit": 76742000000,
+   "operating_income": 39652000000,
+   "ebitda": 73311000000,
+   "net_income": 33680000000,
+   "eps": 7.84,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 83161000000,
+   "gross_profit": 31359000000,
+   "operating_income": 5285000000,
+   "ebitda": 10079000000,
+   "net_income": 4183000000,
+   "eps": 1,
+   "_type": "Q1"
+  }
+ },
+ "YETI": {
+  "quarter": {
+   "revenue": 380414000,
+   "gross_profit": 210211000,
+   "operating_income": 12438000,
+   "ebitda": 26410000,
+   "net_income": 9851000,
+   "eps": 0.13,
+   "_type": "Q1"
+  },
+  "fy": {
+   "revenue": 1829873000,
+   "gross_profit": 1063284000,
+   "operating_income": 245376000,
+   "ebitda": 245376000,
+   "net_income": 175689000,
+   "eps": 2.07,
+   "_type": "FY"
+  },
+  "all": {
+   "revenue": 380414000,
+   "gross_profit": 210211000,
+   "operating_income": 12438000,
+   "ebitda": 26410000,
+   "net_income": 9851000,
+   "eps": 0.13,
+   "_type": "Q1"
+  },
+  "all_annual": {
+   "revenue": 1829873000,
+   "gross_profit": 1063284000,
+   "operating_income": 245376000,
+   "ebitda": 281419000,
+   "net_income": 175689000,
+   "eps": 2.06,
+   "_type": "TTM"
+  },
+  "default": {
+   "revenue": 380414000,
+   "gross_profit": 210211000,
+   "operating_income": 12438000,
+   "ebitda": 26410000,
+   "net_income": 9851000,
+   "eps": 0.13,
+   "_type": "Q1"
+  }
+ }
+}
