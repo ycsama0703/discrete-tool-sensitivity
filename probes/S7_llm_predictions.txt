@@ -1,0 +1,20 @@
+L1  wrong calls: are the 5 self-consistency samples unanimous?
+    qwen    wrong= 62  unanimous= 54 (87%)
+    gemma   wrong= 55  unanimous= 44 (80%)
+    llama   wrong= 54  unanimous= 28 (52%)
+    dsv41   wrong= 37  unanimous= 21 (57%)
+    qwen38  wrong= 34  unanimous= 18 (53%)
+    luna    wrong= 55  unanimous= 23 (42%)
+
+L2  is ENUM's release decision model-independent (except when the agent mixes periods)?
+    instances with >=2 models evaluable: 192
+    same release decision across models: 187; differs: 5 (of which some model mixed periods: 5; unexplained: 0)
+    released instances per model: {'qwen': 28, 'gemma': 27, 'llama': 19, 'dsv41': 24, 'qwen38': 25, 'luna': 26}
+
+L3  self-verification balanced accuracy by field kind
+    qwen    flow 0.89 (err 32/96)   stock 0.99 (err 23/72)   ratio 0.61 (err 7/24)
+    gemma   flow 0.50 (err 23/96)   stock 0.56 (err 24/72)   ratio 0.50 (err 8/24)
+    llama   flow 0.50 (err 22/96)   stock 0.50 (err 24/72)   ratio 0.50 (err 8/24)
+    dsv41   flow 0.64 (err 22/95)   stock 0.89 (err 12/72)   ratio 1.00 (err 3/24)
+    qwen38  flow 0.55 (err 26/94)   stock 0.85 (err 7/71)   ratio 0.41 (err 1/24)
+    luna    flow 0.69 (err 31/96)   stock 0.81 (err 21/72)   ratio 1.00 (err 3/24)

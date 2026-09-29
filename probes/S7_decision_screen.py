@@ -38,6 +38,7 @@ Usage:
 
 import argparse
 import json
+import math
 import os
 import random
 import re
@@ -641,7 +642,11 @@ def cmd_eval(a):
     # calibration / test split by field (protocol section 1), fixed seed
     fl = sorted(FIELDS); random.Random(2026).shuffle(fl)
     calib_fields = set(fl[:len(fl) // 2])
-    print(f"calibration fields: {sorted(calib_fields)}  (all numbers below: TEST split only)")
+    if a.split == "all":
+        print(f"calibration fields: {sorted(calib_fields)}  (numbers below: ALL fields; methods that need "
+              f"calibration (CRC) are defined on the test fields only and show as unavailable here)")
+    else:
+        print(f"calibration fields: {sorted(calib_fields)}  (all numbers below: TEST split only)")
 
     for rule in rules:
         cls_by_u = {u: audit_classes(cache, audit_syms[u], rule) for u in test_unis}
@@ -711,7 +716,7 @@ def cmd_eval(a):
             for r in test:
                 if r["failed"] is None and key in r["scores"]:
                     r["flags"][f"CRC[{key}]"] = t is None or r["scores"][key] > t
-        report(rule, test, cls_by_u)
+        report(rule, rows if a.split == "all" else test, cls_by_u)
         for u in test_unis:
             print(f"  audit generalisation [{u}]: "
                   f"{audit_violations(cache, sorted(U[u]), cls_by_u[u], rule)} (symbol, field) "
@@ -749,6 +754,26 @@ def crc_threshold(calib, key, alpha):
     return best
 
 
+def risk_upper(k, n, conf=0.95):
+    """One-sided exact (Clopper-Pearson) upper confidence bound on a binomial
+    rate after k events in n trials: the p with P(Bin(n, p) <= k) = 1 - conf.
+    With k = 0 this is 1 - (1 - conf)^(1/n) (~3/n, the rule of three)."""
+    if n == 0:
+        return float("nan")
+    if k >= n:
+        return 1.0
+    def cdf(p):
+        return sum(math.comb(n, i) * p ** i * (1 - p) ** (n - i) for i in range(k + 1))
+    lo, hi = k / n, 1.0
+    for _ in range(60):
+        mid = (lo + hi) / 2
+        if cdf(mid) > 1 - conf:
+            lo = mid
+        else:
+            hi = mid
+    return hi
+
+
 def aurc(rows, key):
     ok = sorted(rows, key=lambda r: r["scores"][key])
     risks, err = [], 0
@@ -773,8 +798,8 @@ def report(rule, rows, cls_by_u):
             print(f"    [{u:14}] {t:22} " + "  ".join(f"{pn}={c}" for pn, c in params.items()))
     print(f"instances evaluated {n}; excluded: {fails}; param error {pe}/{n} = {pe/max(n,1):.1%}; "
           f"decision error {de}/{n} = {de/max(n,1):.1%}")
-    print(f"\n  {'method':18} {'coverage':>9} {'sel.risk':>9} {'released_err':>13} "
-          f"{'dec.recall':>11} {'precision':>10}")
+    print(f"\n  {'method':18} {'coverage':>9} {'sel.risk':>9} {'risk.95UB':>10} {'released':>9} "
+          f"{'released_err':>13} {'dec.recall':>11} {'precision':>10}")
     methods = []
     for r in ok:
         for m in r["flags"]:
@@ -791,7 +816,8 @@ def report(rule, rows, cls_by_u):
         risk = rel_err / len(rel) if rel else float("nan")
         rec = (de - rel_err) / de if de else float("nan")
         prec = sum(r["dec_err"] for r in fl) / len(fl) if fl else float("nan")
-        print(f"  {m:18} {len(rel)/n:9.1%} {risk:9.1%} {rel_err:13} {rec:11.1%} {prec:10.1%}")
+        print(f"  {m:18} {len(rel)/n:9.1%} {risk:9.1%} {risk_upper(rel_err, len(rel)):10.1%} {len(rel):9} "
+              f"{rel_err:13} {rec:11.1%} {prec:10.1%}")
     for key in ("output_jump", "safer", "selfcons", "vote_disagree"):
         if ok and all(key in r["scores"] for r in ok):
             print(f"  AURC {key:13} {aurc(ok, key):.4f}")
@@ -826,6 +852,9 @@ def main():
     ap.add_argument("--limit", type=int, help="run at most N new items (dry runs only)")
     ap.add_argument("--universe")
     ap.add_argument("--intent", choices=list(INTENTS), help="eval: keep only instances with this intent")
+    ap.add_argument("--split", choices=["test", "all"], default="test",
+                    help="eval: report on the test fields only (default) or on all fields; "
+                         "CRC needs the calibration fields and is reported on the test split only")
     ap.add_argument("--backend", choices=["transformers", "ollama", "openrouter"],
                     default="transformers")
     ap.add_argument("--model", default="Qwen/Qwen2.5-7B-Instruct")
