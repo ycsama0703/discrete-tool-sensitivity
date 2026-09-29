@@ -1,0 +1,55 @@
+====================================================================== 
+P1  quarter->fy: common scaling mu_r and threshold crossings
+
+  [R-first]  field               kind   n_sym  mu_r=mean log(fy/q)  sd   crossing rate
+           revenue              flow     240    +1.221             0.28   36.7%
+           operating_income     flow     231    +1.269             0.67   39.2%
+           net_income           flow     231    +1.187             0.78   40.0%
+           eps                  flow     231    +1.184             0.83   45.8%
+           market_cap           stock    240    -0.123             0.53   15.0%
+           total_debt           stock    240    -0.245             0.71   10.0%
+           cash_and_short_term  stock    240    +0.042             0.51   15.0%
+           current_ratio        ratio    228    +0.059             0.63   12.5%
+           mean crossing rate by kind: {'flow': '40.4%', 'stock': '13.3%', 'ratio': '12.5%'}    (log 4 = 1.386)
+
+  [R-aligned]  field               kind   n_sym  mu_r=mean log(fy/q)  sd   crossing rate
+           revenue              flow     240    +1.343             0.17   40.4%
+           operating_income     flow     231    +1.304             0.45   38.8%
+           net_income           flow     228    +1.218             0.53   36.7%
+           eps                  flow     228    +1.220             0.54   43.3%
+           market_cap           stock    240    -0.085             0.33    6.7%
+           total_debt           stock    240    +0.033             0.40    3.3%
+           cash_and_short_term  stock    240    +0.145             0.49   13.8%
+           current_ratio        ratio    225    +0.062             0.61   10.8%
+           mean crossing rate by kind: {'flow': '39.8%', 'stock': '7.9%', 'ratio': '10.8%'}    (log 4 = 1.386)
+====================================================================== 
+P2  which wrong value do wrong calls pick?  (per correct value)
+P3  parameter error rate by intent
+
+  qwen    P3 {'quarter': '0.0% (0/1280)', 'fy': '0.0% (0/1280)', 'ambiguous': '97.5% (1248/1280)'}
+          P2 correct=quarter: {'all': 1241, 'fy': 1, '__OMITTED__': 6} -> 'all' 99%
+  gemma   P3 {'quarter': '0.1% (1/1280)', 'fy': '0.0% (0/1280)', 'ambiguous': '85.2% (1090/1280)'}
+          P2 correct=quarter: {'all': 951, 'fy': 67, '__OMITTED__': 73} -> 'all' 87%
+  llama   P3 {'quarter': '0.2% (2/1273)', 'fy': '2.9% (37/1270)', 'ambiguous': '83.5% (1064/1274)'}
+          P2 correct=fy: {'all': 37} -> 'all' 100% | correct=quarter: {'all': 863, 'fy': 203} -> 'all' 81%
+  dsv41   P3 {'quarter': '0.0% (0/1280)', 'fy': '0.0% (0/1280)', 'ambiguous': '58.0% (732/1261)'}
+          P2 correct=quarter: {'fy': 560, 'all': 166, '__OMITTED__': 6} -> 'fy' 77%
+  qwen38  P3 {'quarter': '0.0% (0/1280)', 'fy': '0.0% (0/1280)', 'ambiguous': '56.4% (709/1256)'}
+          P2 correct=quarter: {'fy': 552, 'all': 147, '__OMITTED__': 10} -> 'fy' 78%
+  luna    P3 {'quarter': '0.0% (0/1280)', 'fy': '0.0% (0/1280)', 'ambiguous': '84.3% (1079/1280)'}
+          P2 correct=quarter: {'fy': 246, 'all': 832, '__OMITTED__': 1} -> 'all' 77%
+====================================================================== 
+P4  does 'the call is wrong' track the actual parameter error?  (rep. symbol)
+          method        n   actual_err  TPR    TNR    balanced_acc
+  qwen    self_verify   192    32.3%    80.6%  98.5%  0.896
+  qwen    judge         192    32.3%    14.5%  100.0%  0.573
+  gemma   self_verify   192    28.6%     5.5%  100.0%  0.527
+  gemma   judge         192    28.6%    18.2%  94.2%  0.562
+  llama   self_verify   192    28.1%    100.0%   0.0%  0.500
+  llama   judge         192    28.1%    16.7%  92.8%  0.547
+  dsv41   self_verify   191    19.4%    54.1%  96.1%  0.751
+  dsv41   judge         191    19.4%    21.6%  94.8%  0.582
+  qwen38  self_verify   189    18.0%    23.5%  96.1%  0.598
+  qwen38  judge         189    18.0%    11.8%  97.4%  0.546
+  luna    self_verify   192    28.6%    50.9%  99.3%  0.751
+  luna    judge         192    28.6%     1.8%  99.3%  0.505

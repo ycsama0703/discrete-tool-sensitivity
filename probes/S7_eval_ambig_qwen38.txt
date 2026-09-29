@@ -1,0 +1,169 @@
+calibration fields: ['cash_and_short_term', 'market_cap', 'revenue', 'total_debt']  (all numbers below: TEST split only)
+
+==================== read rule R-first ====================
+step 2 audit (value classes per tool and enum param, leave-one-universe-out):
+    [CONSUMER      ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all', 'quarter'], ['fy']]
+    [CONSUMER      ] get_enterprise_value   period=[['all', 'quarter'], ['fy']]
+    [CONSUMER      ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+    [ENERGY_STAPLES] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all', 'quarter'], ['fy']]
+    [ENERGY_STAPLES] get_enterprise_value   period=[['all', 'quarter'], ['fy']]
+    [ENERGY_STAPLES] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+    [FIN_HEALTH    ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all', 'quarter'], ['fy']]
+    [FIN_HEALTH    ] get_enterprise_value   period=[['all', 'quarter'], ['fy']]
+    [FIN_HEALTH    ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+    [TECH          ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all', 'quarter'], ['fy']]
+    [TECH          ] get_enterprise_value   period=[['all', 'quarter'], ['fy']]
+    [TECH          ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+instances evaluated 21; excluded: {'api_error': 0, 'parse': 10, 'tool_or_value': 1}; param error 18/21 = 85.7%; decision error 14/21 = 66.7%
+
+  method              coverage  sel.risk  released_err  dec.recall  precision
+  none                  100.0%     66.7%            14        0.0%       nan%
+  lipschitz             100.0%     66.7%            14        0.0%       nan%
+  legality              100.0%     66.7%            14        0.0%       nan%
+  output_jump@0.10        0.0%      nan%             0      100.0%      66.7%
+  safer_m1               28.6%     33.3%             2       85.7%      80.0%
+  certdr_union            0.0%      nan%             0      100.0%      66.7%
+  ENUM                    9.5%      0.0%             0      100.0%      73.7%
+  selfcons               66.7%     64.3%             9       35.7%      71.4%
+  self_verify            81.0%     76.5%            13        7.1%      25.0%
+  strong_judge           95.2%     65.0%            13        7.1%     100.0%
+  vote_disagree           0.0%      nan%             0      100.0%      66.7%
+  CRC[selfcons]           0.0%      nan%             0      100.0%      66.7%
+  CRC[vote_disagree]      0.0%      nan%             0      100.0%      66.7%
+  CRC[output_jump]        0.0%      nan%             0      100.0%      66.7%
+  AURC output_jump   0.6516
+  AURC safer         0.4031
+  AURC selfcons      0.7621
+  AURC vote_disagree 0.6309
+  cost: ENUM 46 extra calls/decision (no audit: 103)
+
+  by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors
+    CONSUMER       flow  threshold n= 2  dec_err= 2  coverage= 0.0%  released_err=0
+    CONSUMER       flow  top3      n= 2  dec_err= 1  coverage=50.0%  released_err=0
+    CONSUMER       ratio threshold n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    CONSUMER       ratio top3      n= 1  dec_err= 0  coverage=100.0%  released_err=0
+    ENERGY_STAPLES flow  threshold n= 1  dec_err= 1  coverage= 0.0%  released_err=0
+    ENERGY_STAPLES flow  top3      n= 2  dec_err= 2  coverage= 0.0%  released_err=0
+    ENERGY_STAPLES ratio top3      n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    FIN_HEALTH     flow  threshold n= 3  dec_err= 3  coverage= 0.0%  released_err=0
+    FIN_HEALTH     flow  top3      n= 3  dec_err= 3  coverage= 0.0%  released_err=0
+    FIN_HEALTH     ratio threshold n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    FIN_HEALTH     ratio top3      n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    TECH           flow  top3      n= 2  dec_err= 2  coverage= 0.0%  released_err=0
+    TECH           ratio top3      n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+  audit generalisation [CONSUMER]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
+  audit generalisation [ENERGY_STAPLES]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
+  audit generalisation [FIN_HEALTH]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
+  audit generalisation [TECH]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
+
+==================== read rule R-annual ====================
+step 2 audit (value classes per tool and enum param, leave-one-universe-out):
+    [CONSUMER      ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all'], ['fy'], ['quarter']]
+    [CONSUMER      ] get_enterprise_value   period=[['all', 'fy'], ['quarter']]
+    [CONSUMER      ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+    [ENERGY_STAPLES] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all'], ['fy'], ['quarter']]
+    [ENERGY_STAPLES] get_enterprise_value   period=[['all', 'fy'], ['quarter']]
+    [ENERGY_STAPLES] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+    [FIN_HEALTH    ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all'], ['fy'], ['quarter']]
+    [FIN_HEALTH    ] get_enterprise_value   period=[['all', 'fy'], ['quarter']]
+    [FIN_HEALTH    ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+    [TECH          ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all'], ['fy'], ['quarter']]
+    [TECH          ] get_enterprise_value   period=[['all', 'fy'], ['quarter']]
+    [TECH          ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+instances evaluated 21; excluded: {'api_error': 0, 'parse': 10, 'tool_or_value': 1}; param error 18/21 = 85.7%; decision error 14/21 = 66.7%
+
+  method              coverage  sel.risk  released_err  dec.recall  precision
+  none                  100.0%     66.7%            14        0.0%       nan%
+  lipschitz             100.0%     66.7%            14        0.0%       nan%
+  legality              100.0%     66.7%            14        0.0%       nan%
+  output_jump@0.10        0.0%      nan%             0      100.0%      66.7%
+  safer_m1               47.6%     40.0%             4       71.4%      90.9%
+  certdr_union            0.0%      nan%             0      100.0%      66.7%
+  ENUM                    9.5%      0.0%             0      100.0%      73.7%
+  selfcons               66.7%     64.3%             9       35.7%      71.4%
+  self_verify            81.0%     76.5%            13        7.1%      25.0%
+  strong_judge           95.2%     65.0%            13        7.1%     100.0%
+  vote_disagree           0.0%      nan%             0      100.0%      66.7%
+  CRC[selfcons]           0.0%      nan%             0      100.0%      66.7%
+  CRC[vote_disagree]      0.0%      nan%             0      100.0%      66.7%
+  CRC[output_jump]        0.0%      nan%             0      100.0%      66.7%
+  AURC output_jump   0.6516
+  AURC safer         0.5205
+  AURC selfcons      0.7621
+  AURC vote_disagree 0.6309
+  cost: ENUM 60 extra calls/decision (no audit: 103)
+
+  by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors
+    CONSUMER       flow  threshold n= 2  dec_err= 2  coverage= 0.0%  released_err=0
+    CONSUMER       flow  top3      n= 2  dec_err= 1  coverage=50.0%  released_err=0
+    CONSUMER       ratio threshold n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    CONSUMER       ratio top3      n= 1  dec_err= 0  coverage=100.0%  released_err=0
+    ENERGY_STAPLES flow  threshold n= 1  dec_err= 1  coverage= 0.0%  released_err=0
+    ENERGY_STAPLES flow  top3      n= 2  dec_err= 2  coverage= 0.0%  released_err=0
+    ENERGY_STAPLES ratio top3      n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    FIN_HEALTH     flow  threshold n= 3  dec_err= 3  coverage= 0.0%  released_err=0
+    FIN_HEALTH     flow  top3      n= 3  dec_err= 3  coverage= 0.0%  released_err=0
+    FIN_HEALTH     ratio threshold n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    FIN_HEALTH     ratio top3      n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    TECH           flow  top3      n= 2  dec_err= 2  coverage= 0.0%  released_err=0
+    TECH           ratio top3      n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+  audit generalisation [CONSUMER]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
+  audit generalisation [ENERGY_STAPLES]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
+  audit generalisation [FIN_HEALTH]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
+  audit generalisation [TECH]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
+
+==================== read rule R-aligned ====================
+step 2 audit (value classes per tool and enum param, leave-one-universe-out):
+    [CONSUMER      ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all', 'quarter'], ['fy']]
+    [CONSUMER      ] get_enterprise_value   period=[['all', 'quarter'], ['fy']]
+    [CONSUMER      ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+    [ENERGY_STAPLES] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all', 'quarter'], ['fy']]
+    [ENERGY_STAPLES] get_enterprise_value   period=[['all', 'quarter'], ['fy']]
+    [ENERGY_STAPLES] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+    [FIN_HEALTH    ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all', 'quarter'], ['fy']]
+    [FIN_HEALTH    ] get_enterprise_value   period=[['all', 'quarter'], ['fy']]
+    [FIN_HEALTH    ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+    [TECH          ] get_fundamentals       statement=[['balance', 'cashflow', 'income']]  period=[['all', 'quarter'], ['fy']]
+    [TECH          ] get_enterprise_value   period=[['all', 'quarter'], ['fy']]
+    [TECH          ] get_key_metrics        period=[['all'], ['fy'], ['quarter']]
+instances evaluated 21; excluded: {'api_error': 0, 'parse': 10, 'tool_or_value': 1}; param error 18/21 = 85.7%; decision error 12/21 = 57.1%
+
+  method              coverage  sel.risk  released_err  dec.recall  precision
+  none                  100.0%     57.1%            12        0.0%       nan%
+  lipschitz             100.0%     57.1%            12        0.0%       nan%
+  legality              100.0%     57.1%            12        0.0%       nan%
+  output_jump@0.10        0.0%      nan%             0      100.0%      57.1%
+  safer_m1               42.9%     11.1%             1       91.7%      91.7%
+  certdr_union            0.0%      nan%             0      100.0%      57.1%
+  ENUM                   19.0%      0.0%             0      100.0%      70.6%
+  selfcons               66.7%     50.0%             7       41.7%      71.4%
+  self_verify            81.0%     64.7%            11        8.3%      25.0%
+  strong_judge           95.2%     55.0%            11        8.3%     100.0%
+  vote_disagree           0.0%      nan%             0      100.0%      57.1%
+  CRC[selfcons]           0.0%      nan%             0      100.0%      57.1%
+  CRC[vote_disagree]      0.0%      nan%             0      100.0%      57.1%
+  CRC[output_jump]        4.8%      0.0%             0      100.0%      60.0%
+  AURC output_jump   0.3686
+  AURC safer         0.2519
+  AURC selfcons      0.6678
+  AURC vote_disagree 0.5479
+  cost: ENUM 46 extra calls/decision (no audit: 103)
+
+  by stratum: universe x kind x decision -> n, decision errors, ENUM coverage, ENUM released errors
+    CONSUMER       flow  threshold n= 2  dec_err= 2  coverage= 0.0%  released_err=0
+    CONSUMER       flow  top3      n= 2  dec_err= 1  coverage=50.0%  released_err=0
+    CONSUMER       ratio threshold n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    CONSUMER       ratio top3      n= 1  dec_err= 0  coverage=100.0%  released_err=0
+    ENERGY_STAPLES flow  threshold n= 1  dec_err= 1  coverage= 0.0%  released_err=0
+    ENERGY_STAPLES flow  top3      n= 2  dec_err= 0  coverage=100.0%  released_err=0
+    ENERGY_STAPLES ratio top3      n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    FIN_HEALTH     flow  threshold n= 3  dec_err= 3  coverage= 0.0%  released_err=0
+    FIN_HEALTH     flow  top3      n= 3  dec_err= 3  coverage= 0.0%  released_err=0
+    FIN_HEALTH     ratio threshold n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    FIN_HEALTH     ratio top3      n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+    TECH           flow  top3      n= 2  dec_err= 2  coverage= 0.0%  released_err=0
+    TECH           ratio top3      n= 1  dec_err= 0  coverage= 0.0%  released_err=0
+  audit generalisation [CONSUMER]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
+  audit generalisation [ENERGY_STAPLES]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
+  audit generalisation [FIN_HEALTH]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols
+  audit generalisation [TECH]: 0 (symbol, field) pairs where a merged period class disagrees on this universe's symbols

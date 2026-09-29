@@ -623,6 +623,8 @@ def cmd_eval(a):
     by = {}
     for c in calls:
         by.setdefault(c["id"], {})[c["symbol"]] = c
+    if a.intent:   # e.g. only requests that leave the period unstated (the realistic agent setting)
+        by = {i: v for i, v in by.items() if insts[i]["intent"] == a.intent}
     test_unis = sorted({insts[i]["universe"] for i in by})
     U = universes()
     # Leave-one-universe-out audit: the audit for universe u uses only symbols
@@ -823,6 +825,7 @@ def main():
     ap.add_argument("--max-new", type=int, default=2000, help="openrouter max_tokens")
     ap.add_argument("--limit", type=int, help="run at most N new items (dry runs only)")
     ap.add_argument("--universe")
+    ap.add_argument("--intent", choices=list(INTENTS), help="eval: keep only instances with this intent")
     ap.add_argument("--backend", choices=["transformers", "ollama", "openrouter"],
                     default="transformers")
     ap.add_argument("--model", default="Qwen/Qwen2.5-7B-Instruct")
