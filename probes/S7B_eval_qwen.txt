@@ -1,0 +1,19 @@
+[qwen] instances answered: 189  (not yet run: 0)
+  unparsed answers: 1/940
+  LLM decision == code decision on the quarter table: 28/189 = 14.8%
+  self-inconsistency (quarter table asked twice, temp 0): 0/189
+
+  B-G1  flip quarter->fy:  stratum   n   code_flip  LLM_flip  |diff|
+        threshold flow     48    100.0%    100.0%     0.0
+        threshold ratio    12     83.3%     91.7%     8.3
+        threshold stock    34     85.3%     97.1%    11.8
+        top3      flow     48     62.5%     83.3%    20.8
+        top3      ratio    12     75.0%     75.0%     0.0
+        top3      stock    35     91.4%     74.3%    17.1
+        max |diff| = 20.8 pp (<= 15), per-instance agreement = 79.4% (>= 80%), threshold-flow LLM flip = 100.0% (>= 80%)  -> FAIL
+
+  B-G2  top-3 flow (n=48): flip vs quarter table -- code: fy 62.5%, mixed 100.0%;  LLM: fy 83.3%, mixed 95.8%  -> PASS
+
+  ENUM-B (H-B1, H-B3):
+    all intents      evaluable 183  released  18 (9.8%)  param-induced errors released 0 (of 6 overall) -> PASS;  reasoning errors among released 12
+    period unstated  evaluable  59  released   5 (8.5%)  param-induced errors released 0 (of 6 overall) -> PASS;  reasoning errors among released 5
