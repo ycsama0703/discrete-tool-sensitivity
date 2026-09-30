@@ -1,0 +1,19 @@
+[dsv41] instances evaluated 44/48; excluded {'parse_or_invalid': 4}
+  E1 filled values (literal): {'__OMITTED__': 797, 'splits_and_dividends': 62, 'splits_only': 76, 'unadjusted': 21}
+     effective (omitted -> splits_only): {'splits_only': 873, 'splits_and_dividends': 62, 'unadjusted': 21} -> dominant 'splits_only' 91.3% (>= 70%)
+  param error 44/44 = 100.0%; decision error 23/44 = 52.3%
+
+  method          coverage  released  rel_err  risk.95UB  dec.recall
+  none              100.0%        44       23      65.4%        0.0%
+  ENUM               27.3%        12        0      22.1%      100.0%
+  safer_m1           52.3%        23        5      40.4%       78.3%
+  certdr_union        9.1%         4        0      52.7%      100.0%
+  selfcons           56.8%        25       12      65.9%       47.8%
+  strong_judge       22.7%        10        6      85.0%       73.9%
+  vote_disagree       6.8%         3        3     100.0%       87.0%
+
+  by stratum (measure x decision): n, dec_err, ENUM coverage, ENUM released errors
+    price  threshold n=12 dec_err= 7 coverage=16.7% released_err=0
+    price  top3      n=12 dec_err= 5 coverage=41.7% released_err=0
+    return threshold n=10 dec_err= 9 coverage= 0.0% released_err=0
+    return top3      n=10 dec_err= 2 coverage=50.0% released_err=0

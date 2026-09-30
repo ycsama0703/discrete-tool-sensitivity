@@ -1,0 +1,20 @@
+[gemma] instances evaluated 48/48; excluded {}
+  E1 filled values (literal): {'__OMITTED__': 636, 'splits_only': 231, 'splits_and_dividends': 93}
+     effective (omitted -> splits_only): {'splits_only': 867, 'splits_and_dividends': 93} -> dominant 'splits_only' 90.3% (>= 70%)
+  param error 48/48 = 100.0%; decision error 21/48 = 43.8%
+
+  method          coverage  released  rel_err  risk.95UB  dec.recall
+  none              100.0%        48       21      56.6%        0.0%
+  ENUM               27.1%        13        0      20.6%      100.0%
+  safer_m1           58.3%        28        8      45.7%       61.9%
+  certdr_union        8.3%         4        0      52.7%      100.0%
+  selfcons           77.1%        37       15      55.4%       28.6%
+  self_verify        89.6%        43       16      50.9%       23.8%
+  strong_judge       16.7%         8        4      80.7%       81.0%
+  vote_disagree       6.2%         3        3     100.0%       85.7%
+
+  by stratum (measure x decision): n, dec_err, ENUM coverage, ENUM released errors
+    price  threshold n=12 dec_err= 7 coverage=16.7% released_err=0
+    price  top3      n=12 dec_err= 5 coverage=41.7% released_err=0
+    return threshold n=12 dec_err= 7 coverage= 0.0% released_err=0
+    return top3      n=12 dec_err= 2 coverage=50.0% released_err=0

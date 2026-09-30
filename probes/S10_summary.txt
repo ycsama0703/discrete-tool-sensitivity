@@ -1,0 +1,9 @@
+E2 release predicted by (rho, kappa): AUC 0.945 vs output-jump 0.696  (release rate 27.1%) -> PASS
+E3 top-3 return flips on split windows: splits_only 20.0%, unadjusted 60.0% (n=10)
+   groups by mean rho (splits_only): [('TECH', 0.046), ('CONS_HEALTH', 0.078), ('FIN_IND', 0.081), ('DIVIDEND', 0.118)]
+   groups by flip rate            : [('DIVIDEND', 0), ('TECH', 0), ('FIN_IND', 0.33), ('CONS_HEALTH', 0.33)]
+   -> FAIL
+E4 ENUM released errors per model: {'qwen': 0, 'gemma': 0, 'llama': 0, 'dsv41': 0, 'qwen38': 0, 'luna': 0}
+   pooled released / errors: selfcons 118/51, self_verify 105/45, strong_judge 98/46, vote_disagree 18/17, safer_m1 137/30
+   -> PASS
+E5 release decision differs across models on 3/48 instances; unexplained by mixing: 0 -> PASS

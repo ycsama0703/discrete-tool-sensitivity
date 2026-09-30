@@ -1,0 +1,20 @@
+[qwen] instances evaluated 48/48; excluded {}
+  E1 filled values (literal): {'__OMITTED__': 198, 'splits_and_dividends': 326, 'splits_only': 436}
+     effective (omitted -> splits_only): {'splits_only': 634, 'splits_and_dividends': 326} -> dominant 'splits_only' 66.0% (>= 70%)
+  param error 48/48 = 100.0%; decision error 22/48 = 45.8%
+
+  method          coverage  released  rel_err  risk.95UB  dec.recall
+  none              100.0%        48       22      58.6%        0.0%
+  ENUM               25.0%        12        0      22.1%      100.0%
+  safer_m1           50.0%        24        5      38.9%       77.3%
+  certdr_union        8.3%         4        0      52.7%      100.0%
+  selfcons           29.2%        14        6      67.5%       72.7%
+  self_verify        16.7%         8        4      80.7%       81.8%
+  strong_judge       22.9%        11        6      80.0%       72.7%
+  vote_disagree       6.2%         3        2      98.3%       90.9%
+
+  by stratum (measure x decision): n, dec_err, ENUM coverage, ENUM released errors
+    price  threshold n=12 dec_err= 8 coverage=16.7% released_err=0
+    price  top3      n=12 dec_err= 6 coverage=41.7% released_err=0
+    return threshold n=12 dec_err= 6 coverage= 0.0% released_err=0
+    return top3      n=12 dec_err= 2 coverage=41.7% released_err=0
