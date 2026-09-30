@@ -12,3 +12,6 @@ openrouter_key.txt
 probes/_s7_*.log
 probes/_s7_*.done
 probes/_s7_*.calls.log
+
+# per-run scratch
+probes/vast/.instance_id
